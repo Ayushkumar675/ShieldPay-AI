@@ -5,7 +5,7 @@ Parametric claim flow: trigger → trust → fraud → approval/verify/delay →
 from datetime import datetime
 from typing import Dict
 
-from app.models.schemas import Claim, ClaimStatus, PayoutTier, Payment
+from app.models.schemas import Claim, ClaimStatus, PayoutTier, Payout
 from app.core.config import settings
 
 
@@ -26,7 +26,7 @@ async def auto_create_claim(worker_id: str, policy_id: str, trigger: Dict):
     from app.services.payout_throttle import check_throttle
 
     db = get_db()
-    if not db:
+    if db is None:
         return
 
     # Step 1: Compute trust score
@@ -39,7 +39,7 @@ async def auto_create_claim(worker_id: str, policy_id: str, trigger: Dict):
     income_loss = await estimate_income_loss(worker_id, trigger)
 
     # Step 4: Get policy coverage
-    policy = await db.policies.find_one({"id": policy_id})
+    policy = await db["policies"].find_one({"id": policy_id})
     max_payout = min(income_loss, policy["coverage_amount"], settings.MAX_WEEKLY_PAYOUT)
 
     # Step 5: Apply throttle reduction if active
@@ -75,18 +75,18 @@ async def auto_create_claim(worker_id: str, policy_id: str, trigger: Dict):
         trust_score=trust,
     )
 
-    await db.claims.insert_one(claim.model_dump())
+    await db["claims"].insert_one(claim.model_dump())
 
     # Step 8: Process instant payout
     if claim_status == ClaimStatus.AUTO_APPROVED:
-        payment = Payment(
+        payment = Payout(
             worker_id=worker_id,
             type="claim_payout",
             amount=round(payout_amount, 2),
             reference_id=claim.id,
         )
-        await db.payments.insert_one(payment.model_dump())
-        await db.claims.update_one(
+        await db["payouts"].insert_one(payment.model_dump())
+        await db["claims"].update_one(
             {"id": claim.id},
             {"$set": {
                 "status": ClaimStatus.PAID,
@@ -98,17 +98,17 @@ async def auto_create_claim(worker_id: str, policy_id: str, trigger: Dict):
     # Step 9: Update worker reliability score
     if trust.fraud_anomaly_score > 0.5:
         # Decrease reliability for suspicious workers
-        await db.users.update_one(
+        await db["users"].update_one(
             {"id": worker_id},
             {"$mul": {"reliability_score": 0.95}}
         )
     elif trust.composite_score > 0.85:
         # Reward trustworthy workers
-        await db.users.update_one(
+        await db["users"].update_one(
             {"id": worker_id},
             {"$min": {"reliability_score": 1.0}},
         )
-        await db.users.update_one(
+        await db["users"].update_one(
             {"id": worker_id},
             {"$mul": {"reliability_score": 1.01}},
         )

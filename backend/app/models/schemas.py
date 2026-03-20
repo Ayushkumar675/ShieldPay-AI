@@ -192,18 +192,31 @@ class FraudAlert(BaseModel):
     resolved: bool = False
 
 
-class FraudRing(BaseModel):
+
+# ─── Financials ──────────────────────────────────────────
+
+class PayoutTransaction(BaseModel):
     id: str = Field(default_factory=generate_id)
-    worker_ids: List[str] = []
-    detected_pattern: str = ""
-    confidence: float = 0.0
-    total_suspicious_claims: int = 0
+    claim_id: str
+    worker_id: str
+    amount: float
+    status: str = "processed"
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+
+class LiquidityState(BaseModel):
+    total_premiums: float = 0.0
+    total_payouts: float = 0.0
+    reserve_balance: float = 50000.0  # Initial seed capital
+    liquidity_ratio: float = 1.0
+    active_policies_count: int = 0
+    last_updated: datetime = Field(default_factory=datetime.utcnow)
+
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
-# ─── Payment ────────────────────────────────────────────
+# ─── Payout ────────────────────────────────────────────
 
-class Payment(BaseModel):
+class Payout(BaseModel):
     id: str = Field(default_factory=generate_id)
     worker_id: str
     type: str  # premium_collected, claim_payout

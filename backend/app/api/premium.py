@@ -15,7 +15,7 @@ router = APIRouter()
 async def get_premium_quote(current_user: dict = Depends(get_current_user)):
     """Get a dynamic premium quote for the current worker."""
     db = get_db()
-    worker = await db.users.find_one({"id": current_user["user_id"]})
+    worker = await db["users"].find_one({"id": current_user["user_id"]})
     if not worker:
         return {"error": "Worker not found"}
 
@@ -30,7 +30,7 @@ async def get_premium_quote(current_user: dict = Depends(get_current_user)):
 async def get_premium_factors(current_user: dict = Depends(get_current_user)):
     """Get breakdown of risk factors affecting premium."""
     db = get_db()
-    worker = await db.users.find_one({"id": current_user["user_id"]})
+    worker = await db["users"].find_one({"id": current_user["user_id"]})
     if not worker:
         return {"error": "Worker not found"}
 

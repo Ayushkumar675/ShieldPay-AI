@@ -29,8 +29,8 @@ async def analyze_movement(worker_id: str) -> Dict:
     from app.models.database import get_db
     db = get_db()
 
-    worker = await db.users.find_one({"id": worker_id}) if db else None
-    device = worker.get("device_signals", {}) if worker else {}
+    worker = await db["users"].find_one({"id": worker_id}) if db is not None else None
+    device = (worker.get("device_signals") or {}) if worker else {}
 
     # Check for teleport anomalies (GPS jump > 50km in < 30min)
     teleport_detected = False
@@ -74,7 +74,7 @@ async def analyze_delivery_activity(worker_id: str) -> Dict:
     from app.models.database import get_db
     db = get_db()
 
-    worker = await db.users.find_one({"id": worker_id}) if db else None
+    worker = await db["users"].find_one({"id": worker_id}) if db is not None else None
     avg_parcels = worker.get("avg_daily_parcels", 30) if worker else 30
     reliability = worker.get("reliability_score", 0.8) if worker else 0.8
 
@@ -116,15 +116,15 @@ async def analyze_environment(worker_id: str) -> Dict:
     from app.models.database import get_db
     db = get_db()
 
-    worker = await db.users.find_one({"id": worker_id}) if db else None
+    worker = await db["users"].find_one({"id": worker_id}) if db is not None else None
     warehouse_id = worker.get("warehouse_id", "") if worker else ""
 
     # Check how many other workers in same warehouse report disruption
-    if db and warehouse_id:
-        nearby_claims = await db.claims.count_documents({
+    if db is not None and warehouse_id:
+        nearby_claims = await db["claims"].count_documents({
             "created_at": {"$gte": datetime.utcnow() - timedelta(hours=24)},
         })
-        nearby_workers = await db.users.count_documents({"warehouse_id": warehouse_id})
+        nearby_workers = await db["users"].count_documents({"warehouse_id": warehouse_id})
         claim_density = nearby_claims / max(nearby_workers, 1)
     else:
         claim_density = random.uniform(0.1, 0.6)
@@ -143,7 +143,7 @@ async def analyze_environment(worker_id: str) -> Dict:
     return {
         "score": round(min(1.0, env_score), 3),
         "claim_density": round(claim_density, 3),
-        "nearby_claims": nearby_claims if db else 0,
+        "nearby_claims": nearby_claims if db is not None else 0,
         "telecom_correlated": telecom_correlated,
     }
 
@@ -162,8 +162,8 @@ async def analyze_device(worker_id: str) -> Dict:
     from app.models.database import get_db
     db = get_db()
 
-    worker = await db.users.find_one({"id": worker_id}) if db else None
-    device = worker.get("device_signals", {}) if worker else {}
+    worker = await db["users"].find_one({"id": worker_id}) if db is not None else None
+    device = (worker.get("device_signals") or {}) if worker else {}
 
     is_emulator = device.get("is_emulator", False)
     is_rooted = device.get("is_rooted", False)
@@ -212,8 +212,8 @@ async def detect_fraud_rings(worker_id: str) -> Dict:
     db = get_db()
 
     # Check for temporal claim clustering
-    if db:
-        recent_claims = await db.claims.count_documents({
+    if db is not None:
+        recent_claims = await db["claims"].count_documents({
             "worker_id": worker_id,
             "created_at": {"$gte": datetime.utcnow() - timedelta(hours=48)}
         })
@@ -224,8 +224,8 @@ async def detect_fraud_rings(worker_id: str) -> Dict:
     claim_spike = recent_claims > 3
 
     # Check if worker is part of a known fraud ring
-    if db:
-        ring = await db.fraud_rings.find_one({"worker_ids": worker_id})
+    if db is not None:
+        ring = await db['fraud_rings'].find_one({"worker_ids": worker_id})
     else:
         ring = None
     in_fraud_ring = ring is not None
@@ -266,8 +266,8 @@ async def check_and_create_alerts(worker_id: str, analysis: Dict) -> List[Dict]:
             severity=0.8,
             details={"flags": movement.get("flags", [])},
         )
-        if db:
-            await db.fraud_alerts.insert_one(alert.model_dump())
+        if db is not None:
+            await db["fraud_alerts"].insert_one(alert.model_dump())
         alerts.append(alert.model_dump())
 
     # Device issues
@@ -279,8 +279,8 @@ async def check_and_create_alerts(worker_id: str, analysis: Dict) -> List[Dict]:
             severity=0.7,
             details={"flags": device.get("flags", [])},
         )
-        if db:
-            await db.fraud_alerts.insert_one(alert.model_dump())
+        if db is not None:
+            await db["fraud_alerts"].insert_one(alert.model_dump())
         alerts.append(alert.model_dump())
 
     # Claim spikes
@@ -292,8 +292,8 @@ async def check_and_create_alerts(worker_id: str, analysis: Dict) -> List[Dict]:
             severity=0.6,
             details={"recent_claims": graph.get("recent_claims_48h", 0)},
         )
-        if db:
-            await db.fraud_alerts.insert_one(alert.model_dump())
+        if db is not None:
+            await db["fraud_alerts"].insert_one(alert.model_dump())
         alerts.append(alert.model_dump())
 
     # Fraud ring membership
@@ -304,8 +304,8 @@ async def check_and_create_alerts(worker_id: str, analysis: Dict) -> List[Dict]:
             severity=0.9,
             details={"ring_id": graph.get("ring_id")},
         )
-        if db:
-            await db.fraud_alerts.insert_one(alert.model_dump())
+        if db is not None:
+            await db["fraud_alerts"].insert_one(alert.model_dump())
         alerts.append(alert.model_dump())
 
     return alerts

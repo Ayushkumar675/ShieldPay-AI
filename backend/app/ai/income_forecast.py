@@ -21,7 +21,7 @@ async def estimate_income_loss(worker_id: str, trigger: dict) -> float:
     from app.models.database import get_db
     db = get_db()
 
-    worker = await db.users.find_one({"id": worker_id}) if db else None
+    worker = await db["users"].find_one({"id": worker_id}) if db is not None else None
 
     avg_daily_income = worker.get("avg_daily_income", 500) if worker else 500
     severity = trigger.get("severity", 0.5)
@@ -37,16 +37,20 @@ async def estimate_income_loss(worker_id: str, trigger: dict) -> float:
     }
     impact = type_impact.get(disruption_type, 0.6)
 
-    # Estimate duration in days (from trigger data or default)
+
+    # Deterministic duration based on severity
     if trigger.get("resolved_at") and trigger.get("detected_at"):
         try:
             detected = datetime.fromisoformat(str(trigger["detected_at"]))
             resolved = datetime.fromisoformat(str(trigger["resolved_at"]))
             duration_days = max(1, (resolved - detected).days)
         except (ValueError, TypeError):
-            duration_days = random.randint(1, 5)
+            duration_days = max(1, int(severity * 7))  # 1-7 days based on severity
     else:
-        duration_days = random.randint(1, 5)
+        duration_days = max(1, int(severity * 7))
+
+    return round(avg_daily_income * duration_days * impact, 2)
+
 
     # Income loss = avg_daily × severity × impact × duration
     income_loss = avg_daily_income * severity * impact * min(duration_days, 7)
@@ -62,7 +66,7 @@ async def forecast_weekly_income(worker_id: str) -> Dict:
     from app.models.database import get_db
     db = get_db()
 
-    worker = await db.users.find_one({"id": worker_id}) if db else None
+    worker = await db["users"].find_one({"id": worker_id}) if db is not None else None
     avg_parcels = worker.get("avg_daily_parcels", 30) if worker else 30
     avg_income = worker.get("avg_daily_income", 500) if worker else 500
 

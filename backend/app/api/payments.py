@@ -1,11 +1,11 @@
 """
-ShieldPay AI — Payment Simulation API
+ShieldPay AI — Payout Simulation API
 Simulates premium collection and claim payouts.
 """
 from fastapi import APIRouter, Depends
 from datetime import datetime
 
-from app.models.schemas import Payment
+from app.models.schemas import Payout
 from app.models.database import get_db
 from app.core.auth import get_current_user, require_admin
 
@@ -16,7 +16,7 @@ router = APIRouter()
 async def get_payment_history(current_user: dict = Depends(get_current_user)):
     """Get payment history for the current worker."""
     db = get_db()
-    cursor = db.payments.find(
+    cursor = db["payouts"].find(
         {"worker_id": current_user["user_id"]},
         {"_id": 0}
     ).sort("created_at", -1)
@@ -57,8 +57,8 @@ async def get_platform_payment_summary(current_user: dict = Depends(require_admi
         }}
     ]
 
-    premium_result = await db.payments.aggregate(premium_pipeline).to_list(1)
-    payout_result = await db.payments.aggregate(payout_pipeline).to_list(1)
+    premium_result = await db["payouts"].aggregate(premium_pipeline).to_list(1)
+    payout_result = await db["payouts"].aggregate(payout_pipeline).to_list(1)
 
     premiums = premium_result[0] if premium_result else {"total": 0, "count": 0}
     payouts = payout_result[0] if payout_result else {"total": 0, "count": 0}

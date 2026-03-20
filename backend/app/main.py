@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 
 from app.core.config import settings
 from app.models.database import connect_db, close_db
-from app.api import workers, policies, claims, premium, fraud, integrations, payments
+from app.api import workers, policies, claims, premium, fraud, integrations, payments, analytics
 from app.api.ai_routes import router as ai_router, load_ai_models
 
 
@@ -15,11 +15,16 @@ from app.api.ai_routes import router as ai_router, load_ai_models
 async def lifespan(app: FastAPI):
     """Startup and shutdown events."""
     # Load AI/ML models
-    print("\n🧠 Loading AI/ML Models...")
+    print("\nLoading AI/ML Models...")
     load_ai_models()
 
     # Connect database
     await connect_db()
+    
+    # Initialize platform metrics if they don't exist
+    from app.services.liquidity_engine import LiquidityEngineService
+    await LiquidityEngineService.get_state()
+    
     yield
     await close_db()
 
@@ -46,6 +51,9 @@ app.include_router(policies.router, prefix="/api/v1/policies", tags=["Policies"]
 app.include_router(claims.router, prefix="/api/v1/claims", tags=["Claims"])
 app.include_router(premium.router, prefix="/api/v1/premium", tags=["Premium"])
 app.include_router(fraud.router, prefix="/api/v1/fraud", tags=["Fraud Analytics"])
+app.include_router(analytics.router, prefix="/api/v1/analytics", tags=["Analytics"])
+from app.api import simulation
+app.include_router(simulation.router, prefix="/api/v1/simulation", tags=["Simulation"])
 app.include_router(integrations.router, prefix="/api/v1/integrations", tags=["External Integrations"])
 app.include_router(payments.router, prefix="/api/v1/payments", tags=["Payments"])
 app.include_router(ai_router, prefix="/api/v1/ai", tags=["AI Intelligence"])

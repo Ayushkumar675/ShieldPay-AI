@@ -49,7 +49,7 @@ async def compute_trust_score(worker_id: str) -> TrustScore:
     # Get historical trust from database
     from app.models.database import get_db
     db = get_db()
-    worker = await db.users.find_one({"id": worker_id}) if db else None
+    worker = await db["users"].find_one({"id": worker_id}) if db is not None else None
     historical_trust = worker.get("reliability_score", 0.8) if worker else 0.8
 
     # Device score affects movement trust

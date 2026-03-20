@@ -93,7 +93,7 @@ async def get_active_disruptions(current_user: dict = Depends(get_current_user))
     """Get all currently active disruption events."""
     from app.models.database import get_db
     db = get_db()
-    cursor = db.disruption_triggers.find(
+    cursor = db['disruption_triggers'].find(
         {"is_active": True},
         {"_id": 0}
     ).sort("detected_at", -1)

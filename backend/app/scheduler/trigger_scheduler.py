@@ -48,7 +48,7 @@ class TriggerScheduler:
 
         from app.models.database import get_db
         db = get_db()
-        if not db:
+        if db is None:
             print("  ⚠ Database not connected, skipping scan")
             return
 
@@ -80,7 +80,7 @@ class TriggerScheduler:
         for city, weather in MOCK_WEATHER_CONDITIONS.items():
             if weather["severity"] >= 0.6:  # Threshold for trigger
                 # Check if trigger already exists for this city
-                existing = await db.disruption_triggers.find_one({
+                existing = await db['disruption_triggers'].find_one({
                     "type": "weather",
                     "location.city": city,
                     "is_active": True
@@ -95,7 +95,7 @@ class TriggerScheduler:
                         weather_data=weather,
                         is_active=True,
                     )
-                    await db.disruption_triggers.insert_one(trigger.model_dump())
+                    await db['disruption_triggers'].insert_one(trigger.model_dump())
                     triggers.append(trigger.model_dump())
                     print(f"  🌧  Weather trigger: {city} (severity: {weather['severity']})")
 
@@ -108,14 +108,14 @@ class TriggerScheduler:
 
         triggers = []
         # Get all unique warehouse IDs
-        warehouse_ids = await db.users.distinct("warehouse_id")
+        warehouse_ids = await db["users"].distinct("warehouse_id")
 
         for wh_id in warehouse_ids[:5]:  # Check top 5 warehouses
             if not wh_id:
                 continue
             # Simulate warehouse check (20% chance of disruption)
             if random.random() < 0.15:
-                existing = await db.disruption_triggers.find_one({
+                existing = await db['disruption_triggers'].find_one({
                     "type": "warehouse_shutdown",
                     "affected_warehouse_ids": wh_id,
                     "is_active": True,
@@ -130,7 +130,7 @@ class TriggerScheduler:
                         description=f"Warehouse {wh_id} operations disrupted",
                         is_active=True,
                     )
-                    await db.disruption_triggers.insert_one(trigger.model_dump())
+                    await db['disruption_triggers'].insert_one(trigger.model_dump())
                     triggers.append(trigger.model_dump())
                     print(f"  🏭 Warehouse trigger: {wh_id}")
 
@@ -147,7 +147,7 @@ class TriggerScheduler:
         for city in cities:
             congestion = random.uniform(0.4, 1.0)
             if congestion > 0.85:  # Severe gridlock
-                existing = await db.disruption_triggers.find_one({
+                existing = await db['disruption_triggers'].find_one({
                     "type": "traffic_gridlock",
                     "location.city": city,
                     "is_active": True,
@@ -162,7 +162,7 @@ class TriggerScheduler:
                         traffic_data={"congestion_index": congestion},
                         is_active=True,
                     )
-                    await db.disruption_triggers.insert_one(trigger.model_dump())
+                    await db['disruption_triggers'].insert_one(trigger.model_dump())
                     triggers.append(trigger.model_dump())
                     print(f"  🚗 Traffic trigger: {city} (congestion: {congestion:.2f})")
 
@@ -177,19 +177,19 @@ class TriggerScheduler:
         if trigger.get("affected_warehouse_ids"):
             query["warehouse_id"] = {"$in": trigger["affected_warehouse_ids"]}
 
-        workers = await db.users.find(query).to_list(length=100)
+        workers = await db["users"].find(query).to_list(length=100)
         print(f"  👷 {len(workers)} workers in affected zone")
 
         claims_created = 0
         for worker in workers:
             # Check if worker has active policy
-            policy = await db.policies.find_one({
+            policy = await db["policies"].find_one({
                 "worker_id": worker["id"],
                 "status": "active"
             })
             if policy:
                 # Check for existing claim for this trigger
-                existing = await db.claims.find_one({
+                existing = await db["claims"].find_one({
                     "worker_id": worker["id"],
                     "trigger_id": trigger["id"]
                 })
@@ -202,7 +202,7 @@ class TriggerScheduler:
     async def _resolve_expired_triggers(self, db):
         """Resolve triggers that have been active for > 72 hours."""
         cutoff = datetime.utcnow() - timedelta(hours=72)
-        result = await db.disruption_triggers.update_many(
+        result = await db['disruption_triggers'].update_many(
             {"is_active": True, "detected_at": {"$lt": cutoff}},
             {"$set": {"is_active": False, "resolved_at": datetime.utcnow()}}
         )

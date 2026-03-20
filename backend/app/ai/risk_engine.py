@@ -77,12 +77,12 @@ async def get_warehouse_risk(warehouse_id: str) -> Dict:
     db = get_db()
 
     # Check for recent disruptions at this warehouse
-    if db:
-        disruptions = await db.disruption_triggers.count_documents({
+    if db is not None:
+        disruptions = await db['disruption_triggers'].count_documents({
             "affected_warehouse_ids": warehouse_id,
             "is_active": True
         })
-        historical = await db.disruption_triggers.count_documents({
+        historical = await db['disruption_triggers'].count_documents({
             "affected_warehouse_ids": warehouse_id
         })
         score = min(1.0, (disruptions * 0.3) + (historical * 0.02))
@@ -91,8 +91,8 @@ async def get_warehouse_risk(warehouse_id: str) -> Dict:
 
     return {
         "score": round(score, 3),
-        "active_disruptions": disruptions if db else 0,
-        "historical_incidents": historical if db else 0,
+        "active_disruptions": disruptions if db is not None else 0,
+        "historical_incidents": historical if db is not None else 0,
     }
 
 

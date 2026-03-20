@@ -20,19 +20,19 @@ async def check_throttle() -> Dict:
     from app.models.database import get_db
     db = get_db()
 
-    if not db:
+    if db is None:
         return {"is_throttled": False, "payout_multiplier": 1.0, "reason": "no_db"}
 
     now = datetime.utcnow()
 
     # Check 1: Claim spike in last 30 minutes
-    recent_claims = await db.claims.count_documents({
+    recent_claims = await db["claims"].count_documents({
         "created_at": {"$gte": now - timedelta(minutes=30)}
     })
     claim_spike = recent_claims > 50
 
     # Check 2: Payout rate in last hour
-    hour_payouts = await db.payments.aggregate([
+    hour_payouts = await db["payouts"].aggregate([
         {"$match": {
             "type": "claim_payout",
             "created_at": {"$gte": now - timedelta(hours=1)}
@@ -45,11 +45,11 @@ async def check_throttle() -> Dict:
     payout_rate_spike = hour_payout_count > 20  # More than 20 payouts per hour
 
     # Check 3: Overall liquidity
-    total_premiums_result = await db.payments.aggregate([
+    total_premiums_result = await db["payouts"].aggregate([
         {"$match": {"type": "premium_collected"}},
         {"$group": {"_id": None, "total": {"$sum": "$amount"}}}
     ]).to_list(1)
-    total_payouts_result = await db.payments.aggregate([
+    total_payouts_result = await db["payouts"].aggregate([
         {"$match": {"type": "claim_payout"}},
         {"$group": {"_id": None, "total": {"$sum": "$amount"}}}
     ]).to_list(1)
@@ -103,7 +103,7 @@ async def get_liquidity_simulation() -> Dict:
     from app.models.database import get_db
     db = get_db()
 
-    if not db:
+    if db is None:
         return {"error": "Database not connected"}
 
     # Get daily trends for last 30 days
@@ -118,7 +118,7 @@ async def get_liquidity_simulation() -> Dict:
         }},
         {"$sort": {"_id.date": 1}}
     ]
-    results = await db.payments.aggregate(pipeline).to_list(100)
+    results = await db["payouts"].aggregate(pipeline).to_list(100)
 
     daily_data = {}
     for r in results:

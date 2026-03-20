@@ -50,16 +50,16 @@ def load_ai_models():
     for name, path in model_files.items():
         if path.exists():
             ai_models[name] = joblib.load(path)
-            print(f"  ✅ AI Model loaded: {name}")
+            print(f"  AI Model loaded: {name}")
         else:
-            print(f"  ⚠ AI Model not found: {name} at {path}")
+            print(f"  AI Model not found: {name} at {path}")
 
     # Seed initial financial data
     _seed_financial_data()
     # Seed initial disruption events
     _seed_disruption_events()
 
-    print(f"  📦 {len(ai_models)} AI models loaded")
+    print(f"  {len(ai_models)} AI models loaded")
 
 
 def _seed_financial_data():
