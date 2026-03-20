@@ -1,0 +1,5002 @@
+[
+  {
+    "id": "ecdf01e8-0f3c-4404-a720-2f8e3175b4cc",
+    "name": "Worker_0001",
+    "email": "worker1@shieldpay.dev",
+    "phone": "+917331368101",
+    "platform": "meesho",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.596114,
+      "lng": 88.43187
+    },
+    "avg_daily_parcels": 41,
+    "avg_daily_income": 768.22,
+    "reliability_score": 0.851,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 175,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-24T19:58:55.431280"
+  },
+  {
+    "id": "e1f2420d-5702-4d1d-a295-15d305b8b5fb",
+    "name": "Worker_0002",
+    "email": "worker2@shieldpay.dev",
+    "phone": "+918750424414",
+    "platform": "amazon",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.003188,
+      "lng": 72.499803
+    },
+    "avg_daily_parcels": 27,
+    "avg_daily_income": 553.93,
+    "reliability_score": 0.773,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 215,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-12T19:58:55.431350"
+  },
+  {
+    "id": "5c3d4079-e03f-4c96-ae4c-06f8abb7d2f9",
+    "name": "Worker_0003",
+    "email": "worker3@shieldpay.dev",
+    "phone": "+918200590227",
+    "platform": "jiomart",
+    "warehouse_id": "WH-015",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.667412,
+      "lng": 88.323531
+    },
+    "avg_daily_parcels": 49,
+    "avg_daily_income": 759.56,
+    "reliability_score": 0.895,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 161,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-15T19:58:55.431369"
+  },
+  {
+    "id": "175fb4e9-fb48-4c71-9086-0f94f81b238a",
+    "name": "Worker_0004",
+    "email": "worker4@shieldpay.dev",
+    "phone": "+919751948400",
+    "platform": "meesho",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.505598,
+      "lng": 88.400088
+    },
+    "avg_daily_parcels": 44,
+    "avg_daily_income": 809.11,
+    "reliability_score": 0.764,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 488,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-02T19:58:55.431384"
+  },
+  {
+    "id": "c971e05f-88ff-4959-b0ba-6a1680f1874e",
+    "name": "Worker_0005",
+    "email": "worker5@shieldpay.dev",
+    "phone": "+917589194938",
+    "platform": "amazon",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.52704,
+      "lng": 88.363486
+    },
+    "avg_daily_parcels": 58,
+    "avg_daily_income": 735.31,
+    "reliability_score": 0.816,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 215,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-06T19:58:55.431396"
+  },
+  {
+    "id": "e00fd99b-795a-4ba0-8f23-aaadb89567cd",
+    "name": "Worker_0006",
+    "email": "worker6@shieldpay.dev",
+    "phone": "+918093335592",
+    "platform": "flipkart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.977562,
+      "lng": 77.617815
+    },
+    "avg_daily_parcels": 38,
+    "avg_daily_income": 491.09,
+    "reliability_score": 0.923,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 317,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-24T19:58:55.431407"
+  },
+  {
+    "id": "a5ec99a9-f37f-4f1d-bda4-f05a232bcd1d",
+    "name": "Worker_0007",
+    "email": "worker7@shieldpay.dev",
+    "phone": "+918201467821",
+    "platform": "flipkart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.043258,
+      "lng": 77.558924
+    },
+    "avg_daily_parcels": 17,
+    "avg_daily_income": 271.29,
+    "reliability_score": 0.834,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 383,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-15T19:58:55.431415"
+  },
+  {
+    "id": "b4c85a79-92f9-4925-9b2e-ced6d450157e",
+    "name": "Worker_0008",
+    "email": "worker8@shieldpay.dev",
+    "phone": "+917704776867",
+    "platform": "flipkart",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.631857,
+      "lng": 88.425021
+    },
+    "avg_daily_parcels": 52,
+    "avg_daily_income": 1136.01,
+    "reliability_score": 0.981,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 276,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-08T19:58:55.431427"
+  },
+  {
+    "id": "15f2561a-f383-4210-afce-d2d2780f8c61",
+    "name": "Worker_0009",
+    "email": "worker9@shieldpay.dev",
+    "phone": "+917992890033",
+    "platform": "meesho",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.534243,
+      "lng": 77.113501
+    },
+    "avg_daily_parcels": 21,
+    "avg_daily_income": 436.29,
+    "reliability_score": 0.994,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 360,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-17T19:58:55.431436"
+  },
+  {
+    "id": "6d517f06-1116-4be2-adcb-d898ac9240e7",
+    "name": "Worker_0010",
+    "email": "worker10@shieldpay.dev",
+    "phone": "+917533652543",
+    "platform": "meesho",
+    "warehouse_id": "WH-006",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.427312,
+      "lng": 78.551555
+    },
+    "avg_daily_parcels": 36,
+    "avg_daily_income": 454.92,
+    "reliability_score": 0.875,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 277,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-27T19:58:55.431446"
+  },
+  {
+    "id": "d8a1df6c-51fe-4c2e-844a-7310c9344f7e",
+    "name": "Worker_0011",
+    "email": "worker11@shieldpay.dev",
+    "phone": "+919638814600",
+    "platform": "amazon",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 22.986141,
+      "lng": 72.453463
+    },
+    "avg_daily_parcels": 46,
+    "avg_daily_income": 766.18,
+    "reliability_score": 0.827,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 326,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-02T19:58:55.431454"
+  },
+  {
+    "id": "48b1539d-ef2c-4f7b-b717-0fe768f03dea",
+    "name": "Worker_0012",
+    "email": "worker12@shieldpay.dev",
+    "phone": "+917549277571",
+    "platform": "flipkart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.410325,
+      "lng": 88.241883
+    },
+    "avg_daily_parcels": 52,
+    "avg_daily_income": 1093.53,
+    "reliability_score": 0.925,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 363,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-29T19:58:55.431464"
+  },
+  {
+    "id": "6f4dbbe2-389b-4525-abd6-cf45e8512f7a",
+    "name": "Worker_0013",
+    "email": "worker13@shieldpay.dev",
+    "phone": "+919515036396",
+    "platform": "amazon",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.005274,
+      "lng": 77.556623
+    },
+    "avg_daily_parcels": 40,
+    "avg_daily_income": 610.3,
+    "reliability_score": 0.982,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 463,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-09T19:58:55.431474"
+  },
+  {
+    "id": "182950dd-3720-412f-9895-45d671b27bd5",
+    "name": "Worker_0014",
+    "email": "worker14@shieldpay.dev",
+    "phone": "+918197850630",
+    "platform": "flipkart",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.262086,
+      "lng": 78.567195
+    },
+    "avg_daily_parcels": 37,
+    "avg_daily_income": 455.82,
+    "reliability_score": 0.773,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 284,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-30T19:58:55.431482"
+  },
+  {
+    "id": "c48b0bdf-9018-4121-8441-231ae166ec5f",
+    "name": "Worker_0015",
+    "email": "worker15@shieldpay.dev",
+    "phone": "+917731917311",
+    "platform": "meesho",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.537176,
+      "lng": 77.099735
+    },
+    "avg_daily_parcels": 41,
+    "avg_daily_income": 581.79,
+    "reliability_score": 0.852,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 474,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-02T19:58:55.431490"
+  },
+  {
+    "id": "827a7f2f-21b9-4a5b-a657-05344d0f73b7",
+    "name": "Worker_0016",
+    "email": "worker16@shieldpay.dev",
+    "phone": "+917608590060",
+    "platform": "amazon",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.598594,
+      "lng": 88.453302
+    },
+    "avg_daily_parcels": 15,
+    "avg_daily_income": 238.41,
+    "reliability_score": 0.738,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 391,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-12T19:58:55.431498"
+  },
+  {
+    "id": "2ec4cadc-1b5b-45d3-88a0-90035416301d",
+    "name": "Worker_0017",
+    "email": "worker17@shieldpay.dev",
+    "phone": "+919318238729",
+    "platform": "jiomart",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.334671,
+      "lng": 78.586518
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 864.1,
+    "reliability_score": 0.718,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 269,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-01T19:58:55.431507"
+  },
+  {
+    "id": "4f49779f-f6b0-47d5-85fa-669f91efe286",
+    "name": "Worker_0018",
+    "email": "worker18@shieldpay.dev",
+    "phone": "+919414522508",
+    "platform": "amazon",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.994995,
+      "lng": 77.659388
+    },
+    "avg_daily_parcels": 50,
+    "avg_daily_income": 982.79,
+    "reliability_score": 0.302,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": true,
+      "is_rooted": false,
+      "app_install_age_days": 28,
+      "background_location_streaming": true,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-01T19:58:55.431519"
+  },
+  {
+    "id": "a73e1cfb-3a97-4584-af65-f3817e8395d1",
+    "name": "Worker_0019",
+    "email": "worker19@shieldpay.dev",
+    "phone": "+917115911192",
+    "platform": "amazon",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.405213,
+      "lng": 88.218997
+    },
+    "avg_daily_parcels": 51,
+    "avg_daily_income": 664.63,
+    "reliability_score": 0.722,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 191,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-26T19:58:55.431527"
+  },
+  {
+    "id": "0e69d89b-0235-4984-b4f8-040f5d8a1218",
+    "name": "Worker_0020",
+    "email": "worker20@shieldpay.dev",
+    "phone": "+918150832634",
+    "platform": "jiomart",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.433408,
+      "lng": 88.422579
+    },
+    "avg_daily_parcels": 55,
+    "avg_daily_income": 1189.11,
+    "reliability_score": 0.473,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": true,
+      "is_rooted": false,
+      "app_install_age_days": 6,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-12T19:58:55.431538"
+  },
+  {
+    "id": "5c905cdc-eff2-4377-b64a-ddd61b2d1730",
+    "name": "Worker_0021",
+    "email": "worker21@shieldpay.dev",
+    "phone": "+919129969098",
+    "platform": "meesho",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.292556,
+      "lng": 78.580572
+    },
+    "avg_daily_parcels": 28,
+    "avg_daily_income": 486.61,
+    "reliability_score": 0.74,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 103,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-29T19:58:55.431547"
+  },
+  {
+    "id": "a3c5fcee-9f8a-4238-bddc-90da38222945",
+    "name": "Worker_0022",
+    "email": "worker22@shieldpay.dev",
+    "phone": "+918232606203",
+    "platform": "flipkart",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.535438,
+      "lng": 88.29841
+    },
+    "avg_daily_parcels": 60,
+    "avg_daily_income": 1263.65,
+    "reliability_score": 0.776,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 311,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-26T19:58:55.431557"
+  },
+  {
+    "id": "62415ba2-71b8-4f03-b335-d32a50359520",
+    "name": "Worker_0023",
+    "email": "worker23@shieldpay.dev",
+    "phone": "+917809269596",
+    "platform": "jiomart",
+    "warehouse_id": "WH-015",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.694537,
+      "lng": 88.249646
+    },
+    "avg_daily_parcels": 43,
+    "avg_daily_income": 683.86,
+    "reliability_score": 0.967,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 297,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-27T19:58:55.431567"
+  },
+  {
+    "id": "30b86a99-5ef4-4956-89d3-5f68e66dc6ac",
+    "name": "Worker_0024",
+    "email": "worker24@shieldpay.dev",
+    "phone": "+919424012362",
+    "platform": "amazon",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.454615,
+      "lng": 88.265869
+    },
+    "avg_daily_parcels": 36,
+    "avg_daily_income": 662.89,
+    "reliability_score": 0.991,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 216,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-03T19:58:55.431575"
+  },
+  {
+    "id": "3ff567ce-958d-49c8-a891-2b4026a87572",
+    "name": "Worker_0025",
+    "email": "worker25@shieldpay.dev",
+    "phone": "+917230558082",
+    "platform": "amazon",
+    "warehouse_id": "WH-006",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.418919,
+      "lng": 78.610338
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 833.23,
+    "reliability_score": 0.889,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 494,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-26T19:58:55.431587"
+  },
+  {
+    "id": "bd37b3a6-462b-429b-a75c-33e4548e2c53",
+    "name": "Worker_0026",
+    "email": "worker26@shieldpay.dev",
+    "phone": "+918489816366",
+    "platform": "meesho",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.738537,
+      "lng": 77.076681
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 666.46,
+    "reliability_score": 0.766,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 481,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-16T19:58:55.431598"
+  },
+  {
+    "id": "fe312c30-c2f8-41d4-812b-9e0d219348f1",
+    "name": "Worker_0027",
+    "email": "worker27@shieldpay.dev",
+    "phone": "+919821731527",
+    "platform": "flipkart",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.888219,
+      "lng": 77.470512
+    },
+    "avg_daily_parcels": 27,
+    "avg_daily_income": 529.21,
+    "reliability_score": 0.843,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 186,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-17T19:58:55.431607"
+  },
+  {
+    "id": "62805193-b5fd-4fc1-8f48-280b91933a40",
+    "name": "Worker_0028",
+    "email": "worker28@shieldpay.dev",
+    "phone": "+917882081437",
+    "platform": "jiomart",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.908156,
+      "lng": 77.532557
+    },
+    "avg_daily_parcels": 27,
+    "avg_daily_income": 370.75,
+    "reliability_score": 0.715,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 400,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-26T19:58:55.431617"
+  },
+  {
+    "id": "7bee05b0-97aa-4b93-b7af-308ffb058cc9",
+    "name": "Worker_0029",
+    "email": "worker29@shieldpay.dev",
+    "phone": "+919095957444",
+    "platform": "jiomart",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.601761,
+      "lng": 88.471964
+    },
+    "avg_daily_parcels": 26,
+    "avg_daily_income": 387.44,
+    "reliability_score": 0.709,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 390,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-26T19:58:55.431626"
+  },
+  {
+    "id": "07588006-abbd-450a-bdb8-b96b2da1ba19",
+    "name": "Worker_0030",
+    "email": "worker30@shieldpay.dev",
+    "phone": "+919219409556",
+    "platform": "jiomart",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.593956,
+      "lng": 77.11524
+    },
+    "avg_daily_parcels": 41,
+    "avg_daily_income": 581.78,
+    "reliability_score": 0.369,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": true,
+      "is_rooted": true,
+      "app_install_age_days": 8,
+      "background_location_streaming": true,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-04T19:58:55.431635"
+  },
+  {
+    "id": "275aecc6-355c-4f49-aa77-71bb120fb30b",
+    "name": "Worker_0031",
+    "email": "worker31@shieldpay.dev",
+    "phone": "+918981499329",
+    "platform": "jiomart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.987849,
+      "lng": 77.587416
+    },
+    "avg_daily_parcels": 38,
+    "avg_daily_income": 503.34,
+    "reliability_score": 0.787,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 279,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-16T19:58:55.431644"
+  },
+  {
+    "id": "12410448-a5ac-47dc-b056-769c3b0df873",
+    "name": "Worker_0032",
+    "email": "worker32@shieldpay.dev",
+    "phone": "+917624542859",
+    "platform": "flipkart",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.509699,
+      "lng": 88.372198
+    },
+    "avg_daily_parcels": 57,
+    "avg_daily_income": 879.67,
+    "reliability_score": 0.782,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 241,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-12T19:58:55.431652"
+  },
+  {
+    "id": "20a75f94-6ab3-4c37-a46d-236a453f34b2",
+    "name": "Worker_0033",
+    "email": "worker33@shieldpay.dev",
+    "phone": "+918450110175",
+    "platform": "meesho",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.59672,
+      "lng": 77.147719
+    },
+    "avg_daily_parcels": 58,
+    "avg_daily_income": 1023.21,
+    "reliability_score": 0.885,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 90,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-29T19:58:55.431662"
+  },
+  {
+    "id": "7239af10-4718-40e6-a193-40cf7388d9bb",
+    "name": "Worker_0034",
+    "email": "worker34@shieldpay.dev",
+    "phone": "+919837404632",
+    "platform": "meesho",
+    "warehouse_id": "WH-009",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.47577,
+      "lng": 78.492574
+    },
+    "avg_daily_parcels": 46,
+    "avg_daily_income": 609.32,
+    "reliability_score": 0.93,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 444,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-28T19:58:55.431671"
+  },
+  {
+    "id": "0d794ec7-82a5-4aaa-9123-4d532be9aca3",
+    "name": "Worker_0035",
+    "email": "worker35@shieldpay.dev",
+    "phone": "+919623284300",
+    "platform": "flipkart",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.767734,
+      "lng": 77.138196
+    },
+    "avg_daily_parcels": 39,
+    "avg_daily_income": 561.43,
+    "reliability_score": 0.709,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 143,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-09T19:58:55.431680"
+  },
+  {
+    "id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+    "name": "Worker_0036",
+    "email": "worker36@shieldpay.dev",
+    "phone": "+917921885846",
+    "platform": "amazon",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.552311,
+      "lng": 88.47716
+    },
+    "avg_daily_parcels": 50,
+    "avg_daily_income": 820.96,
+    "reliability_score": 0.405,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 22,
+      "background_location_streaming": true,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-20T19:58:55.431689"
+  },
+  {
+    "id": "ac4a5a71-52bf-4b05-9831-b1d5da121589",
+    "name": "Worker_0037",
+    "email": "worker37@shieldpay.dev",
+    "phone": "+917938468228",
+    "platform": "flipkart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.437543,
+      "lng": 88.212284
+    },
+    "avg_daily_parcels": 35,
+    "avg_daily_income": 450.75,
+    "reliability_score": 0.896,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 120,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-03T19:58:55.431698"
+  },
+  {
+    "id": "a8e91672-ebcf-4f25-b4f3-d57b8417aa8b",
+    "name": "Worker_0038",
+    "email": "worker38@shieldpay.dev",
+    "phone": "+919404197687",
+    "platform": "jiomart",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.769129,
+      "lng": 77.092929
+    },
+    "avg_daily_parcels": 55,
+    "avg_daily_income": 903.82,
+    "reliability_score": 0.732,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 378,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-04T19:58:55.431708"
+  },
+  {
+    "id": "95a63de6-8ea8-4f36-b2c9-443b12207312",
+    "name": "Worker_0039",
+    "email": "worker39@shieldpay.dev",
+    "phone": "+918090372523",
+    "platform": "meesho",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.967081,
+      "lng": 77.619083
+    },
+    "avg_daily_parcels": 39,
+    "avg_daily_income": 836.74,
+    "reliability_score": 0.829,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 295,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-08T19:58:55.431716"
+  },
+  {
+    "id": "b6a89879-fc07-4dd3-ae0d-da9029dfc915",
+    "name": "Worker_0040",
+    "email": "worker40@shieldpay.dev",
+    "phone": "+917933849220",
+    "platform": "jiomart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.961953,
+      "lng": 77.666509
+    },
+    "avg_daily_parcels": 58,
+    "avg_daily_income": 1107.84,
+    "reliability_score": 0.862,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 320,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-28T19:58:55.431725"
+  },
+  {
+    "id": "289afcdb-dbb4-4d9f-9e41-993e8c1b665c",
+    "name": "Worker_0041",
+    "email": "worker41@shieldpay.dev",
+    "phone": "+917113749020",
+    "platform": "amazon",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.286102,
+      "lng": 78.604778
+    },
+    "avg_daily_parcels": 32,
+    "avg_daily_income": 389.43,
+    "reliability_score": 0.764,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 442,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-14T19:58:55.431734"
+  },
+  {
+    "id": "c8740a72-536c-4d50-a653-c472fc381e56",
+    "name": "Worker_0042",
+    "email": "worker42@shieldpay.dev",
+    "phone": "+918204138580",
+    "platform": "jiomart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.004244,
+      "lng": 77.63237
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 401.99,
+    "reliability_score": 0.821,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 313,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-03-22T19:58:55.431744"
+  },
+  {
+    "id": "41577684-1bf9-4ddb-b255-0b3992874c20",
+    "name": "Worker_0043",
+    "email": "worker43@shieldpay.dev",
+    "phone": "+919455130927",
+    "platform": "amazon",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.5982,
+      "lng": 77.072443
+    },
+    "avg_daily_parcels": 49,
+    "avg_daily_income": 740.1,
+    "reliability_score": 0.87,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 262,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-03-21T19:58:55.431753"
+  },
+  {
+    "id": "0a2931ff-92e8-4d29-bcff-cc9ec1ac426d",
+    "name": "Worker_0044",
+    "email": "worker44@shieldpay.dev",
+    "phone": "+917651001696",
+    "platform": "jiomart",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.470551,
+      "lng": 88.294397
+    },
+    "avg_daily_parcels": 55,
+    "avg_daily_income": 866.33,
+    "reliability_score": 0.757,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 97,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-27T19:58:55.431763"
+  },
+  {
+    "id": "8265cde2-bfe6-4a6e-95f8-48607021d357",
+    "name": "Worker_0045",
+    "email": "worker45@shieldpay.dev",
+    "phone": "+917031430701",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.477926,
+      "lng": 88.245043
+    },
+    "avg_daily_parcels": 47,
+    "avg_daily_income": 759.85,
+    "reliability_score": 0.969,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 386,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-28T19:58:55.431772"
+  },
+  {
+    "id": "b0f637a4-bcad-409b-939d-745a653b3c56",
+    "name": "Worker_0046",
+    "email": "worker46@shieldpay.dev",
+    "phone": "+917744743925",
+    "platform": "meesho",
+    "warehouse_id": "WH-009",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.440761,
+      "lng": 78.491054
+    },
+    "avg_daily_parcels": 23,
+    "avg_daily_income": 405.6,
+    "reliability_score": 0.982,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 493,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-26T19:58:55.431781"
+  },
+  {
+    "id": "b4e2bd16-be0a-49b7-831a-91d4be0a9420",
+    "name": "Worker_0047",
+    "email": "worker47@shieldpay.dev",
+    "phone": "+917003081306",
+    "platform": "amazon",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.455937,
+      "lng": 88.468615
+    },
+    "avg_daily_parcels": 28,
+    "avg_daily_income": 470.75,
+    "reliability_score": 0.99,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 453,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-21T19:58:55.431791"
+  },
+  {
+    "id": "317b8a33-b316-4e75-b4cb-21c7c5bc0ddd",
+    "name": "Worker_0048",
+    "email": "worker48@shieldpay.dev",
+    "phone": "+918247738192",
+    "platform": "meesho",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.471951,
+      "lng": 88.485451
+    },
+    "avg_daily_parcels": 24,
+    "avg_daily_income": 513.85,
+    "reliability_score": 0.912,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 377,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-09T19:58:55.431801"
+  },
+  {
+    "id": "5f752240-3d00-422e-9ab7-eadce14db335",
+    "name": "Worker_0049",
+    "email": "worker49@shieldpay.dev",
+    "phone": "+919866798259",
+    "platform": "flipkart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.014038,
+      "lng": 77.594175
+    },
+    "avg_daily_parcels": 46,
+    "avg_daily_income": 679.87,
+    "reliability_score": 0.932,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 260,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-05T19:58:55.431811"
+  },
+  {
+    "id": "1a012509-d152-4589-b219-31390b6f1cb4",
+    "name": "Worker_0050",
+    "email": "worker50@shieldpay.dev",
+    "phone": "+918186718344",
+    "platform": "meesho",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.654599,
+      "lng": 88.478921
+    },
+    "avg_daily_parcels": 34,
+    "avg_daily_income": 414.76,
+    "reliability_score": 0.793,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 495,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-03T19:58:55.431822"
+  },
+  {
+    "id": "ad48eb06-de54-44bf-9033-c9b0338edda2",
+    "name": "Worker_0051",
+    "email": "worker51@shieldpay.dev",
+    "phone": "+918769794577",
+    "platform": "meesho",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.458165,
+      "lng": 88.435763
+    },
+    "avg_daily_parcels": 51,
+    "avg_daily_income": 633.99,
+    "reliability_score": 0.711,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 168,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-08T19:58:55.431832"
+  },
+  {
+    "id": "a0b5a273-f524-424b-8f68-319435223e15",
+    "name": "Worker_0052",
+    "email": "worker52@shieldpay.dev",
+    "phone": "+918775205578",
+    "platform": "meesho",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.88442,
+      "lng": 77.4796
+    },
+    "avg_daily_parcels": 16,
+    "avg_daily_income": 320.08,
+    "reliability_score": 0.709,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 218,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-22T19:58:55.431841"
+  },
+  {
+    "id": "91296b34-b9ec-4749-b199-d419c1f1008c",
+    "name": "Worker_0053",
+    "email": "worker53@shieldpay.dev",
+    "phone": "+919409162122",
+    "platform": "amazon",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.502486,
+      "lng": 88.455154
+    },
+    "avg_daily_parcels": 25,
+    "avg_daily_income": 511.89,
+    "reliability_score": 0.928,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 358,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-05T19:58:55.431852"
+  },
+  {
+    "id": "71ffba31-8b21-4d50-b680-7ac1e985b85c",
+    "name": "Worker_0054",
+    "email": "worker54@shieldpay.dev",
+    "phone": "+918781908279",
+    "platform": "meesho",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.012057,
+      "lng": 77.660453
+    },
+    "avg_daily_parcels": 47,
+    "avg_daily_income": 978.07,
+    "reliability_score": 0.941,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 380,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-04T19:58:55.431863"
+  },
+  {
+    "id": "bfe60496-0b96-41e3-b8c6-67d9e5c7a526",
+    "name": "Worker_0055",
+    "email": "worker55@shieldpay.dev",
+    "phone": "+917713834435",
+    "platform": "meesho",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.806593,
+      "lng": 77.116953
+    },
+    "avg_daily_parcels": 43,
+    "avg_daily_income": 779.27,
+    "reliability_score": 0.773,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 326,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-28T19:58:55.431873"
+  },
+  {
+    "id": "1c30a413-af44-45fb-8656-437dfed2d644",
+    "name": "Worker_0056",
+    "email": "worker56@shieldpay.dev",
+    "phone": "+919367529798",
+    "platform": "jiomart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.032839,
+      "lng": 77.663077
+    },
+    "avg_daily_parcels": 51,
+    "avg_daily_income": 868.39,
+    "reliability_score": 0.906,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 499,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-06T19:58:55.431882"
+  },
+  {
+    "id": "b4b6c68d-2ff8-49b7-8aa8-a111e7354a40",
+    "name": "Worker_0057",
+    "email": "worker57@shieldpay.dev",
+    "phone": "+918988452386",
+    "platform": "jiomart",
+    "warehouse_id": "WH-015",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.662175,
+      "lng": 88.281391
+    },
+    "avg_daily_parcels": 45,
+    "avg_daily_income": 562.79,
+    "reliability_score": 0.92,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 92,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-19T19:58:55.431890"
+  },
+  {
+    "id": "4fedfb89-9f69-441b-9a86-4a10eb4f811e",
+    "name": "Worker_0058",
+    "email": "worker58@shieldpay.dev",
+    "phone": "+918468506117",
+    "platform": "jiomart",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.50208,
+      "lng": 88.400417
+    },
+    "avg_daily_parcels": 58,
+    "avg_daily_income": 1123.26,
+    "reliability_score": 0.757,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 310,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-01T19:58:55.431902"
+  },
+  {
+    "id": "7b5cb8df-93a0-461f-b250-03705d44b21e",
+    "name": "Worker_0059",
+    "email": "worker59@shieldpay.dev",
+    "phone": "+917314251770",
+    "platform": "flipkart",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.461557,
+      "lng": 88.411283
+    },
+    "avg_daily_parcels": 15,
+    "avg_daily_income": 321.07,
+    "reliability_score": 0.766,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 477,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-01T19:58:55.431911"
+  },
+  {
+    "id": "681e5c66-f69d-424f-9426-d7ff58f54fa9",
+    "name": "Worker_0060",
+    "email": "worker60@shieldpay.dev",
+    "phone": "+918034269279",
+    "platform": "jiomart",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.54303,
+      "lng": 77.09571
+    },
+    "avg_daily_parcels": 35,
+    "avg_daily_income": 541.19,
+    "reliability_score": 0.858,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 358,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-05T19:58:55.431920"
+  },
+  {
+    "id": "b655312c-749e-4cf7-98ae-c2a4434530d7",
+    "name": "Worker_0061",
+    "email": "worker61@shieldpay.dev",
+    "phone": "+919283073568",
+    "platform": "flipkart",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.007631,
+      "lng": 72.510578
+    },
+    "avg_daily_parcels": 24,
+    "avg_daily_income": 385.2,
+    "reliability_score": 0.848,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 253,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-16T19:58:55.431929"
+  },
+  {
+    "id": "a65cce90-8305-4195-838e-1c3aaa3e3da0",
+    "name": "Worker_0062",
+    "email": "worker62@shieldpay.dev",
+    "phone": "+919807331727",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.427562,
+      "lng": 88.200125
+    },
+    "avg_daily_parcels": 36,
+    "avg_daily_income": 646.81,
+    "reliability_score": 0.776,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 289,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-03-28T19:58:55.431938"
+  },
+  {
+    "id": "b793155e-4674-4fd5-a93f-9350eabd37ad",
+    "name": "Worker_0063",
+    "email": "worker63@shieldpay.dev",
+    "phone": "+918720149826",
+    "platform": "jiomart",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.296282,
+      "lng": 78.62769
+    },
+    "avg_daily_parcels": 48,
+    "avg_daily_income": 1025.06,
+    "reliability_score": 0.732,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 281,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-21T19:58:55.432015"
+  },
+  {
+    "id": "5b7c6800-9e2a-4061-9893-c72cca1aa26b",
+    "name": "Worker_0064",
+    "email": "worker64@shieldpay.dev",
+    "phone": "+917140989255",
+    "platform": "jiomart",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.26533,
+      "lng": 78.589535
+    },
+    "avg_daily_parcels": 32,
+    "avg_daily_income": 646.16,
+    "reliability_score": 0.772,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 463,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-26T19:58:55.432025"
+  },
+  {
+    "id": "17819df4-df80-4f53-8e2d-4b861a4a5f52",
+    "name": "Worker_0065",
+    "email": "worker65@shieldpay.dev",
+    "phone": "+919341584607",
+    "platform": "meesho",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.502385,
+      "lng": 88.314137
+    },
+    "avg_daily_parcels": 39,
+    "avg_daily_income": 722.22,
+    "reliability_score": 0.924,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 357,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-23T19:58:55.432036"
+  },
+  {
+    "id": "8a8b31ec-fe93-4239-a0e1-e7a91c934302",
+    "name": "Worker_0066",
+    "email": "worker66@shieldpay.dev",
+    "phone": "+919599863399",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.476819,
+      "lng": 88.273089
+    },
+    "avg_daily_parcels": 55,
+    "avg_daily_income": 1071.7,
+    "reliability_score": 0.774,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 320,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-24T19:58:55.432046"
+  },
+  {
+    "id": "4114f5bb-4f90-4a02-bc2a-60c4569ce3c6",
+    "name": "Worker_0067",
+    "email": "worker67@shieldpay.dev",
+    "phone": "+918365939554",
+    "platform": "jiomart",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 22.997074,
+      "lng": 72.51264
+    },
+    "avg_daily_parcels": 33,
+    "avg_daily_income": 682.4,
+    "reliability_score": 0.852,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 300,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-13T19:58:55.432054"
+  },
+  {
+    "id": "d3bfd831-e8ec-4150-87be-c1cef564ed4b",
+    "name": "Worker_0068",
+    "email": "worker68@shieldpay.dev",
+    "phone": "+919574278884",
+    "platform": "flipkart",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.648967,
+      "lng": 88.44119
+    },
+    "avg_daily_parcels": 48,
+    "avg_daily_income": 721.32,
+    "reliability_score": 0.708,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 383,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-16T19:58:55.432066"
+  },
+  {
+    "id": "4dafbbf2-aedf-4960-8a05-bbc6048baf54",
+    "name": "Worker_0069",
+    "email": "worker69@shieldpay.dev",
+    "phone": "+919863075301",
+    "platform": "meesho",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.873374,
+      "lng": 77.488411
+    },
+    "avg_daily_parcels": 53,
+    "avg_daily_income": 1122.74,
+    "reliability_score": 0.723,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 413,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-29T19:58:55.432075"
+  },
+  {
+    "id": "76a01149-601b-48c2-b5a6-5fbb8e5734a2",
+    "name": "Worker_0070",
+    "email": "worker70@shieldpay.dev",
+    "phone": "+917284658047",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.473407,
+      "lng": 88.233329
+    },
+    "avg_daily_parcels": 31,
+    "avg_daily_income": 488.82,
+    "reliability_score": 0.894,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 445,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-25T19:58:55.432084"
+  },
+  {
+    "id": "a0eee7cf-5077-4259-9840-fa601a31a608",
+    "name": "Worker_0071",
+    "email": "worker71@shieldpay.dev",
+    "phone": "+917230193490",
+    "platform": "meesho",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.487456,
+      "lng": 88.275898
+    },
+    "avg_daily_parcels": 42,
+    "avg_daily_income": 898.84,
+    "reliability_score": 0.819,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 303,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-30T19:58:55.432094"
+  },
+  {
+    "id": "a76e11e4-a167-493f-a96b-cc85cabd3c48",
+    "name": "Worker_0072",
+    "email": "worker72@shieldpay.dev",
+    "phone": "+917851982952",
+    "platform": "meesho",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.470146,
+      "lng": 88.486703
+    },
+    "avg_daily_parcels": 59,
+    "avg_daily_income": 852.77,
+    "reliability_score": 0.781,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 112,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-02T19:58:55.432102"
+  },
+  {
+    "id": "e663f8a8-fce5-40cc-b698-42c4f388fe61",
+    "name": "Worker_0073",
+    "email": "worker73@shieldpay.dev",
+    "phone": "+918861009325",
+    "platform": "jiomart",
+    "warehouse_id": "WH-006",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.427048,
+      "lng": 78.627216
+    },
+    "avg_daily_parcels": 52,
+    "avg_daily_income": 1074.87,
+    "reliability_score": 0.356,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": true,
+      "is_rooted": false,
+      "app_install_age_days": 19,
+      "background_location_streaming": true,
+      "accelerometer_available": false
+    },
+    "created_at": "2025-04-19T19:58:55.432111"
+  },
+  {
+    "id": "969fccb4-0138-4199-bda5-0dc39d4eec5e",
+    "name": "Worker_0074",
+    "email": "worker74@shieldpay.dev",
+    "phone": "+918816884270",
+    "platform": "meesho",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.031667,
+      "lng": 72.507244
+    },
+    "avg_daily_parcels": 49,
+    "avg_daily_income": 979.34,
+    "reliability_score": 0.917,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 150,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-11T19:58:55.432120"
+  },
+  {
+    "id": "55c5a6a3-7afc-4bba-b5ab-377f38c5e467",
+    "name": "Worker_0075",
+    "email": "worker75@shieldpay.dev",
+    "phone": "+917634505470",
+    "platform": "amazon",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.529104,
+      "lng": 88.332857
+    },
+    "avg_daily_parcels": 32,
+    "avg_daily_income": 638.77,
+    "reliability_score": 0.957,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 87,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-03T19:58:55.432130"
+  },
+  {
+    "id": "3b83c43a-3340-4ee0-8b6b-769d74a713c6",
+    "name": "Worker_0076",
+    "email": "worker76@shieldpay.dev",
+    "phone": "+919599850826",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.409297,
+      "lng": 88.207036
+    },
+    "avg_daily_parcels": 58,
+    "avg_daily_income": 1008.81,
+    "reliability_score": 0.859,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 327,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-06T19:58:55.432145"
+  },
+  {
+    "id": "cf3e3cf3-f16b-4a0b-b933-e5bc79d29862",
+    "name": "Worker_0077",
+    "email": "worker77@shieldpay.dev",
+    "phone": "+918089867862",
+    "platform": "amazon",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.518476,
+      "lng": 88.34773
+    },
+    "avg_daily_parcels": 24,
+    "avg_daily_income": 314.36,
+    "reliability_score": 0.931,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 457,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-25T19:58:55.432155"
+  },
+  {
+    "id": "3f3a23e6-be75-4af6-8765-83d09ae21f65",
+    "name": "Worker_0078",
+    "email": "worker78@shieldpay.dev",
+    "phone": "+919781166593",
+    "platform": "flipkart",
+    "warehouse_id": "WH-015",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.636376,
+      "lng": 88.253582
+    },
+    "avg_daily_parcels": 34,
+    "avg_daily_income": 577.42,
+    "reliability_score": 0.767,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 200,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-13T19:58:55.432166"
+  },
+  {
+    "id": "b9da5a7f-7123-4a77-beca-534801fe5f82",
+    "name": "Worker_0079",
+    "email": "worker79@shieldpay.dev",
+    "phone": "+918429187999",
+    "platform": "meesho",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.005672,
+      "lng": 77.589377
+    },
+    "avg_daily_parcels": 46,
+    "avg_daily_income": 872.13,
+    "reliability_score": 0.951,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 121,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-14T19:58:55.432176"
+  },
+  {
+    "id": "6cfe966e-1223-4ca1-b71a-d1298fe16d57",
+    "name": "Worker_0080",
+    "email": "worker80@shieldpay.dev",
+    "phone": "+917140095834",
+    "platform": "meesho",
+    "warehouse_id": "WH-009",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.469863,
+      "lng": 78.432548
+    },
+    "avg_daily_parcels": 17,
+    "avg_daily_income": 314.02,
+    "reliability_score": 0.92,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 307,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-23T19:58:55.432185"
+  },
+  {
+    "id": "1a314891-4615-487c-96ba-f5a503e62a57",
+    "name": "Worker_0081",
+    "email": "worker81@shieldpay.dev",
+    "phone": "+917397133524",
+    "platform": "jiomart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.984259,
+      "lng": 77.563341
+    },
+    "avg_daily_parcels": 35,
+    "avg_daily_income": 486.5,
+    "reliability_score": 0.811,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 90,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-15T19:58:55.432194"
+  },
+  {
+    "id": "27a07005-6102-43bf-a1dd-7d9baef85ce5",
+    "name": "Worker_0082",
+    "email": "worker82@shieldpay.dev",
+    "phone": "+917385736054",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.466092,
+      "lng": 88.21977
+    },
+    "avg_daily_parcels": 34,
+    "avg_daily_income": 532.86,
+    "reliability_score": 0.748,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 438,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-30T19:58:55.432202"
+  },
+  {
+    "id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+    "name": "Worker_0083",
+    "email": "worker83@shieldpay.dev",
+    "phone": "+918859347002",
+    "platform": "amazon",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.042003,
+      "lng": 77.619666
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 852.23,
+    "reliability_score": 0.545,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 3,
+      "background_location_streaming": true,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-27T19:58:55.432211"
+  },
+  {
+    "id": "0f3783ee-024a-4a82-a095-d1ce14cc28c8",
+    "name": "Worker_0084",
+    "email": "worker84@shieldpay.dev",
+    "phone": "+917217230297",
+    "platform": "amazon",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.010421,
+      "lng": 77.686074
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 1005.62,
+    "reliability_score": 0.894,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 457,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-12T19:58:55.432222"
+  },
+  {
+    "id": "428a0818-c6b9-471f-86f7-92184ae13332",
+    "name": "Worker_0085",
+    "email": "worker85@shieldpay.dev",
+    "phone": "+918730261612",
+    "platform": "amazon",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.607297,
+      "lng": 88.423793
+    },
+    "avg_daily_parcels": 44,
+    "avg_daily_income": 912.39,
+    "reliability_score": 0.796,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 244,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-03T19:58:55.432256"
+  },
+  {
+    "id": "55337e4f-e005-4599-a303-0368030bd919",
+    "name": "Worker_0086",
+    "email": "worker86@shieldpay.dev",
+    "phone": "+917934817847",
+    "platform": "flipkart",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.52993,
+      "lng": 77.140872
+    },
+    "avg_daily_parcels": 20,
+    "avg_daily_income": 408.9,
+    "reliability_score": 0.825,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 223,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-14T19:58:55.432319"
+  },
+  {
+    "id": "f7017421-adf8-4521-9cc5-a857256e0976",
+    "name": "Worker_0087",
+    "email": "worker87@shieldpay.dev",
+    "phone": "+919595973675",
+    "platform": "meesho",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.300233,
+      "lng": 78.550554
+    },
+    "avg_daily_parcels": 17,
+    "avg_daily_income": 366.56,
+    "reliability_score": 0.922,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 323,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-18T19:58:55.432341"
+  },
+  {
+    "id": "f1fba945-1e8f-4825-9bd0-7cc6be4c6bf8",
+    "name": "Worker_0088",
+    "email": "worker88@shieldpay.dev",
+    "phone": "+918255074132",
+    "platform": "jiomart",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.035794,
+      "lng": 72.51539
+    },
+    "avg_daily_parcels": 48,
+    "avg_daily_income": 1046.21,
+    "reliability_score": 0.856,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 100,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-30T19:58:55.432360"
+  },
+  {
+    "id": "3551825d-4367-4172-8849-38955ab4a84b",
+    "name": "Worker_0089",
+    "email": "worker89@shieldpay.dev",
+    "phone": "+917221401840",
+    "platform": "jiomart",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.805299,
+      "lng": 77.148459
+    },
+    "avg_daily_parcels": 18,
+    "avg_daily_income": 228.0,
+    "reliability_score": 0.85,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 90,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-06T19:58:55.432375"
+  },
+  {
+    "id": "656eb8e5-0af6-45f2-b595-0fedd4123a39",
+    "name": "Worker_0090",
+    "email": "worker90@shieldpay.dev",
+    "phone": "+918537193449",
+    "platform": "amazon",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.451994,
+      "lng": 88.250678
+    },
+    "avg_daily_parcels": 24,
+    "avg_daily_income": 428.39,
+    "reliability_score": 0.965,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 353,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-06T19:58:55.432387"
+  },
+  {
+    "id": "73ccf13e-1e11-4901-8dfc-1b1ef485287c",
+    "name": "Worker_0091",
+    "email": "worker91@shieldpay.dev",
+    "phone": "+917621520016",
+    "platform": "amazon",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.866265,
+      "lng": 77.519996
+    },
+    "avg_daily_parcels": 48,
+    "avg_daily_income": 1008.22,
+    "reliability_score": 0.777,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 82,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-03T19:58:55.432402"
+  },
+  {
+    "id": "d43f4725-fef1-4936-96b8-914d91805450",
+    "name": "Worker_0092",
+    "email": "worker92@shieldpay.dev",
+    "phone": "+919996062994",
+    "platform": "amazon",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.288424,
+      "lng": 78.60347
+    },
+    "avg_daily_parcels": 51,
+    "avg_daily_income": 1027.09,
+    "reliability_score": 0.93,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 222,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-22T19:58:55.432416"
+  },
+  {
+    "id": "154c841f-7a36-44a3-b798-f990d82cbdee",
+    "name": "Worker_0093",
+    "email": "worker93@shieldpay.dev",
+    "phone": "+919595635922",
+    "platform": "flipkart",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.543004,
+      "lng": 88.303007
+    },
+    "avg_daily_parcels": 37,
+    "avg_daily_income": 705.41,
+    "reliability_score": 0.953,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 448,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-25T19:58:55.432427"
+  },
+  {
+    "id": "f790c2cf-742d-47e0-8c88-41a0e09346a0",
+    "name": "Worker_0094",
+    "email": "worker94@shieldpay.dev",
+    "phone": "+919056861939",
+    "platform": "amazon",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.512653,
+      "lng": 88.410396
+    },
+    "avg_daily_parcels": 46,
+    "avg_daily_income": 879.26,
+    "reliability_score": 0.965,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 283,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-02T19:58:55.432438"
+  },
+  {
+    "id": "ce4c7592-8c59-4f44-924d-0aed0f83a644",
+    "name": "Worker_0095",
+    "email": "worker95@shieldpay.dev",
+    "phone": "+917928614485",
+    "platform": "flipkart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.030563,
+      "lng": 77.597259
+    },
+    "avg_daily_parcels": 25,
+    "avg_daily_income": 546.27,
+    "reliability_score": 0.816,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 500,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-14T19:58:55.432447"
+  },
+  {
+    "id": "441d8f44-ad7a-4c72-b986-0a3b9003c4be",
+    "name": "Worker_0096",
+    "email": "worker96@shieldpay.dev",
+    "phone": "+917089551743",
+    "platform": "amazon",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.043067,
+      "lng": 72.536275
+    },
+    "avg_daily_parcels": 18,
+    "avg_daily_income": 221.64,
+    "reliability_score": 0.848,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 76,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-10T19:58:55.432455"
+  },
+  {
+    "id": "c63713e3-9f4d-4f4c-8d92-3a1028ce6874",
+    "name": "Worker_0097",
+    "email": "worker97@shieldpay.dev",
+    "phone": "+917963683697",
+    "platform": "meesho",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.626335,
+      "lng": 88.396277
+    },
+    "avg_daily_parcels": 60,
+    "avg_daily_income": 1273.28,
+    "reliability_score": 0.479,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 13,
+      "background_location_streaming": false,
+      "accelerometer_available": false
+    },
+    "created_at": "2025-07-30T19:58:55.432468"
+  },
+  {
+    "id": "dd95013a-5e01-42ff-ae8a-2572512ba29f",
+    "name": "Worker_0098",
+    "email": "worker98@shieldpay.dev",
+    "phone": "+919294722821",
+    "platform": "meesho",
+    "warehouse_id": "WH-015",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.647598,
+      "lng": 88.290558
+    },
+    "avg_daily_parcels": 35,
+    "avg_daily_income": 533.81,
+    "reliability_score": 0.717,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 383,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-03T19:58:55.432478"
+  },
+  {
+    "id": "c9cf346d-e9c8-48be-8bb4-c370c912978b",
+    "name": "Worker_0099",
+    "email": "worker99@shieldpay.dev",
+    "phone": "+917749966590",
+    "platform": "flipkart",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.022633,
+      "lng": 72.509477
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 698.8,
+    "reliability_score": 0.984,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 499,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-24T19:58:55.432493"
+  },
+  {
+    "id": "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+    "name": "Worker_0100",
+    "email": "worker100@shieldpay.dev",
+    "phone": "+919762911144",
+    "platform": "flipkart",
+    "warehouse_id": "WH-009",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.502156,
+      "lng": 78.434573
+    },
+    "avg_daily_parcels": 49,
+    "avg_daily_income": 651.17,
+    "reliability_score": 0.308,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": true,
+      "is_rooted": false,
+      "app_install_age_days": 12,
+      "background_location_streaming": true,
+      "accelerometer_available": false
+    },
+    "created_at": "2025-06-24T19:58:55.432508"
+  },
+  {
+    "id": "407793bd-5f71-4574-ac5b-18f7fa22820b",
+    "name": "Worker_0101",
+    "email": "worker101@shieldpay.dev",
+    "phone": "+917286318556",
+    "platform": "meesho",
+    "warehouse_id": "WH-015",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.694087,
+      "lng": 88.290577
+    },
+    "avg_daily_parcels": 21,
+    "avg_daily_income": 446.22,
+    "reliability_score": 0.811,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 465,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-27T19:58:55.432524"
+  },
+  {
+    "id": "dcdfac70-8edf-4bd9-99d3-9c414c77611c",
+    "name": "Worker_0102",
+    "email": "worker102@shieldpay.dev",
+    "phone": "+917062264347",
+    "platform": "amazon",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.984631,
+      "lng": 77.58278
+    },
+    "avg_daily_parcels": 56,
+    "avg_daily_income": 1101.93,
+    "reliability_score": 0.969,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 349,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-10T19:58:55.432537"
+  },
+  {
+    "id": "a4bc8c74-8a69-489f-885c-6b0134b5da86",
+    "name": "Worker_0103",
+    "email": "worker103@shieldpay.dev",
+    "phone": "+919463324717",
+    "platform": "flipkart",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.254721,
+      "lng": 78.59917
+    },
+    "avg_daily_parcels": 40,
+    "avg_daily_income": 729.72,
+    "reliability_score": 0.805,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 141,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-20T19:58:55.432552"
+  },
+  {
+    "id": "f56705c3-4022-47de-8164-79f2ee093317",
+    "name": "Worker_0104",
+    "email": "worker104@shieldpay.dev",
+    "phone": "+919147005029",
+    "platform": "flipkart",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.583877,
+      "lng": 88.475683
+    },
+    "avg_daily_parcels": 52,
+    "avg_daily_income": 838.0,
+    "reliability_score": 0.743,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 397,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-03T19:58:55.432569"
+  },
+  {
+    "id": "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+    "name": "Worker_0105",
+    "email": "worker105@shieldpay.dev",
+    "phone": "+917890726638",
+    "platform": "jiomart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.968557,
+      "lng": 77.646978
+    },
+    "avg_daily_parcels": 50,
+    "avg_daily_income": 858.42,
+    "reliability_score": 0.589,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": true,
+      "is_rooted": false,
+      "app_install_age_days": 16,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-20T19:58:55.432585"
+  },
+  {
+    "id": "a580637a-ba9e-4293-ae4b-c4e7b880b0ac",
+    "name": "Worker_0106",
+    "email": "worker106@shieldpay.dev",
+    "phone": "+917617739413",
+    "platform": "amazon",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.884053,
+      "lng": 77.480577
+    },
+    "avg_daily_parcels": 20,
+    "avg_daily_income": 436.44,
+    "reliability_score": 0.758,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 270,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-13T19:58:55.432600"
+  },
+  {
+    "id": "77334f7e-6744-4e43-adf5-a9a8c1782e58",
+    "name": "Worker_0107",
+    "email": "worker107@shieldpay.dev",
+    "phone": "+917137734713",
+    "platform": "flipkart",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.604511,
+      "lng": 77.137407
+    },
+    "avg_daily_parcels": 35,
+    "avg_daily_income": 534.11,
+    "reliability_score": 0.756,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 452,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-06T19:58:55.432618"
+  },
+  {
+    "id": "9989e88c-2bba-4906-ad78-afb84d53363c",
+    "name": "Worker_0108",
+    "email": "worker108@shieldpay.dev",
+    "phone": "+918187579958",
+    "platform": "jiomart",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.634085,
+      "lng": 88.393093
+    },
+    "avg_daily_parcels": 21,
+    "avg_daily_income": 327.85,
+    "reliability_score": 0.861,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 405,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-11T19:58:55.432636"
+  },
+  {
+    "id": "9dcce907-2d17-40a7-aa58-350d4d590bf9",
+    "name": "Worker_0109",
+    "email": "worker109@shieldpay.dev",
+    "phone": "+918194440839",
+    "platform": "jiomart",
+    "warehouse_id": "WH-009",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.438576,
+      "lng": 78.487905
+    },
+    "avg_daily_parcels": 46,
+    "avg_daily_income": 901.83,
+    "reliability_score": 0.769,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 492,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-29T19:58:55.432648"
+  },
+  {
+    "id": "f85b9540-bb50-442c-be4c-72f168d52d79",
+    "name": "Worker_0110",
+    "email": "worker110@shieldpay.dev",
+    "phone": "+919564563512",
+    "platform": "flipkart",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.29746,
+      "lng": 78.618043
+    },
+    "avg_daily_parcels": 43,
+    "avg_daily_income": 884.64,
+    "reliability_score": 0.89,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 356,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-25T19:58:55.432663"
+  },
+  {
+    "id": "0d3a2136-5946-4da2-9118-8b3b4d0cd1d5",
+    "name": "Worker_0111",
+    "email": "worker111@shieldpay.dev",
+    "phone": "+917559570705",
+    "platform": "flipkart",
+    "warehouse_id": "WH-006",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.427285,
+      "lng": 78.559965
+    },
+    "avg_daily_parcels": 20,
+    "avg_daily_income": 340.25,
+    "reliability_score": 0.881,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 468,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-19T19:58:55.432679"
+  },
+  {
+    "id": "e498de48-3fbc-4b40-a78f-6a54c3eae475",
+    "name": "Worker_0112",
+    "email": "worker112@shieldpay.dev",
+    "phone": "+918786061585",
+    "platform": "meesho",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.7966,
+      "lng": 77.076672
+    },
+    "avg_daily_parcels": 23,
+    "avg_daily_income": 399.11,
+    "reliability_score": 0.718,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 285,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-12T19:58:55.432694"
+  },
+  {
+    "id": "0a48c3c9-b52d-4661-a476-6692f133762e",
+    "name": "Worker_0113",
+    "email": "worker113@shieldpay.dev",
+    "phone": "+918565555911",
+    "platform": "flipkart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.008219,
+      "lng": 77.678691
+    },
+    "avg_daily_parcels": 30,
+    "avg_daily_income": 525.96,
+    "reliability_score": 0.849,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 456,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-26T19:58:55.432708"
+  },
+  {
+    "id": "5794fc9b-bda4-49d0-ad5b-12d81447e6b1",
+    "name": "Worker_0114",
+    "email": "worker114@shieldpay.dev",
+    "phone": "+919748064899",
+    "platform": "flipkart",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.465433,
+      "lng": 88.325365
+    },
+    "avg_daily_parcels": 40,
+    "avg_daily_income": 554.46,
+    "reliability_score": 0.933,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 293,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-23T19:58:55.432721"
+  },
+  {
+    "id": "241b0803-0f86-4545-bac7-ba2a4693c37b",
+    "name": "Worker_0115",
+    "email": "worker115@shieldpay.dev",
+    "phone": "+919471306024",
+    "platform": "flipkart",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.881378,
+      "lng": 77.500709
+    },
+    "avg_daily_parcels": 16,
+    "avg_daily_income": 346.88,
+    "reliability_score": 0.735,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 194,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-02T19:58:55.432739"
+  },
+  {
+    "id": "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+    "name": "Worker_0116",
+    "email": "worker116@shieldpay.dev",
+    "phone": "+919939581991",
+    "platform": "amazon",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.588247,
+      "lng": 88.449183
+    },
+    "avg_daily_parcels": 36,
+    "avg_daily_income": 501.99,
+    "reliability_score": 0.438,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": true,
+      "app_install_age_days": 29,
+      "background_location_streaming": true,
+      "accelerometer_available": false
+    },
+    "created_at": "2025-07-29T19:58:55.432756"
+  },
+  {
+    "id": "2716fc69-c093-48fc-b377-35f9e7e9b822",
+    "name": "Worker_0117",
+    "email": "worker117@shieldpay.dev",
+    "phone": "+917510987126",
+    "platform": "amazon",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.542069,
+      "lng": 88.452305
+    },
+    "avg_daily_parcels": 43,
+    "avg_daily_income": 817.75,
+    "reliability_score": 0.788,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 370,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-14T19:58:55.432774"
+  },
+  {
+    "id": "356bc0ae-7563-4f60-b4e6-44d89efaf573",
+    "name": "Worker_0118",
+    "email": "worker118@shieldpay.dev",
+    "phone": "+918538911084",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.461065,
+      "lng": 88.230323
+    },
+    "avg_daily_parcels": 25,
+    "avg_daily_income": 399.47,
+    "reliability_score": 0.917,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 312,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-25T19:58:55.432794"
+  },
+  {
+    "id": "bf4a9ada-a3be-4fee-bce6-ed9ee4f5ec83",
+    "name": "Worker_0119",
+    "email": "worker119@shieldpay.dev",
+    "phone": "+918591482376",
+    "platform": "amazon",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.475957,
+      "lng": 88.231897
+    },
+    "avg_daily_parcels": 23,
+    "avg_daily_income": 468.4,
+    "reliability_score": 0.971,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 365,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-14T19:58:55.432811"
+  },
+  {
+    "id": "19dfdf97-5105-4d41-bb6d-b6e8205b3ecb",
+    "name": "Worker_0120",
+    "email": "worker120@shieldpay.dev",
+    "phone": "+917458569338",
+    "platform": "flipkart",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.608551,
+      "lng": 77.108271
+    },
+    "avg_daily_parcels": 43,
+    "avg_daily_income": 561.01,
+    "reliability_score": 0.774,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 81,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-11T19:58:55.432830"
+  },
+  {
+    "id": "601759d4-8c74-4467-a5b2-cd0203ef9d18",
+    "name": "Worker_0121",
+    "email": "worker121@shieldpay.dev",
+    "phone": "+917102745438",
+    "platform": "jiomart",
+    "warehouse_id": "WH-006",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.42374,
+      "lng": 78.588655
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 577.81,
+    "reliability_score": 0.874,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 350,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-23T19:58:55.432850"
+  },
+  {
+    "id": "a34151bf-4941-44bd-b08d-6522d3c5ebc2",
+    "name": "Worker_0122",
+    "email": "worker122@shieldpay.dev",
+    "phone": "+917583564273",
+    "platform": "flipkart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.033285,
+      "lng": 77.61275
+    },
+    "avg_daily_parcels": 44,
+    "avg_daily_income": 568.89,
+    "reliability_score": 0.968,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 361,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-09T19:58:55.432867"
+  },
+  {
+    "id": "2f28ae61-8259-4f66-96ff-e9044c551104",
+    "name": "Worker_0123",
+    "email": "worker123@shieldpay.dev",
+    "phone": "+919960193278",
+    "platform": "meesho",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.29454,
+      "lng": 78.569428
+    },
+    "avg_daily_parcels": 45,
+    "avg_daily_income": 552.7,
+    "reliability_score": 0.742,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 348,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-03-25T19:58:55.432883"
+  },
+  {
+    "id": "3e968a78-a6d4-46b7-951e-9d19e3036796",
+    "name": "Worker_0124",
+    "email": "worker124@shieldpay.dev",
+    "phone": "+917465744537",
+    "platform": "amazon",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.340014,
+      "lng": 78.582652
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 404.35,
+    "reliability_score": 0.806,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 440,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-09T19:58:55.432899"
+  },
+  {
+    "id": "56c8f009-61d0-4d1a-b4e9-f6b2c9d3ae08",
+    "name": "Worker_0125",
+    "email": "worker125@shieldpay.dev",
+    "phone": "+917251361317",
+    "platform": "jiomart",
+    "warehouse_id": "WH-015",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.700979,
+      "lng": 88.26688
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 562.18,
+    "reliability_score": 0.955,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 460,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-14T19:58:55.432916"
+  },
+  {
+    "id": "3a578f0c-01ec-416a-8642-7616ea4678de",
+    "name": "Worker_0126",
+    "email": "worker126@shieldpay.dev",
+    "phone": "+917461457246",
+    "platform": "meesho",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.568601,
+      "lng": 88.485413
+    },
+    "avg_daily_parcels": 43,
+    "avg_daily_income": 886.25,
+    "reliability_score": 0.838,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 179,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-23T19:58:55.432935"
+  },
+  {
+    "id": "cc50ee62-0d02-4062-911a-c27766bca1fd",
+    "name": "Worker_0127",
+    "email": "worker127@shieldpay.dev",
+    "phone": "+918919499900",
+    "platform": "meesho",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.464813,
+      "lng": 88.43834
+    },
+    "avg_daily_parcels": 41,
+    "avg_daily_income": 762.39,
+    "reliability_score": 0.867,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 205,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-03-22T19:58:55.432956"
+  },
+  {
+    "id": "ab4c26b1-3c47-4f32-a5f1-576cb347a7df",
+    "name": "Worker_0128",
+    "email": "worker128@shieldpay.dev",
+    "phone": "+917877832273",
+    "platform": "meesho",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.582101,
+      "lng": 88.443231
+    },
+    "avg_daily_parcels": 36,
+    "avg_daily_income": 451.49,
+    "reliability_score": 0.895,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 265,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-13T19:58:55.432976"
+  },
+  {
+    "id": "dc67185e-43dd-4ce9-89a5-af08a3fb75e4",
+    "name": "Worker_0129",
+    "email": "worker129@shieldpay.dev",
+    "phone": "+917971819972",
+    "platform": "meesho",
+    "warehouse_id": "WH-006",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.4533,
+      "lng": 78.607942
+    },
+    "avg_daily_parcels": 33,
+    "avg_daily_income": 531.12,
+    "reliability_score": 0.984,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 120,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-22T19:58:55.432995"
+  },
+  {
+    "id": "1d1a0010-0e76-49ea-b896-5d85715daeb2",
+    "name": "Worker_0130",
+    "email": "worker130@shieldpay.dev",
+    "phone": "+918222283146",
+    "platform": "jiomart",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.571317,
+      "lng": 88.503776
+    },
+    "avg_daily_parcels": 38,
+    "avg_daily_income": 782.61,
+    "reliability_score": 0.952,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 127,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-21T19:58:55.433014"
+  },
+  {
+    "id": "f23c67cb-5ae4-49cc-a926-c8483d17fc7d",
+    "name": "Worker_0131",
+    "email": "worker131@shieldpay.dev",
+    "phone": "+918455935470",
+    "platform": "jiomart",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.314863,
+      "lng": 78.601312
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 632.7,
+    "reliability_score": 0.92,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 188,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-17T19:58:55.433035"
+  },
+  {
+    "id": "4e860016-7b91-40d7-ad37-8f4999371746",
+    "name": "Worker_0132",
+    "email": "worker132@shieldpay.dev",
+    "phone": "+919944796288",
+    "platform": "flipkart",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.60901,
+      "lng": 88.417502
+    },
+    "avg_daily_parcels": 18,
+    "avg_daily_income": 230.59,
+    "reliability_score": 0.803,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 397,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-20T19:58:55.433053"
+  },
+  {
+    "id": "2739a5c1-5d42-46ef-8836-eff83ef1643b",
+    "name": "Worker_0133",
+    "email": "worker133@shieldpay.dev",
+    "phone": "+918601445707",
+    "platform": "meesho",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.255591,
+      "lng": 78.632859
+    },
+    "avg_daily_parcels": 53,
+    "avg_daily_income": 955.38,
+    "reliability_score": 0.776,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 205,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-23T19:58:55.433076"
+  },
+  {
+    "id": "d2f00eef-a6d2-474b-9889-f8f3dba0e790",
+    "name": "Worker_0134",
+    "email": "worker134@shieldpay.dev",
+    "phone": "+918148871992",
+    "platform": "meesho",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.011418,
+      "lng": 72.450784
+    },
+    "avg_daily_parcels": 51,
+    "avg_daily_income": 824.88,
+    "reliability_score": 0.961,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 308,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-07T19:58:55.433095"
+  },
+  {
+    "id": "08dabb04-cc32-435c-8683-5d05e8f79927",
+    "name": "Worker_0135",
+    "email": "worker135@shieldpay.dev",
+    "phone": "+917485088029",
+    "platform": "amazon",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.944772,
+      "lng": 77.529578
+    },
+    "avg_daily_parcels": 34,
+    "avg_daily_income": 513.26,
+    "reliability_score": 0.899,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 460,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-08T19:58:55.433112"
+  },
+  {
+    "id": "b60c2d25-3023-463f-9766-85f4289fcd23",
+    "name": "Worker_0136",
+    "email": "worker136@shieldpay.dev",
+    "phone": "+919877811002",
+    "platform": "jiomart",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.538506,
+      "lng": 88.467378
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 453.31,
+    "reliability_score": 0.968,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 469,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-30T19:58:55.433128"
+  },
+  {
+    "id": "5fd0fabe-a073-4fdb-9f87-784ca69ed5c5",
+    "name": "Worker_0137",
+    "email": "worker137@shieldpay.dev",
+    "phone": "+918841673769",
+    "platform": "meesho",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.53148,
+      "lng": 88.425577
+    },
+    "avg_daily_parcels": 18,
+    "avg_daily_income": 347.17,
+    "reliability_score": 0.833,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 139,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-11T19:58:55.433143"
+  },
+  {
+    "id": "9b035241-4895-441f-8740-9b1da1cfb874",
+    "name": "Worker_0138",
+    "email": "worker138@shieldpay.dev",
+    "phone": "+917198049669",
+    "platform": "amazon",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.441456,
+      "lng": 88.261727
+    },
+    "avg_daily_parcels": 42,
+    "avg_daily_income": 652.98,
+    "reliability_score": 0.995,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 434,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-03T19:58:55.433161"
+  },
+  {
+    "id": "0466bf75-abed-416d-8918-51ca18dc677f",
+    "name": "Worker_0139",
+    "email": "worker139@shieldpay.dev",
+    "phone": "+919765404034",
+    "platform": "jiomart",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.554072,
+      "lng": 77.126521
+    },
+    "avg_daily_parcels": 36,
+    "avg_daily_income": 617.7,
+    "reliability_score": 0.725,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 427,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-14T19:58:55.433175"
+  },
+  {
+    "id": "3fcb75a9-092b-4200-ba0f-eecae039b135",
+    "name": "Worker_0140",
+    "email": "worker140@shieldpay.dev",
+    "phone": "+918195035409",
+    "platform": "flipkart",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.593893,
+      "lng": 88.436819
+    },
+    "avg_daily_parcels": 34,
+    "avg_daily_income": 459.6,
+    "reliability_score": 0.991,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 87,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-03-20T19:58:55.433191"
+  },
+  {
+    "id": "a4dafa7d-058a-4563-94ff-bc0d7654b01a",
+    "name": "Worker_0141",
+    "email": "worker141@shieldpay.dev",
+    "phone": "+918344043565",
+    "platform": "flipkart",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.610938,
+      "lng": 88.472257
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 402.27,
+    "reliability_score": 0.92,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 424,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-21T19:58:55.433207"
+  },
+  {
+    "id": "011d3c28-c4cc-43bb-8d44-28dab2e25456",
+    "name": "Worker_0142",
+    "email": "worker142@shieldpay.dev",
+    "phone": "+917522694617",
+    "platform": "amazon",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.9247,
+      "lng": 77.478
+    },
+    "avg_daily_parcels": 56,
+    "avg_daily_income": 932.93,
+    "reliability_score": 0.847,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 177,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-30T19:58:55.433224"
+  },
+  {
+    "id": "f345c7ea-4152-44d1-9e03-1069abbc39ed",
+    "name": "Worker_0143",
+    "email": "worker143@shieldpay.dev",
+    "phone": "+918966817581",
+    "platform": "meesho",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.318261,
+      "lng": 78.579053
+    },
+    "avg_daily_parcels": 22,
+    "avg_daily_income": 364.22,
+    "reliability_score": 0.706,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 230,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-15T19:58:55.433239"
+  },
+  {
+    "id": "04c1db55-3cc7-438d-837b-756dbebc1e78",
+    "name": "Worker_0144",
+    "email": "worker144@shieldpay.dev",
+    "phone": "+919223296608",
+    "platform": "meesho",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.059201,
+      "lng": 72.511382
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 1050.13,
+    "reliability_score": 0.762,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 343,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-11T19:58:55.433256"
+  },
+  {
+    "id": "ccaf50bb-4f11-470b-8ea7-1553d997f006",
+    "name": "Worker_0145",
+    "email": "worker145@shieldpay.dev",
+    "phone": "+919489870033",
+    "platform": "jiomart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.983128,
+      "lng": 77.62716
+    },
+    "avg_daily_parcels": 53,
+    "avg_daily_income": 1116.06,
+    "reliability_score": 0.705,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 173,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-17T19:58:55.433270"
+  },
+  {
+    "id": "627ebdf2-fb33-47e0-a08e-20e68d8afd48",
+    "name": "Worker_0146",
+    "email": "worker146@shieldpay.dev",
+    "phone": "+918626635167",
+    "platform": "jiomart",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.614247,
+      "lng": 77.133904
+    },
+    "avg_daily_parcels": 59,
+    "avg_daily_income": 1162.2,
+    "reliability_score": 0.718,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 434,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-07T19:58:55.433284"
+  },
+  {
+    "id": "e86c046f-6d76-428a-b95d-daa658018947",
+    "name": "Worker_0147",
+    "email": "worker147@shieldpay.dev",
+    "phone": "+918191724311",
+    "platform": "jiomart",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.79371,
+      "lng": 77.126183
+    },
+    "avg_daily_parcels": 58,
+    "avg_daily_income": 982.14,
+    "reliability_score": 0.882,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 394,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-30T19:58:55.433301"
+  },
+  {
+    "id": "dacfdc8c-32fd-4949-ae11-b857da5d08df",
+    "name": "Worker_0148",
+    "email": "worker148@shieldpay.dev",
+    "phone": "+918591143990",
+    "platform": "meesho",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.608018,
+      "lng": 88.432151
+    },
+    "avg_daily_parcels": 45,
+    "avg_daily_income": 984.92,
+    "reliability_score": 0.795,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 83,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-27T19:58:55.433318"
+  },
+  {
+    "id": "63324047-cbe9-4d39-8cce-2f10d507175e",
+    "name": "Worker_0149",
+    "email": "worker149@shieldpay.dev",
+    "phone": "+918346623892",
+    "platform": "meesho",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.781937,
+      "lng": 77.066009
+    },
+    "avg_daily_parcels": 50,
+    "avg_daily_income": 1010.25,
+    "reliability_score": 0.827,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 421,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-03-24T19:58:55.433336"
+  },
+  {
+    "id": "92a1cc4b-0404-4e5c-9d35-5d35fad84527",
+    "name": "Worker_0150",
+    "email": "worker150@shieldpay.dev",
+    "phone": "+917984548870",
+    "platform": "amazon",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.025144,
+      "lng": 77.640039
+    },
+    "avg_daily_parcels": 17,
+    "avg_daily_income": 287.36,
+    "reliability_score": 0.918,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 384,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-10T19:58:55.433356"
+  },
+  {
+    "id": "388a147e-4681-4687-910e-78bb97d1a7e3",
+    "name": "Worker_0151",
+    "email": "worker151@shieldpay.dev",
+    "phone": "+919247988458",
+    "platform": "flipkart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.463556,
+      "lng": 88.199701
+    },
+    "avg_daily_parcels": 60,
+    "avg_daily_income": 929.51,
+    "reliability_score": 0.857,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 109,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-22T19:58:55.433371"
+  },
+  {
+    "id": "65a7034f-1167-4119-9a5d-bb7330bd75ae",
+    "name": "Worker_0152",
+    "email": "worker152@shieldpay.dev",
+    "phone": "+918202552623",
+    "platform": "flipkart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.01382,
+      "lng": 77.63248
+    },
+    "avg_daily_parcels": 16,
+    "avg_daily_income": 320.6,
+    "reliability_score": 0.924,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 369,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-14T19:58:55.433389"
+  },
+  {
+    "id": "5e676e90-cea2-4497-a09a-71f457f3b7f4",
+    "name": "Worker_0153",
+    "email": "worker153@shieldpay.dev",
+    "phone": "+919999607246",
+    "platform": "jiomart",
+    "warehouse_id": "WH-015",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.638986,
+      "lng": 88.266965
+    },
+    "avg_daily_parcels": 56,
+    "avg_daily_income": 1114.29,
+    "reliability_score": 0.889,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 280,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-30T19:58:55.433406"
+  },
+  {
+    "id": "c1aa37cf-e9ee-4988-83ca-b8f63e4f22ef",
+    "name": "Worker_0154",
+    "email": "worker154@shieldpay.dev",
+    "phone": "+919822908575",
+    "platform": "jiomart",
+    "warehouse_id": "WH-009",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.496625,
+      "lng": 78.455771
+    },
+    "avg_daily_parcels": 49,
+    "avg_daily_income": 958.15,
+    "reliability_score": 0.959,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 434,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-20T19:58:55.433422"
+  },
+  {
+    "id": "ef6dfb34-1dab-41ee-87ab-2b2a2f96c0ed",
+    "name": "Worker_0155",
+    "email": "worker155@shieldpay.dev",
+    "phone": "+918742300619",
+    "platform": "amazon",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.977367,
+      "lng": 77.66296
+    },
+    "avg_daily_parcels": 52,
+    "avg_daily_income": 1051.7,
+    "reliability_score": 0.889,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 436,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-13T19:58:55.433438"
+  },
+  {
+    "id": "3d472308-490e-493c-a41f-d067afd95946",
+    "name": "Worker_0156",
+    "email": "worker156@shieldpay.dev",
+    "phone": "+919103433920",
+    "platform": "amazon",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.577654,
+      "lng": 88.435995
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 1138.27,
+    "reliability_score": 0.953,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 84,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-22T19:58:55.433457"
+  },
+  {
+    "id": "010c259d-b40e-4d5b-9df5-dbd242b998dd",
+    "name": "Worker_0157",
+    "email": "worker157@shieldpay.dev",
+    "phone": "+918997399357",
+    "platform": "meesho",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 22.989615,
+      "lng": 72.511391
+    },
+    "avg_daily_parcels": 28,
+    "avg_daily_income": 427.09,
+    "reliability_score": 0.717,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 492,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-13T19:58:55.433473"
+  },
+  {
+    "id": "c3258b53-f3e2-41a7-9e41-6b4817d83dc8",
+    "name": "Worker_0158",
+    "email": "worker158@shieldpay.dev",
+    "phone": "+918892130808",
+    "platform": "meesho",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.733534,
+      "lng": 77.105499
+    },
+    "avg_daily_parcels": 56,
+    "avg_daily_income": 1188.04,
+    "reliability_score": 0.865,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 395,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-14T19:58:55.433490"
+  },
+  {
+    "id": "9fa615de-15b1-4e72-8dd8-f391ba939160",
+    "name": "Worker_0159",
+    "email": "worker159@shieldpay.dev",
+    "phone": "+918272351019",
+    "platform": "amazon",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.013052,
+      "lng": 77.675526
+    },
+    "avg_daily_parcels": 18,
+    "avg_daily_income": 238.72,
+    "reliability_score": 0.884,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 203,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-24T19:58:55.433509"
+  },
+  {
+    "id": "4389e84b-10c4-4285-8c83-76837b75910b",
+    "name": "Worker_0160",
+    "email": "worker160@shieldpay.dev",
+    "phone": "+919585477280",
+    "platform": "meesho",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 22.982601,
+      "lng": 72.496243
+    },
+    "avg_daily_parcels": 48,
+    "avg_daily_income": 805.39,
+    "reliability_score": 0.509,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": true,
+      "is_rooted": false,
+      "app_install_age_days": 6,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-05T19:58:55.433525"
+  },
+  {
+    "id": "85391b1a-2f69-459f-8c7b-7f260610fef7",
+    "name": "Worker_0161",
+    "email": "worker161@shieldpay.dev",
+    "phone": "+917005557480",
+    "platform": "meesho",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.063433,
+      "lng": 72.523096
+    },
+    "avg_daily_parcels": 58,
+    "avg_daily_income": 1042.27,
+    "reliability_score": 0.953,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 381,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-02T19:58:55.433541"
+  },
+  {
+    "id": "426020ea-f17a-4b6a-aaf2-1eb28e166d47",
+    "name": "Worker_0162",
+    "email": "worker162@shieldpay.dev",
+    "phone": "+919074779223",
+    "platform": "meesho",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.430854,
+      "lng": 88.441516
+    },
+    "avg_daily_parcels": 18,
+    "avg_daily_income": 235.96,
+    "reliability_score": 0.706,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 288,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-02-06T19:58:55.433554"
+  },
+  {
+    "id": "b4d6b90b-48b3-40aa-82bf-f1bbff8c6128",
+    "name": "Worker_0163",
+    "email": "worker163@shieldpay.dev",
+    "phone": "+919133412522",
+    "platform": "meesho",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.067916,
+      "lng": 72.528227
+    },
+    "avg_daily_parcels": 44,
+    "avg_daily_income": 738.7,
+    "reliability_score": 0.939,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 96,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-29T19:58:55.433570"
+  },
+  {
+    "id": "b2a51e7e-4da5-4b6d-a6da-c566f3d755cc",
+    "name": "Worker_0164",
+    "email": "worker164@shieldpay.dev",
+    "phone": "+917509848426",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.471524,
+      "lng": 88.215279
+    },
+    "avg_daily_parcels": 57,
+    "avg_daily_income": 861.13,
+    "reliability_score": 0.871,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 369,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-29T19:58:55.433584"
+  },
+  {
+    "id": "f7ae2532-89c7-4b88-9936-79706ae5d168",
+    "name": "Worker_0165",
+    "email": "worker165@shieldpay.dev",
+    "phone": "+919072563618",
+    "platform": "amazon",
+    "warehouse_id": "WH-009",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.482437,
+      "lng": 78.478706
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 584.72,
+    "reliability_score": 0.706,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 161,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-29T19:58:55.433598"
+  },
+  {
+    "id": "70acfb67-2252-436a-ae37-977938ccb8b7",
+    "name": "Worker_0166",
+    "email": "worker166@shieldpay.dev",
+    "phone": "+917779657142",
+    "platform": "amazon",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.976447,
+      "lng": 77.658536
+    },
+    "avg_daily_parcels": 46,
+    "avg_daily_income": 893.31,
+    "reliability_score": 0.988,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 383,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-18T19:58:55.433610"
+  },
+  {
+    "id": "6ab7b990-1e99-40a5-8ab3-7a0e6d135d19",
+    "name": "Worker_0167",
+    "email": "worker167@shieldpay.dev",
+    "phone": "+919802455510",
+    "platform": "meesho",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.310156,
+      "lng": 78.592419
+    },
+    "avg_daily_parcels": 31,
+    "avg_daily_income": 564.97,
+    "reliability_score": 0.906,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 285,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-03-24T19:58:55.433622"
+  },
+  {
+    "id": "cb8298d2-7fb8-4308-90de-0bb8e9351337",
+    "name": "Worker_0168",
+    "email": "worker168@shieldpay.dev",
+    "phone": "+918102135683",
+    "platform": "flipkart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.95254,
+      "lng": 77.661972
+    },
+    "avg_daily_parcels": 31,
+    "avg_daily_income": 659.24,
+    "reliability_score": 0.86,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 383,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-29T19:58:55.433638"
+  },
+  {
+    "id": "405c759f-b278-42ba-8d9b-1a80a0467058",
+    "name": "Worker_0169",
+    "email": "worker169@shieldpay.dev",
+    "phone": "+917556685392",
+    "platform": "jiomart",
+    "warehouse_id": "WH-004",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.293529,
+      "lng": 78.615728
+    },
+    "avg_daily_parcels": 50,
+    "avg_daily_income": 1055.98,
+    "reliability_score": 0.851,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 219,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-14T19:58:55.433652"
+  },
+  {
+    "id": "5eb279e3-1355-42ab-9ad9-d408e55c8197",
+    "name": "Worker_0170",
+    "email": "worker170@shieldpay.dev",
+    "phone": "+917647556478",
+    "platform": "meesho",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.929157,
+      "lng": 77.473616
+    },
+    "avg_daily_parcels": 21,
+    "avg_daily_income": 259.19,
+    "reliability_score": 0.74,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 412,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-05T19:58:55.433667"
+  },
+  {
+    "id": "7dd9033e-0eb8-4d7e-9b7c-f7ff3a9e4d95",
+    "name": "Worker_0171",
+    "email": "worker171@shieldpay.dev",
+    "phone": "+917637445116",
+    "platform": "meesho",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.585031,
+      "lng": 88.478356
+    },
+    "avg_daily_parcels": 15,
+    "avg_daily_income": 290.37,
+    "reliability_score": 0.801,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 120,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-19T19:58:55.433683"
+  },
+  {
+    "id": "75d45b73-e3ab-427d-ae7d-fa13ded55c23",
+    "name": "Worker_0172",
+    "email": "worker172@shieldpay.dev",
+    "phone": "+919797541919",
+    "platform": "amazon",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.063756,
+      "lng": 72.492818
+    },
+    "avg_daily_parcels": 58,
+    "avg_daily_income": 759.19,
+    "reliability_score": 0.863,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 313,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-18T19:58:55.433698"
+  },
+  {
+    "id": "f49b15a8-a929-4806-ae45-efff33cf69e3",
+    "name": "Worker_0173",
+    "email": "worker173@shieldpay.dev",
+    "phone": "+918993538639",
+    "platform": "flipkart",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.582959,
+      "lng": 88.460886
+    },
+    "avg_daily_parcels": 52,
+    "avg_daily_income": 1112.23,
+    "reliability_score": 0.862,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 233,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-06T19:58:55.433714"
+  },
+  {
+    "id": "a32f2095-4cf3-4ab9-9679-ba52db7bce87",
+    "name": "Worker_0174",
+    "email": "worker174@shieldpay.dev",
+    "phone": "+917212396631",
+    "platform": "amazon",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.736307,
+      "lng": 77.128709
+    },
+    "avg_daily_parcels": 32,
+    "avg_daily_income": 503.45,
+    "reliability_score": 0.907,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 85,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-27T19:58:55.433732"
+  },
+  {
+    "id": "8e1323ce-4d93-4d78-8134-4f60498f5083",
+    "name": "Worker_0175",
+    "email": "worker175@shieldpay.dev",
+    "phone": "+918270752919",
+    "platform": "meesho",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.606491,
+      "lng": 88.463028
+    },
+    "avg_daily_parcels": 17,
+    "avg_daily_income": 226.51,
+    "reliability_score": 0.764,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 216,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-21T19:58:55.433749"
+  },
+  {
+    "id": "15f04943-5caa-4f8f-b6bf-e423b97182eb",
+    "name": "Worker_0176",
+    "email": "worker176@shieldpay.dev",
+    "phone": "+919243978437",
+    "platform": "amazon",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.588741,
+      "lng": 77.104943
+    },
+    "avg_daily_parcels": 27,
+    "avg_daily_income": 447.82,
+    "reliability_score": 0.79,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 102,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-01T19:58:55.433763"
+  },
+  {
+    "id": "11f00d85-a295-42c9-9452-5dc5f85ee2d0",
+    "name": "Worker_0177",
+    "email": "worker177@shieldpay.dev",
+    "phone": "+918444157816",
+    "platform": "jiomart",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.769499,
+      "lng": 77.139294
+    },
+    "avg_daily_parcels": 49,
+    "avg_daily_income": 693.41,
+    "reliability_score": 0.829,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 167,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-04-23T19:58:55.433779"
+  },
+  {
+    "id": "c3eea738-e530-403e-b51b-892d74eb7f71",
+    "name": "Worker_0178",
+    "email": "worker178@shieldpay.dev",
+    "phone": "+919986234118",
+    "platform": "amazon",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.43752,
+      "lng": 88.226536
+    },
+    "avg_daily_parcels": 22,
+    "avg_daily_income": 448.65,
+    "reliability_score": 0.824,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 217,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-15T19:58:55.433800"
+  },
+  {
+    "id": "4a9c7b1d-e433-497d-b362-e821fa5dba75",
+    "name": "Worker_0179",
+    "email": "worker179@shieldpay.dev",
+    "phone": "+919030322372",
+    "platform": "amazon",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.020733,
+      "lng": 77.642992
+    },
+    "avg_daily_parcels": 45,
+    "avg_daily_income": 896.44,
+    "reliability_score": 0.937,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 355,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-19T19:58:55.433818"
+  },
+  {
+    "id": "b9ca9611-edaf-495d-8c37-14b2dc486fde",
+    "name": "Worker_0180",
+    "email": "worker180@shieldpay.dev",
+    "phone": "+918060879221",
+    "platform": "flipkart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.959073,
+      "lng": 77.636622
+    },
+    "avg_daily_parcels": 18,
+    "avg_daily_income": 349.45,
+    "reliability_score": 0.754,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 292,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-08T19:58:55.433832"
+  },
+  {
+    "id": "46521897-3500-42c7-8fd9-1ecf4dc89dac",
+    "name": "Worker_0181",
+    "email": "worker181@shieldpay.dev",
+    "phone": "+919682652574",
+    "platform": "meesho",
+    "warehouse_id": "WH-005",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.577272,
+      "lng": 88.397878
+    },
+    "avg_daily_parcels": 47,
+    "avg_daily_income": 907.58,
+    "reliability_score": 0.988,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 141,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-01T19:58:55.433847"
+  },
+  {
+    "id": "3baa4226-3a6a-4db7-bf75-5b66c14bb16b",
+    "name": "Worker_0182",
+    "email": "worker182@shieldpay.dev",
+    "phone": "+918886573996",
+    "platform": "jiomart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.4718,
+      "lng": 88.273628
+    },
+    "avg_daily_parcels": 32,
+    "avg_daily_income": 438.27,
+    "reliability_score": 0.832,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 196,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-07T19:58:55.433889"
+  },
+  {
+    "id": "a866cea2-9293-4354-87ca-d124f7dc0f9a",
+    "name": "Worker_0183",
+    "email": "worker183@shieldpay.dev",
+    "phone": "+918659868507",
+    "platform": "amazon",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.949553,
+      "lng": 77.545261
+    },
+    "avg_daily_parcels": 52,
+    "avg_daily_income": 993.05,
+    "reliability_score": 0.975,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 179,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-17T19:58:55.433904"
+  },
+  {
+    "id": "53ca8971-8813-4050-bd9e-7f2d04657705",
+    "name": "Worker_0184",
+    "email": "worker184@shieldpay.dev",
+    "phone": "+919478635690",
+    "platform": "meesho",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.486199,
+      "lng": 88.417257
+    },
+    "avg_daily_parcels": 25,
+    "avg_daily_income": 538.5,
+    "reliability_score": 0.789,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 349,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-09T19:58:55.433919"
+  },
+  {
+    "id": "c392c3d1-89aa-4d3d-a92a-4fdad42ac710",
+    "name": "Worker_0185",
+    "email": "worker185@shieldpay.dev",
+    "phone": "+919963670617",
+    "platform": "meesho",
+    "warehouse_id": "WH-001",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.88652,
+      "lng": 77.520541
+    },
+    "avg_daily_parcels": 30,
+    "avg_daily_income": 549.05,
+    "reliability_score": 0.886,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 381,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-03T19:58:55.433933"
+  },
+  {
+    "id": "69bac72e-cf18-4bef-8e82-783246191520",
+    "name": "Worker_0186",
+    "email": "worker186@shieldpay.dev",
+    "phone": "+919000878120",
+    "platform": "meesho",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.408333,
+      "lng": 88.222053
+    },
+    "avg_daily_parcels": 33,
+    "avg_daily_income": 628.09,
+    "reliability_score": 0.782,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 81,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-13T19:58:55.433947"
+  },
+  {
+    "id": "906adce8-479c-41d6-8484-3b3f9887a170",
+    "name": "Worker_0187",
+    "email": "worker187@shieldpay.dev",
+    "phone": "+917716789776",
+    "platform": "flipkart",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 22.990076,
+      "lng": 72.466829
+    },
+    "avg_daily_parcels": 40,
+    "avg_daily_income": 762.02,
+    "reliability_score": 0.931,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 218,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-22T19:58:55.433959"
+  },
+  {
+    "id": "1127ea02-0408-4839-900e-e42eb736e110",
+    "name": "Worker_0188",
+    "email": "worker188@shieldpay.dev",
+    "phone": "+919132334324",
+    "platform": "jiomart",
+    "warehouse_id": "WH-002",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 13.002274,
+      "lng": 77.610238
+    },
+    "avg_daily_parcels": 59,
+    "avg_daily_income": 727.52,
+    "reliability_score": 0.848,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 332,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-23T19:58:55.433974"
+  },
+  {
+    "id": "f8e821d6-a62c-42d4-903e-505ef35bc596",
+    "name": "Worker_0189",
+    "email": "worker189@shieldpay.dev",
+    "phone": "+918266194497",
+    "platform": "jiomart",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.580297,
+      "lng": 77.091788
+    },
+    "avg_daily_parcels": 27,
+    "avg_daily_income": 517.63,
+    "reliability_score": 0.891,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 117,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-05-24T19:58:55.433986"
+  },
+  {
+    "id": "1b0b15b5-7572-4089-b6e8-93e4dcabec26",
+    "name": "Worker_0190",
+    "email": "worker190@shieldpay.dev",
+    "phone": "+917647259080",
+    "platform": "meesho",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.555961,
+      "lng": 77.11285
+    },
+    "avg_daily_parcels": 44,
+    "avg_daily_income": 665.1,
+    "reliability_score": 0.943,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 235,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2026-01-22T19:58:55.434000"
+  },
+  {
+    "id": "ec163d50-c4c5-46ec-bfb8-919b2733bdd6",
+    "name": "Worker_0191",
+    "email": "worker191@shieldpay.dev",
+    "phone": "+917607808999",
+    "platform": "meesho",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.037132,
+      "lng": 72.532382
+    },
+    "avg_daily_parcels": 29,
+    "avg_daily_income": 466.6,
+    "reliability_score": 0.925,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 420,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-12T19:58:55.434013"
+  },
+  {
+    "id": "2dad8d3c-c12e-4994-a88e-62b06b22dcc4",
+    "name": "Worker_0192",
+    "email": "worker192@shieldpay.dev",
+    "phone": "+919015239429",
+    "platform": "flipkart",
+    "warehouse_id": "WH-010",
+    "city": "Bangalore",
+    "home_location": {
+      "lat": 12.974896,
+      "lng": 77.565994
+    },
+    "avg_daily_parcels": 50,
+    "avg_daily_income": 988.13,
+    "reliability_score": 0.949,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 413,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-07-03T19:58:55.434026"
+  },
+  {
+    "id": "c0f108a9-9c5e-4574-8729-159b3215f3b3",
+    "name": "Worker_0193",
+    "email": "worker193@shieldpay.dev",
+    "phone": "+919214736437",
+    "platform": "flipkart",
+    "warehouse_id": "WH-006",
+    "city": "Hyderabad",
+    "home_location": {
+      "lat": 17.409408,
+      "lng": 78.631407
+    },
+    "avg_daily_parcels": 59,
+    "avg_daily_income": 1028.1,
+    "reliability_score": 0.936,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 488,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-12-03T19:58:55.434040"
+  },
+  {
+    "id": "c60fbfe5-0091-423f-920a-347a28f570ca",
+    "name": "Worker_0194",
+    "email": "worker194@shieldpay.dev",
+    "phone": "+919793618050",
+    "platform": "jiomart",
+    "warehouse_id": "WH-007",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.530309,
+      "lng": 88.437127
+    },
+    "avg_daily_parcels": 37,
+    "avg_daily_income": 694.29,
+    "reliability_score": 0.792,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 344,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-06-28T19:58:55.434053"
+  },
+  {
+    "id": "332c51fe-e00b-4df5-b145-2bceff35f12b",
+    "name": "Worker_0195",
+    "email": "worker195@shieldpay.dev",
+    "phone": "+918980480462",
+    "platform": "meesho",
+    "warehouse_id": "WH-003",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.539703,
+      "lng": 77.090335
+    },
+    "avg_daily_parcels": 21,
+    "avg_daily_income": 371.57,
+    "reliability_score": 0.875,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 277,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-24T19:58:55.434067"
+  },
+  {
+    "id": "9fce16c2-0035-4e63-bc98-c3ec2a93942b",
+    "name": "Worker_0196",
+    "email": "worker196@shieldpay.dev",
+    "phone": "+918521093525",
+    "platform": "jiomart",
+    "warehouse_id": "WH-014",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.476725,
+      "lng": 88.367426
+    },
+    "avg_daily_parcels": 37,
+    "avg_daily_income": 790.22,
+    "reliability_score": 0.773,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 475,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-24T19:58:55.434080"
+  },
+  {
+    "id": "2a2abbb4-8a62-4889-acb7-0547659659b3",
+    "name": "Worker_0197",
+    "email": "worker197@shieldpay.dev",
+    "phone": "+918061951386",
+    "platform": "flipkart",
+    "warehouse_id": "WH-012",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.402935,
+      "lng": 88.194823
+    },
+    "avg_daily_parcels": 24,
+    "avg_daily_income": 298.8,
+    "reliability_score": 0.992,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 395,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-08-23T19:58:55.434093"
+  },
+  {
+    "id": "a127da6d-0bb8-46cc-9850-9e0282703c05",
+    "name": "Worker_0198",
+    "email": "worker198@shieldpay.dev",
+    "phone": "+917892464655",
+    "platform": "amazon",
+    "warehouse_id": "WH-013",
+    "city": "Ahmedabad",
+    "home_location": {
+      "lat": 23.024678,
+      "lng": 72.475024
+    },
+    "avg_daily_parcels": 38,
+    "avg_daily_income": 793.5,
+    "reliability_score": 0.921,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 454,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-09-20T19:58:55.434111"
+  },
+  {
+    "id": "d5b90fcf-7abc-458e-b473-9aa746526fa1",
+    "name": "Worker_0199",
+    "email": "worker199@shieldpay.dev",
+    "phone": "+917713475507",
+    "platform": "amazon",
+    "warehouse_id": "WH-011",
+    "city": "Delhi",
+    "home_location": {
+      "lat": 28.750497,
+      "lng": 77.079499
+    },
+    "avg_daily_parcels": 15,
+    "avg_daily_income": 271.04,
+    "reliability_score": 0.98,
+    "is_fraud_actor": false,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 70,
+      "background_location_streaming": false,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-11-17T19:58:55.434124"
+  },
+  {
+    "id": "38c9754c-ce18-407a-9b92-b47901f445a4",
+    "name": "Worker_0200",
+    "email": "worker200@shieldpay.dev",
+    "phone": "+918286227602",
+    "platform": "jiomart",
+    "warehouse_id": "WH-008",
+    "city": "Kolkata",
+    "home_location": {
+      "lat": 22.456874,
+      "lng": 88.477071
+    },
+    "avg_daily_parcels": 54,
+    "avg_daily_income": 746.84,
+    "reliability_score": 0.362,
+    "is_fraud_actor": true,
+    "device_signals": {
+      "is_emulator": false,
+      "is_rooted": false,
+      "app_install_age_days": 19,
+      "background_location_streaming": true,
+      "accelerometer_available": true
+    },
+    "created_at": "2025-10-14T19:58:55.434137"
+  }
+]

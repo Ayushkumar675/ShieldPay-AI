@@ -1,0 +1,31 @@
+{
+  "cv_mae_mean": 2.6373324706893095,
+  "cv_mae_std": 0.27241984541680503,
+  "cv_rmse_mean": 3.5107565873875957,
+  "cv_rmse_std": 0.6581201309960049,
+  "cv_r2_mean": 0.8257355622520833,
+  "cv_r2_std": 0.03380323694489197,
+  "test_mae": 2.699411609283195,
+  "test_rmse": 3.7082987586773113,
+  "test_r2": 0.8184858886699259,
+  "features": [
+    "city_risk_index",
+    "rainfall_last_3day_avg",
+    "flood_zone_flag",
+    "traffic_peak_index",
+    "pollution_spike_flag",
+    "parcel_demand_index",
+    "historical_income_variance",
+    "active_hours_ratio",
+    "gps_jump_distance",
+    "claim_frequency_7day",
+    "nearby_claim_cluster_score",
+    "disruption_risk_score_feature",
+    "mobility_stability_index",
+    "logistics_volatility_feature",
+    "behavioral_trust_index",
+    "rain_traffic_interaction",
+    "flood_claim_interaction",
+    "gps_claim_anomaly"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "contamination": 0.08,
+  "optimal_threshold": 0.5951540981714125,
+  "threshold_percentile": 92,
+  "total_flagged": 680,
+  "flagged_pct": 8.0,
+  "threshold_analysis": [
+    {
+      "percentile": 85,
+      "threshold": 0.3482,
+      "flagged_count": 1275,
+      "flagged_pct": 15.0
+    },
+    {
+      "percentile": 90,
+      "threshold": 0.4642,
+      "flagged_count": 850,
+      "flagged_pct": 10.0
+    },
+    {
+      "percentile": 92,
+      "threshold": 0.5952,
+      "flagged_count": 680,
+      "flagged_pct": 8.0
+    },
+    {
+      "percentile": 95,
+      "threshold": 0.6746,
+      "flagged_count": 425,
+      "flagged_pct": 5.0
+    },
+    {
+      "percentile": 97,
+      "threshold": 0.7247,
+      "flagged_count": 255,
+      "flagged_pct": 3.0
+    }
+  ],
+  "feature_analysis": {
+    "gps_jump_distance": {
+      "normal_mean": 2.0998,
+      "fraud_mean": 57.5613,
+      "fraud_to_normal_ratio": 27.41
+    },
+    "claim_frequency_7day": {
+      "normal_mean": 1.664,
+      "fraud_mean": 7.2601,
+      "fraud_to_normal_ratio": 4.36
+    },
+    "active_hours_ratio": {
+      "normal_mean": 0.7178,
+      "fraud_mean": 0.2188,
+      "fraud_to_normal_ratio": 0.3
+    },
+    "nearby_claim_cluster_score": {
+      "normal_mean": 0.2188,
+      "fraud_mean": 0.7968,
+      "fraud_to_normal_ratio": 3.64
+    }
+  },
+  "features": [
+    "gps_jump_distance",
+    "claim_frequency_7day",
+    "active_hours_ratio",
+    "nearby_claim_cluster_score"
+  ]
+}

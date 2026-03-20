@@ -1,0 +1,31 @@
+{
+  "cv_accuracy_mean": 0.9211764705882353,
+  "cv_accuracy_std": 0.007417364831128544,
+  "cv_f1_macro_mean": 0.9211096024858658,
+  "cv_f1_macro_std": 0.007420733622270098,
+  "cv_roc_auc_mean": 0.9743447437137578,
+  "cv_roc_auc_std": 0.003445629437062133,
+  "test_accuracy": 0.9264705882352942,
+  "test_f1_macro": 0.9263629354332892,
+  "test_roc_auc": 0.9764107000266169,
+  "features": [
+    "city_risk_index",
+    "rainfall_last_3day_avg",
+    "flood_zone_flag",
+    "traffic_peak_index",
+    "pollution_spike_flag",
+    "parcel_demand_index",
+    "historical_income_variance",
+    "active_hours_ratio",
+    "gps_jump_distance",
+    "claim_frequency_7day",
+    "nearby_claim_cluster_score",
+    "disruption_risk_score_feature",
+    "mobility_stability_index",
+    "logistics_volatility_feature",
+    "behavioral_trust_index",
+    "rain_traffic_interaction",
+    "flood_claim_interaction",
+    "gps_claim_anomaly"
+  ]
+}

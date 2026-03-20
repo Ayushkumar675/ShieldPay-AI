@@ -1,0 +1,152 @@
+[
+  {
+    "id": "WH-001",
+    "name": "Bangalore Hub 1",
+    "city": "Bangalore",
+    "lat": 12.907508,
+    "lng": 77.505859,
+    "zone": "ZONE-BAN-2",
+    "avg_daily_dispatch": 2707,
+    "risk_level": 0.37
+  },
+  {
+    "id": "WH-002",
+    "name": "Bangalore Hub 2",
+    "city": "Bangalore",
+    "lat": 12.996096,
+    "lng": 77.645001,
+    "zone": "ZONE-BAN-3",
+    "avg_daily_dispatch": 3252,
+    "risk_level": 0.65
+  },
+  {
+    "id": "WH-003",
+    "name": "Delhi Hub 3",
+    "city": "Delhi",
+    "lat": 28.573508,
+    "lng": 77.104255,
+    "zone": "ZONE-DEL-2",
+    "avg_daily_dispatch": 3325,
+    "risk_level": 0.13
+  },
+  {
+    "id": "WH-004",
+    "name": "Hyderabad Hub 4",
+    "city": "Hyderabad",
+    "lat": 17.297558,
+    "lng": 78.593962,
+    "zone": "ZONE-HYD-1",
+    "avg_daily_dispatch": 4847,
+    "risk_level": 0.42
+  },
+  {
+    "id": "WH-005",
+    "name": "Kolkata Hub 5",
+    "city": "Kolkata",
+    "lat": 22.615032,
+    "lng": 88.436474,
+    "zone": "ZONE-KOL-1",
+    "avg_daily_dispatch": 2692,
+    "risk_level": 0.73
+  },
+  {
+    "id": "WH-006",
+    "name": "Hyderabad Hub 6",
+    "city": "Hyderabad",
+    "lat": 17.451928,
+    "lng": 78.592929,
+    "zone": "ZONE-HYD-1",
+    "avg_daily_dispatch": 739,
+    "risk_level": 0.17
+  },
+  {
+    "id": "WH-007",
+    "name": "Kolkata Hub 7",
+    "city": "Kolkata",
+    "lat": 22.571903,
+    "lng": 88.459642,
+    "zone": "ZONE-KOL-2",
+    "avg_daily_dispatch": 4370,
+    "risk_level": 0.18
+  },
+  {
+    "id": "WH-008",
+    "name": "Kolkata Hub 8",
+    "city": "Kolkata",
+    "lat": 22.471329,
+    "lng": 88.444459,
+    "zone": "ZONE-KOL-2",
+    "avg_daily_dispatch": 2428,
+    "risk_level": 0.57
+  },
+  {
+    "id": "WH-009",
+    "name": "Hyderabad Hub 9",
+    "city": "Hyderabad",
+    "lat": 17.482446,
+    "lng": 78.472587,
+    "zone": "ZONE-HYD-4",
+    "avg_daily_dispatch": 2002,
+    "risk_level": 0.48
+  },
+  {
+    "id": "WH-010",
+    "name": "Bangalore Hub 10",
+    "city": "Bangalore",
+    "lat": 13.013787,
+    "lng": 77.596896,
+    "zone": "ZONE-BAN-2",
+    "avg_daily_dispatch": 2172,
+    "risk_level": 0.39
+  },
+  {
+    "id": "WH-011",
+    "name": "Delhi Hub 11",
+    "city": "Delhi",
+    "lat": 28.771316,
+    "lng": 77.105499,
+    "zone": "ZONE-DEL-1",
+    "avg_daily_dispatch": 1829,
+    "risk_level": 0.55
+  },
+  {
+    "id": "WH-012",
+    "name": "Kolkata Hub 12",
+    "city": "Kolkata",
+    "lat": 22.445031,
+    "lng": 88.233449,
+    "zone": "ZONE-KOL-2",
+    "avg_daily_dispatch": 3338,
+    "risk_level": 0.18
+  },
+  {
+    "id": "WH-013",
+    "name": "Ahmedabad Hub 13",
+    "city": "Ahmedabad",
+    "lat": 23.024832,
+    "lng": 72.491579,
+    "zone": "ZONE-AHM-3",
+    "avg_daily_dispatch": 3151,
+    "risk_level": 0.55
+  },
+  {
+    "id": "WH-014",
+    "name": "Kolkata Hub 14",
+    "city": "Kolkata",
+    "lat": 22.508987,
+    "lng": 88.336556,
+    "zone": "ZONE-KOL-1",
+    "avg_daily_dispatch": 4375,
+    "risk_level": 0.18
+  },
+  {
+    "id": "WH-015",
+    "name": "Kolkata Hub 15",
+    "city": "Kolkata",
+    "lat": 22.661238,
+    "lng": 88.290881,
+    "zone": "ZONE-KOL-3",
+    "avg_daily_dispatch": 3614,
+    "risk_level": 0.7
+  }
+]

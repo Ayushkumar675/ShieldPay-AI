@@ -1,0 +1,973 @@
+{
+  "gps_spoofing_events": [
+    {
+      "worker_id": "4f49779f-f6b0-47d5-85fa-669f91efe286",
+      "original_location": {
+        "lat": 12.994995,
+        "lng": 77.659388
+      },
+      "spoofed_location": {
+        "lat": 14.612389790717733,
+        "lng": 78.2035614979491
+      },
+      "teleport_distance_km": 113.6,
+      "timestamp": "2026-03-16T19:58:55.558251"
+    },
+    {
+      "worker_id": "4f49779f-f6b0-47d5-85fa-669f91efe286",
+      "original_location": {
+        "lat": 12.994995,
+        "lng": 77.659388
+      },
+      "spoofed_location": {
+        "lat": 14.670748080522348,
+        "lng": 78.28306933127645
+      },
+      "teleport_distance_km": 102.9,
+      "timestamp": "2026-03-18T19:58:55.558265"
+    },
+    {
+      "worker_id": "4f49779f-f6b0-47d5-85fa-669f91efe286",
+      "original_location": {
+        "lat": 12.994995,
+        "lng": 77.659388
+      },
+      "spoofed_location": {
+        "lat": 14.755088467919862,
+        "lng": 79.38301627377257
+      },
+      "teleport_distance_km": 135.3,
+      "timestamp": "2026-02-20T19:58:55.558271"
+    },
+    {
+      "worker_id": "4f49779f-f6b0-47d5-85fa-669f91efe286",
+      "original_location": {
+        "lat": 12.994995,
+        "lng": 77.659388
+      },
+      "spoofed_location": {
+        "lat": 14.322680736079157,
+        "lng": 79.46241477288847
+      },
+      "teleport_distance_km": 80.0,
+      "timestamp": "2026-03-08T19:58:55.558274"
+    },
+    {
+      "worker_id": "4f49779f-f6b0-47d5-85fa-669f91efe286",
+      "original_location": {
+        "lat": 12.994995,
+        "lng": 77.659388
+      },
+      "spoofed_location": {
+        "lat": 14.568918093741736,
+        "lng": 79.62802347756856
+      },
+      "teleport_distance_km": 125.6,
+      "timestamp": "2026-02-23T19:58:55.558278"
+    },
+    {
+      "worker_id": "0e69d89b-0235-4984-b4f8-040f5d8a1218",
+      "original_location": {
+        "lat": 22.433408,
+        "lng": 88.422579
+      },
+      "spoofed_location": {
+        "lat": 23.864545233301087,
+        "lng": 89.55630780014488
+      },
+      "teleport_distance_km": 83.0,
+      "timestamp": "2026-02-24T19:58:55.558282"
+    },
+    {
+      "worker_id": "0e69d89b-0235-4984-b4f8-040f5d8a1218",
+      "original_location": {
+        "lat": 22.433408,
+        "lng": 88.422579
+      },
+      "spoofed_location": {
+        "lat": 22.93459204309305,
+        "lng": 89.00116155606291
+      },
+      "teleport_distance_km": 102.7,
+      "timestamp": "2026-03-05T19:58:55.558288"
+    },
+    {
+      "worker_id": "0e69d89b-0235-4984-b4f8-040f5d8a1218",
+      "original_location": {
+        "lat": 22.433408,
+        "lng": 88.422579
+      },
+      "spoofed_location": {
+        "lat": 23.711026372315118,
+        "lng": 89.62545065062751
+      },
+      "teleport_distance_km": 214.8,
+      "timestamp": "2026-02-20T19:58:55.558291"
+    },
+    {
+      "worker_id": "07588006-abbd-450a-bdb8-b96b2da1ba19",
+      "original_location": {
+        "lat": 28.593956,
+        "lng": 77.11524
+      },
+      "spoofed_location": {
+        "lat": 29.277520183595865,
+        "lng": 77.77495860509568
+      },
+      "teleport_distance_km": 105.7,
+      "timestamp": "2026-02-26T19:58:55.558294"
+    },
+    {
+      "worker_id": "07588006-abbd-450a-bdb8-b96b2da1ba19",
+      "original_location": {
+        "lat": 28.593956,
+        "lng": 77.11524
+      },
+      "spoofed_location": {
+        "lat": 30.44763367999021,
+        "lng": 78.6376610695419
+      },
+      "teleport_distance_km": 280.5,
+      "timestamp": "2026-03-07T19:58:55.558297"
+    },
+    {
+      "worker_id": "07588006-abbd-450a-bdb8-b96b2da1ba19",
+      "original_location": {
+        "lat": 28.593956,
+        "lng": 77.11524
+      },
+      "spoofed_location": {
+        "lat": 29.83800767575687,
+        "lng": 77.68313531195862
+      },
+      "teleport_distance_km": 223.2,
+      "timestamp": "2026-02-28T19:58:55.558300"
+    },
+    {
+      "worker_id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+      "original_location": {
+        "lat": 22.552311,
+        "lng": 88.47716
+      },
+      "spoofed_location": {
+        "lat": 23.059843430689412,
+        "lng": 90.33098905392458
+      },
+      "teleport_distance_km": 252.7,
+      "timestamp": "2026-03-19T19:58:55.558304"
+    },
+    {
+      "worker_id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+      "original_location": {
+        "lat": 22.552311,
+        "lng": 88.47716
+      },
+      "spoofed_location": {
+        "lat": 24.496041209768144,
+        "lng": 89.01180107800921
+      },
+      "teleport_distance_km": 173.6,
+      "timestamp": "2026-03-12T19:58:55.558308"
+    },
+    {
+      "worker_id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+      "original_location": {
+        "lat": 22.552311,
+        "lng": 88.47716
+      },
+      "spoofed_location": {
+        "lat": 23.994717667282828,
+        "lng": 90.23699804717404
+      },
+      "teleport_distance_km": 247.2,
+      "timestamp": "2026-02-27T19:58:55.558312"
+    },
+    {
+      "worker_id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+      "original_location": {
+        "lat": 22.552311,
+        "lng": 88.47716
+      },
+      "spoofed_location": {
+        "lat": 23.381232398418774,
+        "lng": 89.14539049203121
+      },
+      "teleport_distance_km": 179.0,
+      "timestamp": "2026-03-02T19:58:55.558315"
+    },
+    {
+      "worker_id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+      "original_location": {
+        "lat": 22.552311,
+        "lng": 88.47716
+      },
+      "spoofed_location": {
+        "lat": 23.933632397447944,
+        "lng": 89.51492720015398
+      },
+      "teleport_distance_km": 77.2,
+      "timestamp": "2026-02-23T19:58:55.558318"
+    },
+    {
+      "worker_id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+      "original_location": {
+        "lat": 22.552311,
+        "lng": 88.47716
+      },
+      "spoofed_location": {
+        "lat": 23.952956416477864,
+        "lng": 89.75072046345787
+      },
+      "teleport_distance_km": 167.1,
+      "timestamp": "2026-02-26T19:58:55.558321"
+    },
+    {
+      "worker_id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+      "original_location": {
+        "lat": 22.552311,
+        "lng": 88.47716
+      },
+      "spoofed_location": {
+        "lat": 23.060571298199918,
+        "lng": 89.94423857999485
+      },
+      "teleport_distance_km": 246.3,
+      "timestamp": "2026-02-22T19:58:55.558324"
+    },
+    {
+      "worker_id": "4292dfe9-aa71-42b1-8edc-78623d20ab6f",
+      "original_location": {
+        "lat": 22.552311,
+        "lng": 88.47716
+      },
+      "spoofed_location": {
+        "lat": 23.814194352442232,
+        "lng": 89.36296321722271
+      },
+      "teleport_distance_km": 211.8,
+      "timestamp": "2026-03-09T19:58:55.558327"
+    },
+    {
+      "worker_id": "e663f8a8-fce5-40cc-b698-42c4f388fe61",
+      "original_location": {
+        "lat": 17.427048,
+        "lng": 78.627216
+      },
+      "spoofed_location": {
+        "lat": 18.460894708751244,
+        "lng": 79.19300460689547
+      },
+      "teleport_distance_km": 259.5,
+      "timestamp": "2026-03-18T19:58:55.558331"
+    },
+    {
+      "worker_id": "e663f8a8-fce5-40cc-b698-42c4f388fe61",
+      "original_location": {
+        "lat": 17.427048,
+        "lng": 78.627216
+      },
+      "spoofed_location": {
+        "lat": 18.850578836299505,
+        "lng": 79.28110131957578
+      },
+      "teleport_distance_km": 69.0,
+      "timestamp": "2026-03-11T19:58:55.558334"
+    },
+    {
+      "worker_id": "e663f8a8-fce5-40cc-b698-42c4f388fe61",
+      "original_location": {
+        "lat": 17.427048,
+        "lng": 78.627216
+      },
+      "spoofed_location": {
+        "lat": 19.0136837027529,
+        "lng": 79.12875719261983
+      },
+      "teleport_distance_km": 129.1,
+      "timestamp": "2026-02-23T19:58:55.558337"
+    },
+    {
+      "worker_id": "e663f8a8-fce5-40cc-b698-42c4f388fe61",
+      "original_location": {
+        "lat": 17.427048,
+        "lng": 78.627216
+      },
+      "spoofed_location": {
+        "lat": 19.279714395066197,
+        "lng": 80.52643705786028
+      },
+      "teleport_distance_km": 230.9,
+      "timestamp": "2026-02-27T19:58:55.558340"
+    },
+    {
+      "worker_id": "e663f8a8-fce5-40cc-b698-42c4f388fe61",
+      "original_location": {
+        "lat": 17.427048,
+        "lng": 78.627216
+      },
+      "spoofed_location": {
+        "lat": 18.323890578128356,
+        "lng": 80.0459638834808
+      },
+      "teleport_distance_km": 118.2,
+      "timestamp": "2026-02-17T19:58:55.558343"
+    },
+    {
+      "worker_id": "e663f8a8-fce5-40cc-b698-42c4f388fe61",
+      "original_location": {
+        "lat": 17.427048,
+        "lng": 78.627216
+      },
+      "spoofed_location": {
+        "lat": 18.96034717659309,
+        "lng": 79.23855251646876
+      },
+      "teleport_distance_km": 181.1,
+      "timestamp": "2026-02-27T19:58:55.558346"
+    },
+    {
+      "worker_id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+      "original_location": {
+        "lat": 13.042003,
+        "lng": 77.619666
+      },
+      "spoofed_location": {
+        "lat": 14.597366373219895,
+        "lng": 78.2804884505884
+      },
+      "teleport_distance_km": 183.0,
+      "timestamp": "2026-03-16T19:58:55.558350"
+    },
+    {
+      "worker_id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+      "original_location": {
+        "lat": 13.042003,
+        "lng": 77.619666
+      },
+      "spoofed_location": {
+        "lat": 13.629630968654446,
+        "lng": 78.90184049323024
+      },
+      "teleport_distance_km": 97.8,
+      "timestamp": "2026-03-02T19:58:55.558353"
+    },
+    {
+      "worker_id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+      "original_location": {
+        "lat": 13.042003,
+        "lng": 77.619666
+      },
+      "spoofed_location": {
+        "lat": 14.127891563925132,
+        "lng": 78.43200143489265
+      },
+      "teleport_distance_km": 283.3,
+      "timestamp": "2026-03-09T19:58:55.558355"
+    },
+    {
+      "worker_id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+      "original_location": {
+        "lat": 13.042003,
+        "lng": 77.619666
+      },
+      "spoofed_location": {
+        "lat": 14.293544620354224,
+        "lng": 78.2870296145205
+      },
+      "teleport_distance_km": 289.1,
+      "timestamp": "2026-02-23T19:58:55.558359"
+    },
+    {
+      "worker_id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+      "original_location": {
+        "lat": 13.042003,
+        "lng": 77.619666
+      },
+      "spoofed_location": {
+        "lat": 13.93874596812567,
+        "lng": 78.4514759310091
+      },
+      "teleport_distance_km": 151.5,
+      "timestamp": "2026-03-15T19:58:55.558362"
+    },
+    {
+      "worker_id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+      "original_location": {
+        "lat": 13.042003,
+        "lng": 77.619666
+      },
+      "spoofed_location": {
+        "lat": 14.85622572054421,
+        "lng": 79.23913251932778
+      },
+      "teleport_distance_km": 123.4,
+      "timestamp": "2026-02-25T19:58:55.558365"
+    },
+    {
+      "worker_id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+      "original_location": {
+        "lat": 13.042003,
+        "lng": 77.619666
+      },
+      "spoofed_location": {
+        "lat": 14.5721818525624,
+        "lng": 79.61629826946606
+      },
+      "teleport_distance_km": 238.7,
+      "timestamp": "2026-03-16T19:58:55.558368"
+    },
+    {
+      "worker_id": "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+      "original_location": {
+        "lat": 13.042003,
+        "lng": 77.619666
+      },
+      "spoofed_location": {
+        "lat": 13.867818222526617,
+        "lng": 78.97459104819745
+      },
+      "teleport_distance_km": 136.2,
+      "timestamp": "2026-03-07T19:58:55.558371"
+    },
+    {
+      "worker_id": "c63713e3-9f4d-4f4c-8d92-3a1028ce6874",
+      "original_location": {
+        "lat": 22.626335,
+        "lng": 88.396277
+      },
+      "spoofed_location": {
+        "lat": 24.363288184869713,
+        "lng": 88.97858733311261
+      },
+      "teleport_distance_km": 236.7,
+      "timestamp": "2026-03-11T19:58:55.558374"
+    },
+    {
+      "worker_id": "c63713e3-9f4d-4f4c-8d92-3a1028ce6874",
+      "original_location": {
+        "lat": 22.626335,
+        "lng": 88.396277
+      },
+      "spoofed_location": {
+        "lat": 23.694987924212775,
+        "lng": 89.51029704748224
+      },
+      "teleport_distance_km": 271.3,
+      "timestamp": "2026-03-10T19:58:55.558377"
+    },
+    {
+      "worker_id": "c63713e3-9f4d-4f4c-8d92-3a1028ce6874",
+      "original_location": {
+        "lat": 22.626335,
+        "lng": 88.396277
+      },
+      "spoofed_location": {
+        "lat": 23.34968121078922,
+        "lng": 90.28128510532237
+      },
+      "teleport_distance_km": 275.8,
+      "timestamp": "2026-02-25T19:58:55.558380"
+    },
+    {
+      "worker_id": "c63713e3-9f4d-4f4c-8d92-3a1028ce6874",
+      "original_location": {
+        "lat": 22.626335,
+        "lng": 88.396277
+      },
+      "spoofed_location": {
+        "lat": 23.198406200924254,
+        "lng": 89.40372147074825
+      },
+      "teleport_distance_km": 139.4,
+      "timestamp": "2026-03-15T19:58:55.558383"
+    },
+    {
+      "worker_id": "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+      "original_location": {
+        "lat": 17.502156,
+        "lng": 78.434573
+      },
+      "spoofed_location": {
+        "lat": 18.020047895509453,
+        "lng": 80.25199439116707
+      },
+      "teleport_distance_km": 244.8,
+      "timestamp": "2026-03-18T19:58:55.558386"
+    },
+    {
+      "worker_id": "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+      "original_location": {
+        "lat": 17.502156,
+        "lng": 78.434573
+      },
+      "spoofed_location": {
+        "lat": 19.134366535433323,
+        "lng": 78.9969520435673
+      },
+      "teleport_distance_km": 221.8,
+      "timestamp": "2026-03-13T19:58:55.558389"
+    },
+    {
+      "worker_id": "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+      "original_location": {
+        "lat": 17.502156,
+        "lng": 78.434573
+      },
+      "spoofed_location": {
+        "lat": 19.494343384612982,
+        "lng": 80.15517194319801
+      },
+      "teleport_distance_km": 164.7,
+      "timestamp": "2026-02-18T19:58:55.558392"
+    },
+    {
+      "worker_id": "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+      "original_location": {
+        "lat": 17.502156,
+        "lng": 78.434573
+      },
+      "spoofed_location": {
+        "lat": 19.20290995269811,
+        "lng": 80.41244016877539
+      },
+      "teleport_distance_km": 192.8,
+      "timestamp": "2026-03-10T19:58:55.558394"
+    },
+    {
+      "worker_id": "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+      "original_location": {
+        "lat": 17.502156,
+        "lng": 78.434573
+      },
+      "spoofed_location": {
+        "lat": 19.161345929757044,
+        "lng": 79.07090772860819
+      },
+      "teleport_distance_km": 281.0,
+      "timestamp": "2026-02-23T19:58:55.558397"
+    },
+    {
+      "worker_id": "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+      "original_location": {
+        "lat": 17.502156,
+        "lng": 78.434573
+      },
+      "spoofed_location": {
+        "lat": 19.24202797654219,
+        "lng": 79.45794668720019
+      },
+      "teleport_distance_km": 274.3,
+      "timestamp": "2026-03-04T19:58:55.558401"
+    },
+    {
+      "worker_id": "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+      "original_location": {
+        "lat": 12.968557,
+        "lng": 77.646978
+      },
+      "spoofed_location": {
+        "lat": 14.93201062749677,
+        "lng": 78.41532628858714
+      },
+      "teleport_distance_km": 287.3,
+      "timestamp": "2026-03-13T19:58:55.558405"
+    },
+    {
+      "worker_id": "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+      "original_location": {
+        "lat": 12.968557,
+        "lng": 77.646978
+      },
+      "spoofed_location": {
+        "lat": 14.151610002976398,
+        "lng": 78.41236370205367
+      },
+      "teleport_distance_km": 204.5,
+      "timestamp": "2026-03-14T19:58:55.558408"
+    },
+    {
+      "worker_id": "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+      "original_location": {
+        "lat": 12.968557,
+        "lng": 77.646978
+      },
+      "spoofed_location": {
+        "lat": 13.773247888104494,
+        "lng": 79.15895198061705
+      },
+      "teleport_distance_km": 142.2,
+      "timestamp": "2026-03-14T19:58:55.558411"
+    },
+    {
+      "worker_id": "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+      "original_location": {
+        "lat": 12.968557,
+        "lng": 77.646978
+      },
+      "spoofed_location": {
+        "lat": 13.997454697955398,
+        "lng": 79.22990839996093
+      },
+      "teleport_distance_km": 218.4,
+      "timestamp": "2026-03-12T19:58:55.558414"
+    },
+    {
+      "worker_id": "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+      "original_location": {
+        "lat": 12.968557,
+        "lng": 77.646978
+      },
+      "spoofed_location": {
+        "lat": 14.261109366714575,
+        "lng": 78.22536184414572
+      },
+      "teleport_distance_km": 135.0,
+      "timestamp": "2026-03-16T19:58:55.558417"
+    },
+    {
+      "worker_id": "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+      "original_location": {
+        "lat": 12.968557,
+        "lng": 77.646978
+      },
+      "spoofed_location": {
+        "lat": 13.985943169884944,
+        "lng": 78.99797270487606
+      },
+      "teleport_distance_km": 97.5,
+      "timestamp": "2026-03-08T19:58:55.558420"
+    },
+    {
+      "worker_id": "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+      "original_location": {
+        "lat": 12.968557,
+        "lng": 77.646978
+      },
+      "spoofed_location": {
+        "lat": 14.244336999374239,
+        "lng": 78.73389259674484
+      },
+      "teleport_distance_km": 66.0,
+      "timestamp": "2026-03-02T19:58:55.558423"
+    },
+    {
+      "worker_id": "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+      "original_location": {
+        "lat": 22.588247,
+        "lng": 88.449183
+      },
+      "spoofed_location": {
+        "lat": 24.199186829818498,
+        "lng": 90.08927489263553
+      },
+      "teleport_distance_km": 258.4,
+      "timestamp": "2026-03-15T19:58:55.558427"
+    },
+    {
+      "worker_id": "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+      "original_location": {
+        "lat": 22.588247,
+        "lng": 88.449183
+      },
+      "spoofed_location": {
+        "lat": 24.054879160702228,
+        "lng": 89.73542065236738
+      },
+      "teleport_distance_km": 57.5,
+      "timestamp": "2026-03-08T19:58:55.558430"
+    },
+    {
+      "worker_id": "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+      "original_location": {
+        "lat": 22.588247,
+        "lng": 88.449183
+      },
+      "spoofed_location": {
+        "lat": 24.50690256052527,
+        "lng": 90.3679475896141
+      },
+      "teleport_distance_km": 183.7,
+      "timestamp": "2026-02-26T19:58:55.558433"
+    },
+    {
+      "worker_id": "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+      "original_location": {
+        "lat": 22.588247,
+        "lng": 88.449183
+      },
+      "spoofed_location": {
+        "lat": 23.34402034438411,
+        "lng": 89.12100680914124
+      },
+      "teleport_distance_km": 130.9,
+      "timestamp": "2026-02-21T19:58:55.558436"
+    },
+    {
+      "worker_id": "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+      "original_location": {
+        "lat": 22.588247,
+        "lng": 88.449183
+      },
+      "spoofed_location": {
+        "lat": 24.24148068018234,
+        "lng": 89.8741052494176
+      },
+      "teleport_distance_km": 179.4,
+      "timestamp": "2026-02-23T19:58:55.558439"
+    },
+    {
+      "worker_id": "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+      "original_location": {
+        "lat": 22.588247,
+        "lng": 88.449183
+      },
+      "spoofed_location": {
+        "lat": 23.614116625367075,
+        "lng": 89.05649425833018
+      },
+      "teleport_distance_km": 111.5,
+      "timestamp": "2026-03-16T19:58:55.558442"
+    },
+    {
+      "worker_id": "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+      "original_location": {
+        "lat": 22.588247,
+        "lng": 88.449183
+      },
+      "spoofed_location": {
+        "lat": 23.46305357227977,
+        "lng": 90.1013921472578
+      },
+      "teleport_distance_km": 298.7,
+      "timestamp": "2026-03-17T19:58:55.558444"
+    },
+    {
+      "worker_id": "4389e84b-10c4-4285-8c83-76837b75910b",
+      "original_location": {
+        "lat": 22.982601,
+        "lng": 72.496243
+      },
+      "spoofed_location": {
+        "lat": 23.890329048765327,
+        "lng": 73.23350467805595
+      },
+      "teleport_distance_km": 231.7,
+      "timestamp": "2026-02-19T19:58:55.558448"
+    },
+    {
+      "worker_id": "4389e84b-10c4-4285-8c83-76837b75910b",
+      "original_location": {
+        "lat": 22.982601,
+        "lng": 72.496243
+      },
+      "spoofed_location": {
+        "lat": 24.792869804113284,
+        "lng": 73.92334276475621
+      },
+      "teleport_distance_km": 182.7,
+      "timestamp": "2026-02-20T19:58:55.558458"
+    },
+    {
+      "worker_id": "4389e84b-10c4-4285-8c83-76837b75910b",
+      "original_location": {
+        "lat": 22.982601,
+        "lng": 72.496243
+      },
+      "spoofed_location": {
+        "lat": 23.958183755788173,
+        "lng": 73.20061032325593
+      },
+      "teleport_distance_km": 200.7,
+      "timestamp": "2026-02-24T19:58:55.558461"
+    },
+    {
+      "worker_id": "4389e84b-10c4-4285-8c83-76837b75910b",
+      "original_location": {
+        "lat": 22.982601,
+        "lng": 72.496243
+      },
+      "spoofed_location": {
+        "lat": 24.974207237590797,
+        "lng": 73.61802829507108
+      },
+      "teleport_distance_km": 117.0,
+      "timestamp": "2026-03-01T19:58:55.558465"
+    },
+    {
+      "worker_id": "4389e84b-10c4-4285-8c83-76837b75910b",
+      "original_location": {
+        "lat": 22.982601,
+        "lng": 72.496243
+      },
+      "spoofed_location": {
+        "lat": 23.870602171938703,
+        "lng": 73.94754893538226
+      },
+      "teleport_distance_km": 278.4,
+      "timestamp": "2026-03-03T19:58:55.558468"
+    },
+    {
+      "worker_id": "38c9754c-ce18-407a-9b92-b47901f445a4",
+      "original_location": {
+        "lat": 22.456874,
+        "lng": 88.477071
+      },
+      "spoofed_location": {
+        "lat": 23.75445006263734,
+        "lng": 89.91807072730052
+      },
+      "teleport_distance_km": 231.8,
+      "timestamp": "2026-02-22T19:58:55.558471"
+    },
+    {
+      "worker_id": "38c9754c-ce18-407a-9b92-b47901f445a4",
+      "original_location": {
+        "lat": 22.456874,
+        "lng": 88.477071
+      },
+      "spoofed_location": {
+        "lat": 23.609783840208642,
+        "lng": 89.4106413783824
+      },
+      "teleport_distance_km": 99.8,
+      "timestamp": "2026-03-11T19:58:55.558474"
+    },
+    {
+      "worker_id": "38c9754c-ce18-407a-9b92-b47901f445a4",
+      "original_location": {
+        "lat": 22.456874,
+        "lng": 88.477071
+      },
+      "spoofed_location": {
+        "lat": 24.224196371176458,
+        "lng": 89.99766696459103
+      },
+      "teleport_distance_km": 214.0,
+      "timestamp": "2026-03-10T19:58:55.558477"
+    },
+    {
+      "worker_id": "38c9754c-ce18-407a-9b92-b47901f445a4",
+      "original_location": {
+        "lat": 22.456874,
+        "lng": 88.477071
+      },
+      "spoofed_location": {
+        "lat": 23.54903781517212,
+        "lng": 89.85181834673446
+      },
+      "teleport_distance_km": 291.5,
+      "timestamp": "2026-03-06T19:58:55.558481"
+    },
+    {
+      "worker_id": "38c9754c-ce18-407a-9b92-b47901f445a4",
+      "original_location": {
+        "lat": 22.456874,
+        "lng": 88.477071
+      },
+      "spoofed_location": {
+        "lat": 24.237111809427713,
+        "lng": 89.299800574315
+      },
+      "teleport_distance_km": 155.6,
+      "timestamp": "2026-03-08T19:58:55.558484"
+    },
+    {
+      "worker_id": "38c9754c-ce18-407a-9b92-b47901f445a4",
+      "original_location": {
+        "lat": 22.456874,
+        "lng": 88.477071
+      },
+      "spoofed_location": {
+        "lat": 22.99850905197651,
+        "lng": 89.9058802765391
+      },
+      "teleport_distance_km": 209.5,
+      "timestamp": "2026-03-08T19:58:55.558487"
+    },
+    {
+      "worker_id": "38c9754c-ce18-407a-9b92-b47901f445a4",
+      "original_location": {
+        "lat": 22.456874,
+        "lng": 88.477071
+      },
+      "spoofed_location": {
+        "lat": 23.645681466306375,
+        "lng": 90.42709034023446
+      },
+      "teleport_distance_km": 248.3,
+      "timestamp": "2026-02-27T19:58:55.558490"
+    }
+  ],
+  "coordinated_claim_spikes": [
+    {
+      "worker_ids": [
+        "4f49779f-f6b0-47d5-85fa-669f91efe286",
+        "38c9754c-ce18-407a-9b92-b47901f445a4",
+        "07588006-abbd-450a-bdb8-b96b2da1ba19",
+        "c63713e3-9f4d-4f4c-8d92-3a1028ce6874",
+        "9e842ec0-dca4-46e9-b83e-2ad32ff1a859"
+      ],
+      "timestamp": "2026-03-14T19:58:55.558528",
+      "claim_window_minutes": 6,
+      "total_amount_claimed": 7253.28
+    },
+    {
+      "worker_ids": [
+        "9426975b-4df3-4ca7-85a4-6c5791dd450a",
+        "9f1112eb-9de3-4abf-af90-20e935a4c27f",
+        "07588006-abbd-450a-bdb8-b96b2da1ba19",
+        "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+        "c63713e3-9f4d-4f4c-8d92-3a1028ce6874"
+      ],
+      "timestamp": "2026-03-17T19:58:55.558543",
+      "claim_window_minutes": 19,
+      "total_amount_claimed": 5105.56
+    },
+    {
+      "worker_ids": [
+        "9e842ec0-dca4-46e9-b83e-2ad32ff1a859",
+        "07588006-abbd-450a-bdb8-b96b2da1ba19",
+        "38c9754c-ce18-407a-9b92-b47901f445a4",
+        "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3"
+      ],
+      "timestamp": "2026-03-11T19:58:55.558551",
+      "claim_window_minutes": 18,
+      "total_amount_claimed": 6023.06
+    },
+    {
+      "worker_ids": [
+        "4389e84b-10c4-4285-8c83-76837b75910b",
+        "e663f8a8-fce5-40cc-b698-42c4f388fe61",
+        "4f49779f-f6b0-47d5-85fa-669f91efe286",
+        "b3a3d1e2-ac6e-4954-8da8-bda8be0902b3",
+        "9f1112eb-9de3-4abf-af90-20e935a4c27f"
+      ],
+      "timestamp": "2026-03-16T19:58:55.558558",
+      "claim_window_minutes": 16,
+      "total_amount_claimed": 4488.45
+    },
+    {
+      "worker_ids": [
+        "07588006-abbd-450a-bdb8-b96b2da1ba19",
+        "38c9754c-ce18-407a-9b92-b47901f445a4",
+        "0e69d89b-0235-4984-b4f8-040f5d8a1218"
+      ],
+      "timestamp": "2026-03-04T19:58:55.558564",
+      "claim_window_minutes": 26,
+      "total_amount_claimed": 4583.91
+    }
+  ],
+  "fraud_rings": [
+    {
+      "id": "1142227b-ad31-4bc2-aa6a-5b54ef4c2144",
+      "worker_ids": [
+        "4f49779f-f6b0-47d5-85fa-669f91efe286",
+        "07588006-abbd-450a-bdb8-b96b2da1ba19",
+        "c63713e3-9f4d-4f4c-8d92-3a1028ce6874"
+      ],
+      "detected_pattern": "temporal_claim_clustering + device_similarity",
+      "confidence": 0.88,
+      "total_suspicious_claims": 24
+    }
+  ]
+}
