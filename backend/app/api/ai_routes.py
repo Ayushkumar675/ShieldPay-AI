@@ -18,12 +18,9 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
 # ─── Paths ──────────────────────────────────────────────────
-AI_PIPELINE_DIR = Path(__file__).resolve().parent.parent.parent.parent / "ai_pipeline"
-MODELS_DIR = AI_PIPELINE_DIR / "models" / "saved"
-
-# Ensure ai_pipeline is importable
-if str(AI_PIPELINE_DIR.parent) not in sys.path:
-    sys.path.insert(0, str(AI_PIPELINE_DIR.parent))
+# Locally resolved models directory within the backend for deployment
+BACKEND_DIR = Path(__file__).resolve().parent.parent
+MODELS_DIR = BACKEND_DIR / "models" / "saved"
 
 router = APIRouter()
 
@@ -412,7 +409,7 @@ async def detect_fraud(request: FraudDetectionRequest):
 @router.post("/calculate-trust-score")
 async def calculate_trust_score(request: TrustScoreRequest):
     """Calculate composite trust score for claim verification."""
-    from ai_pipeline.trust_engine import compute_trust_score
+    from app.utils.trust_engine import compute_trust_score
 
     result = compute_trust_score(
         mobility_stability_index=request.mobility_stability_index,
