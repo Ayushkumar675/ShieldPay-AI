@@ -71,4 +71,22 @@ async def get_warehouse_risk():
         })
     return {"warehouses": result}
 
+@router.get("/financial-trend")
+async def get_financial_trend():
+    return await AnalyticsService.get_financial_trend()
 
+@router.get("/fraud-heatmap")
+async def get_fraud_heatmap():
+    return await AnalyticsService.get_fraud_heatmap()
+
+@router.get("/fraud-alerts-ai")
+async def get_fraud_alerts_ai():
+    return await AnalyticsService.get_fraud_alerts()
+
+@router.get("/fraud-rings")
+async def get_fraud_rings():
+    return await AnalyticsService.get_fraud_rings()
+
+@router.get("/worker-forecast/{worker_id}")
+async def get_worker_forecast(worker_id: str):
+    return await AnalyticsService.get_worker_forecast(worker_id)

@@ -43,132 +43,31 @@ export default function WorkerDashboard() {
 
   const loadDashboard = async () => {
     setLoading(true)
-
-    // Fetch dashboard stats from existing API
-    const dashData = await api.getDashboard()
-    if (dashData?.stats) {
-      setStats(dashData.stats)
-    }
-
-    // Fetch AI-driven predictions in parallel
-    const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    const riskProfiles = [
-      { rainfall: 30, traffic: 0.4, flood: 0, parcels: 42 },
-      { rainfall: 45, traffic: 0.5, flood: 0, parcels: 38 },
-      { rainfall: 110, traffic: 0.8, flood: 1, parcels: 25 },
-      { rainfall: 150, traffic: 0.9, flood: 1, parcels: 15 },
-      { rainfall: 60, traffic: 0.6, flood: 0, parcels: 30 },
-      { rainfall: 20, traffic: 0.3, flood: 0, parcels: 45 },
-      { rainfall: 10, traffic: 0.2, flood: 0, parcels: 20 },
-    ]
-
-    // Fetch risk predictions for 7-day trend
-    const riskPromises = riskProfiles.map((p, i) =>
-      api.predictRisk({
-        city_risk_index: 0.5,
-        rainfall_last_3day_avg: p.rainfall,
-        flood_zone_flag: p.flood,
-        traffic_peak_index: p.traffic,
-        pollution_spike_flag: 0,
-        parcel_demand_index: p.parcels / 50,
-        historical_income_variance: 0.3,
-        active_hours_ratio: 0.7,
-        gps_jump_distance: 3.0,
-        claim_frequency_7day: 1.0,
-        nearby_claim_cluster_score: 0.15,
-      })
-    )
-
-    // Fetch income loss predictions for 4-week forecast
-    const weekProfiles = [
-      { rainfall: 80, traffic: 0.7, flood: 0 },
-      { rainfall: 100, traffic: 0.8, flood: 1 },
-      { rainfall: 40, traffic: 0.4, flood: 0 },
-      { rainfall: 130, traffic: 0.85, flood: 1 },
-    ]
-
-    const incomePromises = weekProfiles.map(p =>
-      api.predictIncomeLoss({
-        city_risk_index: 0.5,
-        rainfall_last_3day_avg: p.rainfall,
-        flood_zone_flag: p.flood,
-        traffic_peak_index: p.traffic,
-        pollution_spike_flag: 0,
-        parcel_demand_index: 0.6,
-        historical_income_variance: 0.3,
-        active_hours_ratio: 0.7,
-        gps_jump_distance: 3.0,
-        claim_frequency_7day: 1.0,
-        nearby_claim_cluster_score: 0.15,
-      })
-    )
-
-    // Fetch trust score
-    const trustPromise = api.calculateTrustScore({
-      mobility_stability_index: 0.85,
-      behavioral_trust_index: 0.78,
-      fraud_anomaly_score: 0.12,
-      disruption_risk_score: 0.45,
-    })
-
-    // Fetch current risk
-    const currentRiskPromise = api.predictRisk({
-      city_risk_index: 0.5,
-      rainfall_last_3day_avg: 80,
-      flood_zone_flag: 0,
-      traffic_peak_index: 0.65,
-      pollution_spike_flag: 0,
-      parcel_demand_index: 0.6,
-      historical_income_variance: 0.3,
-      active_hours_ratio: 0.75,
-      gps_jump_distance: 4.0,
-      claim_frequency_7day: 1.5,
-      nearby_claim_cluster_score: 0.2,
-    })
-
     try {
-      const [riskResults, incomeResults, trustResult, riskNow] = await Promise.all([
-        Promise.all(riskPromises),
-        Promise.all(incomePromises),
-        trustPromise,
-        currentRiskPromise,
+      const [dashData, forecastData] = await Promise.all([
+        api.getWorkerDashboard(),
+        api.getWorkerForecast()
       ])
 
-      // Build 7-day risk chart data
-      const riskChartData = riskResults.map((r, i) => ({
-        day: days[i],
-        risk: r?.risk_score || 0.3,
-        parcels: riskProfiles[i].parcels,
-      }))
-      setRiskData(riskChartData)
-
-      // Build 4-week income forecast
-      const hourlyRate = 150
-      const normalWeeklyHours = 36
-      const incomeChartData = incomeResults.map((r, i) => {
-        const lossHours = r?.expected_income_loss_hours || 5
-        return {
-          week: `W${i + 1}`,
-          predicted: Math.round((normalWeeklyHours - lossHours) * hourlyRate),
-          normal: normalWeeklyHours * hourlyRate,
-        }
-      })
-      setIncomeData(incomeChartData)
-
-      // Trust score
-      if (trustResult) {
-        setTrustScore(trustResult.trust_score || 0)
-        setTrustBreakdown(trustResult.component_scores || null)
+      if (dashData?.worker_profile) {
+        const income = dashData.worker_profile.avg_income || 1500
+        setStats({
+          weekly_insured_income: income * 6,
+          total_claims: dashData.claims_history?.length || 0,
+          approved_claims: dashData.claims_history?.filter(c => ['paid', 'auto_approved'].includes(c.status)).length || 0,
+          reliability_score: dashData.worker_profile.reliability || 0.85
+        })
+        setTrustScore(dashData.trust_score || 0.85)
       }
 
-      // Current risk
-      if (riskNow) {
-        setCurrentRisk(riskNow)
+      if (forecastData) {
+        setRiskData(forecastData.risk_forecast || [])
+        setIncomeData(forecastData.income_forecast || [])
+        setCurrentRisk(forecastData.current_risk || null)
       }
     } catch (err) {
-      console.error('AI API error:', err)
+      console.error('API error:', err)
     }
-
     setLoading(false)
   }
 

@@ -227,6 +227,77 @@ This ensures **platform liquidity sustainability** while maintaining fair worker
 
 ---
 
+## 🚀 Getting Started (Installation & Setup)
+
+### Prerequisites
+
+- [Docker & Docker Compose](https://www.docker.com/products/docker-desktop)
+- Node.js (v18+) and npm (for manual frontend setup)
+- Python 3.10+ (for manual backend setup)
+
+### ⚡ Quick Start with Docker (Recommended)
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-link>
+   cd ShieldPay-AI
+   ```
+
+2. **Environment Setup:**
+   Copy the example environment variables for the backend:
+   ```bash
+   cp backend/.env.example backend/.env
+   ```
+
+3. **Start the Services:**
+   Run the full stack (Frontend, Backend + AI Pipeline, MongoDB) via Docker Compose:
+   ```bash
+   docker-compose up --build
+   ```
+
+4. **Access the Application:**
+   - **Frontend Dashboard:** http://localhost:5173
+   - **API Documentation (Swagger UI):** http://localhost:8000/docs
+   - **Local MongoDB Instance:** `localhost:27017`
+
+### 🔧 Manual Setup (Development Mode)
+
+If you prefer running services outside of Docker:
+
+<details>
+<summary><b>1. Running the Database</b></summary>
+
+Make sure you have a MongoDB instance running on port 27017, or set up a free MongoDB Atlas cluster and update `MONGODB_URL` in `backend/.env`.
+</details>
+
+<details>
+<summary><b>2. Running the Backend & AI Pipeline</b></summary>
+
+```bash
+cd backend
+python -m venv venv
+
+# Activate virtual environment
+# Windows: venv\Scripts\activate
+# Mac/Linux: source venv/bin/activate
+
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+</details>
+
+<details>
+<summary><b>3. Running the Frontend</b></summary>
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+</details>
+
+---
+
 ## 🎥 Demo Flow
 
 1️⃣ Worker purchases weekly policy

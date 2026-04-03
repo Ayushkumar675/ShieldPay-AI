@@ -3,7 +3,7 @@
  * Handles all communication with FastAPI backend.
  */
 
-const API_BASE = 'http://localhost:8000/api/v1'; // Hardcoded for simplified demo, typically process.env
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
 
 class ApiService {
   constructor() {
@@ -135,13 +135,28 @@ class ApiService {
 
   async getFinancialTrend() {
     const data = await this.request('/analytics/financial-trend');
-    // Adapt existing UI to new response if needed
-    return { trend: data, summary: {} };
+    return data || { trend: [], summary: {} };
   }
   
   async getFraudHeatmapAI() {
     const data = await this.request('/analytics/fraud-heatmap');
-    return { heatmap: data?.heatmap || [] };
+    return data || { heatmap: [] };
+  }
+
+  async getFraudAlertsAI() {
+    const data = await this.request('/analytics/fraud-alerts-ai');
+    return data || { alerts: [] };
+  }
+
+  async getFraudRings() {
+    const data = await this.request('/analytics/fraud-rings');
+    return data || { fraud_rings: [] };
+  }
+
+  async getWorkerForecast(workerId) {
+    const id = workerId || this.user?.id;
+    if (!id) return null;
+    return this.request(`/analytics/worker-forecast/${id}`);
   }
 
   async getWarehouseRisk() {

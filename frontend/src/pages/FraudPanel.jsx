@@ -35,7 +35,7 @@ export default function FraudPanel() {
     // Build alerts from AI fraud scanning
     if (alertsRes?.alerts?.length) {
       setAlerts(alertsRes.alerts.map((a, i) => ({
-        id: i + 1,
+        id: a.id || i + 1,
         worker: a.worker || `Worker_${String(i + 1).padStart(4, '0')}`,
         type: a.type || 'gps_spoof',
         severity: a.severity || 0.5,
@@ -43,35 +43,7 @@ export default function FraudPanel() {
         time: a.time ? _timeAgo(a.time) : `${(i + 1) * 2} hours ago`,
       })))
     } else {
-      // Run batch fraud detection for demo alerts
-      const demoProfiles = [
-        { gps: 45, claims: 6, active: 0.15, cluster: 0.8 },
-        { gps: 30, claims: 4, active: 0.25, cluster: 0.65 },
-        { gps: 55, claims: 8, active: 0.10, cluster: 0.9 },
-        { gps: 15, claims: 3, active: 0.50, cluster: 0.4 },
-        { gps: 70, claims: 7, active: 0.08, cluster: 0.85 },
-      ]
-      const fraudResults = await Promise.all(
-        demoProfiles.map(p =>
-          api.detectFraud({
-            gps_jump_distance: p.gps,
-            claim_frequency_7day: p.claims,
-            active_hours_ratio: p.active,
-            nearby_claim_cluster_score: p.cluster,
-          })
-        )
-      )
-
-      const labels = ['GPS Spoof', 'Claim Spike', 'Fraud Ring', 'Device Anomaly', 'GPS Teleport']
-      const types = ['gps_spoof', 'claim_spike', 'ring_detected', 'device_integrity', 'teleport']
-      setAlerts(fraudResults.map((r, i) => ({
-        id: i + 1,
-        worker: `Worker_${String(Math.floor(Math.random() * 999) + 1).padStart(4, '0')}`,
-        type: types[i],
-        severity: r?.fraud_anomaly_score || 0.5,
-        details: `Anomaly score ${((r?.fraud_anomaly_score || 0.5) * 100).toFixed(0)}% — GPS: ${demoProfiles[i].gps}km, Claims: ${demoProfiles[i].claims}/wk`,
-        time: `${(i + 1) * 2} hours ago`,
-      })))
+      setAlerts([])
     }
 
     // Fetch fraud rings
@@ -84,22 +56,12 @@ export default function FraudPanel() {
         pattern: r.pattern || 'Temporal claim clustering + device similarity',
         workers: r.workers || r.worker_ids || [`W-${i}01`, `W-${i}02`, `W-${i}03`],
       })))
-    } else if (heatmapRes?.heatmap) {
-      // Generate rings from high-risk cities
-      const highRisk = heatmapRes.heatmap.filter(c => c.severity > 0.6).slice(0, 2)
-      setRings(highRisk.map((city, i) => ({
-        id: `RING-${String(i + 1).padStart(3, '0')}`,
-        members: Math.max(2, Math.floor(city.alerts / 5)),
-        confidence: city.severity,
-        claims: city.alerts,
-        pattern: `Clustered fraud alerts in ${city.city} — ${city.alerts} anomalies detected`,
-        workers: Array.from({ length: Math.min(4, Math.floor(city.alerts / 5)) }, (_, j) => `W-${city.city.substring(0,3).toUpperCase()}-${j + 1}`),
-      })))
+    } else {
+      setRings([])
     }
 
     // Build layer scores from aggregated fraud heatmap
-    if (heatmapRes?.heatmap) {
-      const totalAlerts = heatmapRes.heatmap.reduce((s, c) => s + c.alerts, 0)
+    if (heatmapRes?.heatmap?.length) {
       const avgSeverity = heatmapRes.heatmap.reduce((s, c) => s + c.severity, 0) / heatmapRes.heatmap.length
       const safeBase = Math.round((1 - avgSeverity) * 100)
       setLayerScores([
@@ -109,16 +71,17 @@ export default function FraudPanel() {
         { layer: 'Device', safe: safeBase - 5, flagged: 100 - safeBase + 5 },
         { layer: 'Graph ML', safe: safeBase + 5, flagged: 100 - safeBase - 5 },
       ])
-      setPlatformSafety(safeBase + 3)
+      setPlatformSafety(Math.min(100, safeBase + 3))
     } else {
+      // 100% safe base if no fraud heatmap data exists
       setLayerScores([
-        { layer: 'Movement', safe: 85, flagged: 15 },
-        { layer: 'Delivery', safe: 92, flagged: 8 },
-        { layer: 'Environment', safe: 88, flagged: 12 },
-        { layer: 'Device', safe: 78, flagged: 22 },
-        { layer: 'Graph ML', safe: 90, flagged: 10 },
+        { layer: 'Movement', safe: 100, flagged: 0 },
+        { layer: 'Delivery', safe: 100, flagged: 0 },
+        { layer: 'Environment', safe: 100, flagged: 0 },
+        { layer: 'Device', safe: 100, flagged: 0 },
+        { layer: 'Graph ML', safe: 100, flagged: 0 },
       ])
-      setPlatformSafety(87)
+      setPlatformSafety(100)
     }
 
     setLoading(false)
