@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts'
-import { Users, IndianRupee, AlertTriangle, Shield, TrendingUp, Activity, Zap } from 'lucide-react'
+import { Users, IndianRupee, AlertTriangle, Shield, TrendingUp, Activity, Zap, Sparkles, Radio } from 'lucide-react'
 import api from '../services/api'
 
 const COLORS = ['#6366f1', '#10b981', '#f59e0b', '#ef4444', '#a855f7', '#22d3ee']
@@ -25,6 +25,13 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null
 }
 
+const THROTTLE_COLORS = {
+  NORMAL: '#10b981',
+  ELEVATED: '#f59e0b',
+  HIGH_ALERT: '#ef4444',
+  LOCKDOWN: '#dc2626',
+}
+
 export default function AdminDashboard() {
   const [analytics, setAnalytics] = useState(null)
   const [liquidityTrend, setLiquidityTrend] = useState([])
@@ -32,6 +39,8 @@ export default function AdminDashboard() {
   const [warehouseRisk, setWarehouseRisk] = useState([])
   const [claimBreakdown, setClaimBreakdown] = useState([])
   const [financialSummary, setFinancialSummary] = useState(null)
+  const [aiInsights, setAiInsights] = useState(null)
+  const [systemHealth, setSystemHealth] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -40,11 +49,13 @@ export default function AdminDashboard() {
 
   const loadAllData = async () => {
     setLoading(true)
-    const [analyticsData, trendData, heatmap, warehouses] = await Promise.all([
+    const [analyticsData, trendData, heatmap, warehouses, insights, health] = await Promise.all([
       api.getFraudAnalytics(),
       api.getFinancialTrend(),
       api.getFraudHeatmapAI(),
       api.getWarehouseRisk(),
+      api.getAiInsights(),
+      api.getSystemHealth(),
     ])
 
     if (analyticsData) setAnalytics(analyticsData)
@@ -56,6 +67,8 @@ export default function AdminDashboard() {
 
     if (heatmap?.heatmap) setHeatmapData(heatmap.heatmap)
     if (warehouses?.warehouses) setWarehouseRisk(warehouses.warehouses)
+    if (insights) setAiInsights(insights)
+    if (health) setSystemHealth(health)
 
     // Build claim breakdown from analytics
     if (analyticsData?.claims_breakdown) {
@@ -87,12 +100,67 @@ export default function AdminDashboard() {
   const totalAlerts = analytics?.fraud_stats?.total_alerts || heatmapData.reduce((s, c) => s + c.alerts, 0) || 0
   const totalClaims = analytics?.claims_breakdown?.total || liquidityTrend.reduce((s, w) => s + (w.claims_count || 0), 0) || 0
 
+  const throttleState = systemHealth?.throttle_state || 'NORMAL'
+  const throttleColor = THROTTLE_COLORS[throttleState] || '#10b981'
+
   return (
     <div className="animate-in">
       <div className="page-header">
         <h2>Admin Analytics</h2>
         <p>Platform intelligence, fraud monitoring, and liquidity analytics</p>
       </div>
+
+      {/* AI Weekly Summary + System Health Banner */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 16, marginBottom: 20 }}>
+        {aiInsights?.summary && (
+          <div className="ai-insight-banner" id="admin-ai-summary">
+            <div className="ai-insight-icon">
+              <Sparkles size={18} />
+            </div>
+            <div className="ai-insight-content">
+              <div className="ai-insight-title">AI Platform Summary</div>
+              <div className="ai-insight-text">{aiInsights.summary}</div>
+            </div>
+          </div>
+        )}
+        
+        {/* Throttle State Indicator */}
+        <div className="throttle-indicator" style={{
+          padding: '16px 24px', borderRadius: 'var(--radius-lg)',
+          background: `${throttleColor}10`, border: `1px solid ${throttleColor}30`,
+          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+          minWidth: 140, gap: 4,
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <div className={`pulse-dot ${throttleState === 'NORMAL' ? '' : 'warning'}`} style={{
+              width: 10, height: 10, borderRadius: '50%', background: throttleColor,
+              boxShadow: `0 0 8px ${throttleColor}`,
+            }} />
+            <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, color: throttleColor }}>
+              {throttleState.replace('_', ' ')}
+            </span>
+          </div>
+          <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>Payout Throttle</span>
+        </div>
+      </div>
+
+      {/* Anomaly Spotlight */}
+      {aiInsights?.anomaly && aiInsights.anomaly.severity !== 'normal' && (
+        <div className="anomaly-spotlight" style={{
+          padding: '14px 20px', borderRadius: 'var(--radius-md)', marginBottom: 20,
+          background: aiInsights.anomaly.severity === 'critical' ? 'rgba(239, 68, 68, 0.08)' : 'rgba(245, 158, 11, 0.08)',
+          border: `1px solid ${aiInsights.anomaly.severity === 'critical' ? 'rgba(239, 68, 68, 0.2)' : 'rgba(245, 158, 11, 0.2)'}`,
+          display: 'flex', alignItems: 'center', gap: 12,
+        }}>
+          <AlertTriangle size={18} color={aiInsights.anomaly.severity === 'critical' ? '#ef4444' : '#f59e0b'} />
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: aiInsights.anomaly.severity === 'critical' ? '#ef4444' : '#f59e0b' }}>
+              Anomaly: {aiInsights.anomaly.metric} — {aiInsights.anomaly.value}
+            </div>
+            <div style={{ fontSize: 13, color: 'var(--text-secondary)' }}>{aiInsights.anomaly.message}</div>
+          </div>
+        </div>
+      )}
 
       {/* Stat Cards */}
       <div className="stats-grid">

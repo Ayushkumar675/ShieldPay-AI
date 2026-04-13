@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts'
-import { Shield, TrendingUp, Package, IndianRupee, AlertTriangle, Zap, Activity } from 'lucide-react'
+import { Shield, TrendingUp, Package, IndianRupee, AlertTriangle, Zap, Activity, Sparkles, Clock } from 'lucide-react'
 import api from '../services/api'
 
 const CustomTooltip = ({ active, payload, label }) => {
@@ -23,6 +23,34 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null
 }
 
+// Radial Trust Gauge component
+const TrustGauge = ({ score }) => {
+  const radius = 60
+  const circumference = 2 * Math.PI * radius
+  const offset = circumference - (score * circumference)
+  const color = score > 0.85 ? '#10b981' : score > 0.5 ? '#f59e0b' : '#ef4444'
+  
+  return (
+    <div className="trust-gauge">
+      <svg width="160" height="160" viewBox="0 0 160 160">
+        <circle className="gauge-bg" cx="80" cy="80" r={radius} />
+        <circle
+          className="gauge-fill"
+          cx="80" cy="80" r={radius}
+          stroke={color}
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          style={{ transition: 'stroke-dashoffset 1.5s ease' }}
+        />
+      </svg>
+      <div className="gauge-value">
+        <div className="value" style={{ color }}>{(score * 100).toFixed(0)}%</div>
+        <div className="label">TRUST</div>
+      </div>
+    </div>
+  )
+}
+
 export default function WorkerDashboard() {
   const [stats, setStats] = useState({
     weekly_insured_income: 0,
@@ -35,6 +63,8 @@ export default function WorkerDashboard() {
   const [trustScore, setTrustScore] = useState(0)
   const [trustBreakdown, setTrustBreakdown] = useState(null)
   const [currentRisk, setCurrentRisk] = useState(null)
+  const [narrative, setNarrative] = useState('')
+  const [trustNarrative, setTrustNarrative] = useState('')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -44,9 +74,10 @@ export default function WorkerDashboard() {
   const loadDashboard = async () => {
     setLoading(true)
     try {
-      const [dashData, forecastData] = await Promise.all([
+      const [dashData, forecastData, narrativeData] = await Promise.all([
         api.getWorkerDashboard(),
-        api.getWorkerForecast()
+        api.getWorkerForecast(),
+        api.getWorkerNarrative(),
       ])
 
       if (dashData?.worker_profile) {
@@ -58,12 +89,18 @@ export default function WorkerDashboard() {
           reliability_score: dashData.worker_profile.reliability || 0.85
         })
         setTrustScore(dashData.trust_score || 0.85)
+        setTrustNarrative(dashData.trust_narrative || '')
       }
 
       if (forecastData) {
         setRiskData(forecastData.risk_forecast || [])
         setIncomeData(forecastData.income_forecast || [])
         setCurrentRisk(forecastData.current_risk || null)
+        setNarrative(forecastData.narrative || '')
+      }
+
+      if (narrativeData?.trust_narrative) {
+        setTrustNarrative(narrativeData.trust_narrative)
       }
     } catch (err) {
       console.error('API error:', err)
@@ -80,6 +117,19 @@ export default function WorkerDashboard() {
         <h2>Worker Dashboard</h2>
         <p>Your income protection overview & real-time risk monitoring</p>
       </div>
+
+      {/* AI Insight Banner */}
+      {narrative && (
+        <div className="ai-insight-banner" id="ai-insight-banner">
+          <div className="ai-insight-icon">
+            <Sparkles size={18} />
+          </div>
+          <div className="ai-insight-content">
+            <div className="ai-insight-title">AI Insight</div>
+            <div className="ai-insight-text">{narrative}</div>
+          </div>
+        </div>
+      )}
 
       {/* Stat Cards */}
       <div className="stats-grid">
@@ -172,7 +222,7 @@ export default function WorkerDashboard() {
         </div>
       </div>
 
-      {/* Trust Score Breakdown */}
+      {/* Trust Score Section with Gauge */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
           <h3>🛡 Trust Score Breakdown</h3>
@@ -180,74 +230,95 @@ export default function WorkerDashboard() {
             {trustScore > 0.85 ? 'Instant Payout' : trustScore > 0.5 ? 'Quick Verify' : 'Under Review'}
           </span>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
-          {[
-            { label: 'Movement Verification', key: 'mobility_stability', color: '--accent-success', fallback: 0.85 },
-            { label: 'Delivery Activity', key: 'behavioral_trust', color: '--accent-primary', fallback: 0.78 },
-            { label: 'Environmental Match', key: 'disruption_match', color: '--accent-secondary', fallback: 0.60 },
-            { label: 'Historical Trust', key: null, color: '--accent-purple', fallback: trustScore },
-            { label: 'Fraud Safety', key: 'fraud_safety', color: '--accent-warning', fallback: 0.90 },
-          ].map((item, i) => {
-            const score = item.key && trustBreakdown?.[item.key]?.value != null
-              ? trustBreakdown[item.key].value
-              : item.fallback
-            return (
-              <div key={i} style={{ padding: '12px 0' }}>
-                <div className="flex justify-between items-center" style={{ marginBottom: 6 }}>
-                  <span style={{ fontSize: 13, color: 'var(--text-secondary)' }}>{item.label}</span>
-                  <span style={{ fontSize: 14, fontWeight: 700 }}>{(score * 100).toFixed(0)}%</span>
-                </div>
-                <div className="risk-meter">
-                  <div
-                    style={{
-                      height: '100%', borderRadius: 4,
-                      width: `${score * 100}%`,
-                      background: `var(${item.color})`,
-                      transition: 'width 1.5s ease',
-                    }}
-                  />
-                </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: 32, alignItems: 'center' }}>
+          {/* Radial Gauge */}
+          <TrustGauge score={trustScore} />
+          
+          {/* Breakdown Bars */}
+          <div>
+            {trustNarrative && (
+              <div className="ai-narrative-inline" style={{ marginBottom: 16 }}>
+                <Sparkles size={14} style={{ flexShrink: 0 }} />
+                <span>{trustNarrative}</span>
               </div>
-            )
-          })}
+            )}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
+              {[
+                { label: 'Movement Verification', key: 'mobility_stability', color: '--accent-success', fallback: 0.85 },
+                { label: 'Delivery Activity', key: 'behavioral_trust', color: '--accent-primary', fallback: 0.78 },
+                { label: 'Environmental Match', key: 'disruption_match', color: '--accent-secondary', fallback: 0.60 },
+                { label: 'Historical Trust', key: null, color: '--accent-purple', fallback: trustScore },
+                { label: 'Fraud Safety', key: 'fraud_safety', color: '--accent-warning', fallback: 0.90 },
+              ].map((item, i) => {
+                const score = item.key && trustBreakdown?.[item.key]?.value != null
+                  ? trustBreakdown[item.key].value
+                  : item.fallback
+                return (
+                  <div key={i} style={{ padding: '8px 0' }}>
+                    <div className="flex justify-between items-center" style={{ marginBottom: 4 }}>
+                      <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>{item.label}</span>
+                      <span style={{ fontSize: 13, fontWeight: 700 }}>{(score * 100).toFixed(0)}%</span>
+                    </div>
+                    <div className="risk-meter">
+                      <div
+                        style={{
+                          height: '100%', borderRadius: 4,
+                          width: `${score * 100}%`,
+                          background: `var(${item.color})`,
+                          transition: 'width 1.5s ease',
+                        }}
+                      />
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Payout Protection Summary */}
+      {/* Payout Protection Tiers */}
       <div className="card">
         <div className="card-header">
           <h3>⚡ Payout Protection Tiers</h3>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
-          <div style={{
+          <div className={`payout-tier-card ${trustScore >= 0.85 ? 'active' : ''}`} style={{
             padding: 20, borderRadius: 'var(--radius-md)',
-            background: 'rgba(16, 185, 129, 0.08)', border: '1px solid rgba(16, 185, 129, 0.2)',
-            textAlign: 'center',
+            background: trustScore >= 0.85 ? 'rgba(16, 185, 129, 0.15)' : 'rgba(16, 185, 129, 0.06)',
+            border: `1px solid ${trustScore >= 0.85 ? 'rgba(16, 185, 129, 0.4)' : 'rgba(16, 185, 129, 0.15)'}`,
+            textAlign: 'center', transition: 'all 0.3s ease',
           }}>
             <div style={{ fontSize: 28, marginBottom: 4 }}>⚡</div>
             <div style={{ fontWeight: 700, color: 'var(--accent-success)', marginBottom: 4 }}>Instant Payout</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>Trust Score ≥ 85%</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>Funds in seconds</div>
+            {trustScore >= 0.85 && <div className="badge success" style={{ marginTop: 8 }}>✓ Your Tier</div>}
           </div>
-          <div style={{
+          <div className={`payout-tier-card ${trustScore >= 0.5 && trustScore < 0.85 ? 'active' : ''}`} style={{
             padding: 20, borderRadius: 'var(--radius-md)',
-            background: 'rgba(245, 158, 11, 0.08)', border: '1px solid rgba(245, 158, 11, 0.2)',
-            textAlign: 'center',
+            background: trustScore >= 0.5 && trustScore < 0.85 ? 'rgba(245, 158, 11, 0.15)' : 'rgba(245, 158, 11, 0.06)',
+            border: `1px solid ${trustScore >= 0.5 && trustScore < 0.85 ? 'rgba(245, 158, 11, 0.4)' : 'rgba(245, 158, 11, 0.15)'}`,
+            textAlign: 'center', transition: 'all 0.3s ease',
           }}>
             <div style={{ fontSize: 28, marginBottom: 4 }}>✋</div>
             <div style={{ fontWeight: 700, color: 'var(--accent-warning)', marginBottom: 4 }}>Quick Verify</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>Trust Score 50-85%</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>In-app confirmation</div>
+            {trustScore >= 0.5 && trustScore < 0.85 && <div className="badge warning" style={{ marginTop: 8 }}>✓ Your Tier</div>}
           </div>
-          <div style={{
+          <div className={`payout-tier-card ${trustScore < 0.5 ? 'active' : ''}`} style={{
             padding: 20, borderRadius: 'var(--radius-md)',
-            background: 'rgba(239, 68, 68, 0.08)', border: '1px solid rgba(239, 68, 68, 0.2)',
-            textAlign: 'center',
+            background: trustScore < 0.5 ? 'rgba(239, 68, 68, 0.15)' : 'rgba(239, 68, 68, 0.06)',
+            border: `1px solid ${trustScore < 0.5 ? 'rgba(239, 68, 68, 0.4)' : 'rgba(239, 68, 68, 0.15)'}`,
+            textAlign: 'center', transition: 'all 0.3s ease',
           }}>
             <div style={{ fontSize: 28, marginBottom: 4 }}>🔍</div>
             <div style={{ fontWeight: 700, color: 'var(--accent-danger)', marginBottom: 4 }}>Under Review</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>Trust Score &lt; 50%</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>24-48 hour review</div>
+            {trustScore < 0.5 && <div className="badge danger" style={{ marginTop: 8 }}>✓ Your Tier</div>}
           </div>
         </div>
       </div>

@@ -59,7 +59,6 @@ async def get_warehouse_risk():
     cursor = db["users"].aggregate(pipeline)
     warehouses = await cursor.to_list(length=20)
     
-    # Format for frontend
     result = []
     for w in warehouses:
         risk = 1.0 - (w.get("avg_reliability", 1.0) or 1.0)
@@ -90,3 +89,21 @@ async def get_fraud_rings():
 @router.get("/worker-forecast/{worker_id}")
 async def get_worker_forecast(worker_id: str):
     return await AnalyticsService.get_worker_forecast(worker_id)
+
+
+@router.get("/ai-insights")
+async def get_ai_insights():
+    """AI-generated weekly platform summary + anomaly spotlight."""
+    return await AnalyticsService.get_ai_insights()
+
+
+@router.get("/system-health")
+async def get_system_health():
+    """Real-time system health: throttle state, liquidity, fraud indicators."""
+    return await AnalyticsService.get_system_health()
+
+
+@router.get("/worker-narrative/{worker_id}")
+async def get_worker_narrative(worker_id: str):
+    """Personalized AI narrative for a specific worker."""
+    return await AnalyticsService.get_worker_narrative(worker_id)

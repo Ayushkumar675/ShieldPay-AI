@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import { AlertTriangle, Shield, Users, Eye, Fingerprint, Network, Radio } from 'lucide-react'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts'
+import { AlertTriangle, Shield, Users, Eye, Fingerprint, Network, Radio, Sparkles } from 'lucide-react'
 import api from '../services/api'
 
 const alertTypeConfig = {
@@ -10,6 +10,11 @@ const alertTypeConfig = {
   ring_detected: { label: 'Fraud Ring', icon: '🕸', badge: 'danger' },
   emulator: { label: 'Emulator', icon: '⚙️', badge: 'danger' },
   teleport: { label: 'Teleport', icon: '⚡', badge: 'danger' },
+  pattern_FP_001: { label: 'GPS Cluster', icon: '📍', badge: 'danger' },
+  pattern_FP_002: { label: 'Claim Stack', icon: '📊', badge: 'warning' },
+  pattern_FP_003: { label: 'Device Rotate', icon: '🔄', badge: 'warning' },
+  pattern_FP_004: { label: 'Weather Fake', icon: '🌤', badge: 'danger' },
+  pattern_FP_005: { label: 'Phantom Delivery', icon: '👻', badge: 'warning' },
 }
 
 export default function FraudPanel() {
@@ -17,6 +22,7 @@ export default function FraudPanel() {
   const [rings, setRings] = useState([])
   const [layerScores, setLayerScores] = useState([])
   const [platformSafety, setPlatformSafety] = useState(0)
+  const [fraudTrend, setFraudTrend] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -37,16 +43,16 @@ export default function FraudPanel() {
       setAlerts(alertsRes.alerts.map((a, i) => ({
         id: a.id || i + 1,
         worker: a.worker || `Worker_${String(i + 1).padStart(4, '0')}`,
-        type: a.type || 'gps_spoof',
+        type: a.alert_type || a.type || 'gps_spoof',
         severity: a.severity || 0.5,
-        details: a.details || 'Anomalous pattern detected',
+        details: a.details ? (typeof a.details === 'object' ? JSON.stringify(a.details) : a.details) : 'Anomalous pattern detected',
         time: a.time ? _timeAgo(a.time) : `${(i + 1) * 2} hours ago`,
       })))
     } else {
       setAlerts([])
     }
 
-    // Fetch fraud rings
+    // Fraud rings
     if (ringsRes?.fraud_rings?.length) {
       setRings(ringsRes.fraud_rings.map((r, i) => ({
         id: r.id || `RING-${String(i + 1).padStart(3, '0')}`,
@@ -60,7 +66,7 @@ export default function FraudPanel() {
       setRings([])
     }
 
-    // Build layer scores from aggregated fraud heatmap
+    // Build layer scores and fraud trend
     if (heatmapRes?.heatmap?.length) {
       const avgSeverity = heatmapRes.heatmap.reduce((s, c) => s + c.severity, 0) / heatmapRes.heatmap.length
       const safeBase = Math.round((1 - avgSeverity) * 100)
@@ -72,8 +78,14 @@ export default function FraudPanel() {
         { layer: 'Graph ML', safe: safeBase + 5, flagged: 100 - safeBase - 5 },
       ])
       setPlatformSafety(Math.min(100, safeBase + 3))
+
+      // Build trend sparkline data from heatmap cities
+      setFraudTrend(heatmapRes.heatmap.map((c, i) => ({
+        city: c.city,
+        alerts: c.alerts,
+        severity: Math.round(c.severity * 100),
+      })))
     } else {
-      // 100% safe base if no fraud heatmap data exists
       setLayerScores([
         { layer: 'Movement', safe: 100, flagged: 0 },
         { layer: 'Delivery', safe: 100, flagged: 0 },
@@ -82,6 +94,7 @@ export default function FraudPanel() {
         { layer: 'Graph ML', safe: 100, flagged: 0 },
       ])
       setPlatformSafety(100)
+      setFraudTrend([])
     }
 
     setLoading(false)
@@ -145,35 +158,53 @@ export default function FraudPanel() {
           </ResponsiveContainer>
         </div>
 
-        {/* Trust Score Formula */}
+        {/* Fraud Trend Sparkline + Trust Model */}
         <div className="card">
           <div className="card-header">
-            <h3>🧮 Trust Score Model</h3>
+            <h3>📈 Fraud Intensity by City</h3>
+            <span className="badge warning">Trend</span>
           </div>
-          <div style={{ padding: '12px 0' }}>
+          {fraudTrend.length > 0 ? (
+            <ResponsiveContainer width="100%" height={140}>
+              <BarChart data={fraudTrend}>
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
+                <XAxis dataKey="city" stroke="var(--text-muted)" fontSize={11} />
+                <YAxis stroke="var(--text-muted)" fontSize={11} />
+                <Tooltip />
+                <Bar dataKey="alerts" fill="#ef4444" name="Alerts" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="severity" fill="#f59e0b" name="Severity %" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          ) : (
+            <div style={{ height: 140, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
+              No fraud trend data available
+            </div>
+          )}
+          
+          {/* Trust Score Formula */}
+          <div style={{ marginTop: 16 }}>
+            <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 8, color: 'var(--text-primary)' }}>🧮 Trust Score Model</div>
             <code style={{
-              display: 'block', padding: 16, borderRadius: 'var(--radius-sm)',
-              background: 'var(--bg-glass)', fontSize: 13, lineHeight: 2,
+              display: 'block', padding: 12, borderRadius: 'var(--radius-sm)',
+              background: 'var(--bg-glass)', fontSize: 11, lineHeight: 1.8,
               color: 'var(--accent-secondary)', whiteSpace: 'pre-wrap',
             }}>
-{`claim_approval_probability = weighted(
-  real_movement_score       × 0.25,
-  delivery_activity_score   × 0.25,
-  environmental_match_score × 0.20,
-  historical_trust_index    × 0.15,
-  fraud_anomaly_score       × 0.15
-)`}
+{`claim_approval = adaptive_weighted(
+  movement_score    × w₁ (dynamic),
+  delivery_score    × w₂ (dynamic),
+  env_match_score   × w₃ (dynamic),
+  fraud_safety      × w₄ (dynamic)
+) + momentum_bonus - decay`}
             </code>
-            <div style={{ marginTop: 16 }}>
+            <div style={{ marginTop: 8, display: 'flex', gap: 16, fontSize: 11 }}>
               {[
-                { label: 'Instant Payout', threshold: '≥ 85%', color: 'var(--accent-success)' },
-                { label: 'Soft Verification', threshold: '50-85%', color: 'var(--accent-warning)' },
-                { label: 'Delayed Review', threshold: '< 50%', color: 'var(--accent-danger)' },
+                { label: 'Instant', threshold: '≥ 85%', color: 'var(--accent-success)' },
+                { label: 'Verify', threshold: '50-85%', color: 'var(--accent-warning)' },
+                { label: 'Review', threshold: '< 50%', color: 'var(--accent-danger)' },
               ].map((tier, i) => (
-                <div key={i} className="flex items-center gap-2" style={{ marginBottom: 8 }}>
-                  <div style={{ width: 10, height: 10, borderRadius: '50%', background: tier.color }} />
-                  <span style={{ flex: 1, fontSize: 13 }}>{tier.label}</span>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: tier.color }}>{tier.threshold}</span>
+                <div key={i} className="flex items-center gap-2">
+                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: tier.color }} />
+                  <span style={{ color: tier.color, fontWeight: 600 }}>{tier.label}: {tier.threshold}</span>
                 </div>
               ))}
             </div>
@@ -252,7 +283,7 @@ export default function FraudPanel() {
                       <span style={{ fontSize: 13, fontWeight: 600 }}>{(alert.severity * 100).toFixed(0)}%</span>
                     </div>
                   </td>
-                  <td style={{ fontSize: 13 }}>{alert.details}</td>
+                  <td style={{ fontSize: 13, maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{alert.details}</td>
                   <td style={{ fontSize: 12, color: 'var(--text-muted)' }}>{alert.time}</td>
                 </tr>
               )

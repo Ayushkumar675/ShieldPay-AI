@@ -2,10 +2,24 @@
 ShieldPay AI — Income Loss Forecast Model
 Predicts expected reduction in parcel assignments for next 7 days.
 Uses historical delivery data + current disruption context.
+
+All projections use deterministic, date-seeded calculations
+for consistent results within the same day.
 """
+import hashlib
 from datetime import datetime, timedelta
-from typing import Dict, Optional
-import random
+from typing import Dict
+
+
+def _seeded_value(seed_str: str, min_val: float = 0.0, max_val: float = 1.0) -> float:
+    """Generate a deterministic float from a seed string."""
+    h = int(hashlib.sha256(seed_str.encode()).hexdigest()[:8], 16)
+    normalized = (h % 10000) / 10000.0
+    return min_val + normalized * (max_val - min_val)
+
+
+def _date_seed() -> str:
+    return datetime.utcnow().strftime("%Y-%m-%d")
 
 
 async def estimate_income_loss(worker_id: str, trigger: dict) -> float:
@@ -37,7 +51,6 @@ async def estimate_income_loss(worker_id: str, trigger: dict) -> float:
     }
     impact = type_impact.get(disruption_type, 0.6)
 
-
     # Deterministic duration based on severity
     if trigger.get("resolved_at") and trigger.get("detected_at"):
         try:
@@ -45,16 +58,12 @@ async def estimate_income_loss(worker_id: str, trigger: dict) -> float:
             resolved = datetime.fromisoformat(str(trigger["resolved_at"]))
             duration_days = max(1, (resolved - detected).days)
         except (ValueError, TypeError):
-            duration_days = max(1, int(severity * 7))  # 1-7 days based on severity
+            duration_days = max(1, int(severity * 7))
     else:
         duration_days = max(1, int(severity * 7))
 
-    return round(avg_daily_income * duration_days * impact, 2)
-
-
-    # Income loss = avg_daily × severity × impact × duration
-    income_loss = avg_daily_income * severity * impact * min(duration_days, 7)
-
+    # Income loss = avg_daily × duration × impact
+    income_loss = avg_daily_income * duration_days * impact
     return round(income_loss, 2)
 
 
@@ -62,6 +71,7 @@ async def forecast_weekly_income(worker_id: str) -> Dict:
     """
     Forecast next 7 days of expected parcel assignments and income.
     Uses historical delivery patterns + current risk factors.
+    All calculations are deterministic within the same day.
     """
     from app.models.database import get_db
     db = get_db()
@@ -77,6 +87,7 @@ async def forecast_weekly_income(worker_id: str) -> Dict:
     risk = await compute_composite_risk(warehouse_id, city, avg_parcels)
     risk_score = risk["composite_risk"]
 
+    date_seed = _date_seed()
     daily_forecast = []
     total_predicted_income = 0
     total_normal_income = 0
@@ -87,10 +98,15 @@ async def forecast_weekly_income(worker_id: str) -> Dict:
 
         # Weekend adjustment
         weekend_factor = 0.6 if day_of_week >= 5 else 1.0
-        # Risk-based reduction
-        risk_reduction = 1.0 - (risk_score * random.uniform(0.5, 1.0))
-        # Random noise
-        noise = random.uniform(0.85, 1.15)
+        
+        # Risk-based reduction (deterministic)
+        risk_seed = f"{date_seed}:{worker_id}:forecast:{day_offset}"
+        risk_variation = _seeded_value(risk_seed, 0.5, 1.0)
+        risk_reduction = 1.0 - (risk_score * risk_variation)
+        
+        # Deterministic noise instead of random
+        noise_seed = f"{date_seed}:{worker_id}:noise:{day_offset}"
+        noise = _seeded_value(noise_seed, 0.85, 1.15)
 
         predicted_parcels = max(0, int(avg_parcels * weekend_factor * risk_reduction * noise))
         normal_parcels = max(0, int(avg_parcels * weekend_factor * noise))

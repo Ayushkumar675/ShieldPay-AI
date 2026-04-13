@@ -1,6 +1,7 @@
 /**
- * ShieldPay AI — API Service Layer
+ * ShieldPay AI — API Service Layer (Phase 3)
  * Handles all communication with FastAPI backend.
+ * Includes new intelligence endpoints.
  */
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
@@ -26,7 +27,6 @@ class ApiService {
         headers: this.getHeaders(),
       });
       if (res.status === 401) {
-        // Handle auth logic
         return null;
       }
       return await res.json();
@@ -80,14 +80,13 @@ class ApiService {
     return data;
   }
 
-  // --- Real Endpoints ---
+  // ─── Core Endpoints ────────────────────────────────
 
   async getAdminDashboard() {
     return this.request('/analytics/admin-dashboard');
   }
 
   async getWorkerDashboard(workerId) {
-    // If no workerId provided, try to use current user
     const id = workerId || this.user?.id;
     if (!id) return null;
     return this.request(`/analytics/worker-dashboard/${id}`);
@@ -98,7 +97,6 @@ class ApiService {
     return { disruptions: data || [] };
   }
   
-  // Method compatibility for existing components
   async getActiveDisruptionsAI() {
     return this.getActiveDisruptions();
   }
@@ -120,7 +118,7 @@ class ApiService {
   }
 
   async getMyClaims() {
-    return this.getRecentClaims(); // Should filter by user ID on backend ideally
+    return this.getRecentClaims();
   }
 
   async confirmClaim(claimId) {
@@ -130,7 +128,7 @@ class ApiService {
   }
 
   async getFraudAnalytics() {
-     return this.request('/analytics/admin-dashboard');
+    return this.request('/analytics/admin-dashboard');
   }
 
   async getFinancialTrend() {
@@ -163,11 +161,29 @@ class ApiService {
     const data = await this.request('/analytics/warehouse-risk');
     return { warehouses: data?.warehouses || [] };
   }
-  
-  // Policies (existing, keeping simple)
+
+  // ─── Phase 3: Intelligence Endpoints ───────────────
+
+  async getAiInsights() {
+    const data = await this.request('/analytics/ai-insights');
+    return data || { summary: '', anomaly: null };
+  }
+
+  async getSystemHealth() {
+    const data = await this.request('/analytics/system-health');
+    return data || { throttle_state: 'NORMAL', health: 'unknown' };
+  }
+
+  async getWorkerNarrative(workerId) {
+    const id = workerId || this.user?.id;
+    if (!id) return null;
+    return this.request(`/analytics/worker-narrative/${id}`);
+  }
+
+  // ─── Policies ──────────────────────────────────────
+
   async getMyPolicy() {
-    // Mock for now or implement if needed
-    return { policy: { id: "p1", coverage_amount: 5000, status: "active" }}; 
+    return { policy: { id: "p1", coverage_amount: 5000, status: "active" }};
   }
 }
 

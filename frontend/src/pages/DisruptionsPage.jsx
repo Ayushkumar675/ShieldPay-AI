@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { CloudLightning, CloudRain, Factory, Car, Package, AlertTriangle, RefreshCw } from 'lucide-react'
+import { CloudLightning, CloudRain, Factory, Car, Package, AlertTriangle, RefreshCw, Users, IndianRupee } from 'lucide-react'
 import api from '../services/api'
 
 const typeConfig = {
@@ -10,18 +10,20 @@ const typeConfig = {
   parcel_allocation_drop: { icon: Package, color: '#6366f1', label: 'Parcel Drop' },
 }
 
+const CITIES = ['Mumbai', 'Delhi', 'Bangalore', 'Chennai', 'Kolkata', 'Hyderabad', 'Pune', 'Ahmedabad']
+
 export default function DisruptionsPage() {
   const [disruptions, setDisruptions] = useState([])
   const [filter, setFilter] = useState('all')
   const [simulating, setSimulating] = useState(null)
   const [lastSimResult, setLastSimResult] = useState(null)
+  const [selectedCity, setSelectedCity] = useState('Mumbai')
 
   useEffect(() => {
     loadDisruptions()
   }, [])
 
   const loadDisruptions = async () => {
-    // Try AI endpoint first, then fallback to existing integration endpoint
     const aiData = await api.getActiveDisruptionsAI()
     if (aiData?.disruptions?.length) {
       setDisruptions(aiData.disruptions)
@@ -33,12 +35,11 @@ export default function DisruptionsPage() {
     }
   }
 
-  const handleSimulate = async (type, city = 'Mumbai') => {
+  const handleSimulate = async (type, city) => {
     setSimulating(type)
-    const result = await api.simulateDisruption(type, city)
+    const result = await api.simulateDisruption(type, city || selectedCity)
     if (result) {
       setLastSimResult(result)
-      // Refresh disruptions after simulation
       await loadDisruptions()
     }
     setSimulating(null)
@@ -94,45 +95,59 @@ export default function DisruptionsPage() {
           <h3>⚡ AI Simulation Controls</h3>
           <span className="badge info">Trigger Events</span>
         </div>
+        
+        {/* City Selector */}
+        <div style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <label style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-secondary)' }}>Target City:</label>
+          <select 
+            value={selectedCity}
+            onChange={e => setSelectedCity(e.target.value)}
+            className="form-input"
+            style={{ width: 180, padding: '8px 12px', fontSize: 13 }}
+          >
+            {CITIES.map(c => <option key={c} value={c}>{c}</option>)}
+          </select>
+        </div>
+
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <button
             className="btn btn-primary"
-            onClick={() => handleSimulate('heavy_rain', 'Mumbai')}
+            onClick={() => handleSimulate('heavy_rain')}
             disabled={simulating}
             style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 20px' }}
           >
             {simulating === 'heavy_rain' ? <RefreshCw size={14} className="spinning" /> : <CloudRain size={14} />}
-            🌧 Simulate Heavy Rain Event
+            🌧 Heavy Rain — {selectedCity}
           </button>
           <button
             className="btn btn-warning"
-            onClick={() => handleSimulate('warehouse_shutdown', 'Chennai')}
+            onClick={() => handleSimulate('warehouse_shutdown')}
             disabled={simulating}
             style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 20px', background: 'rgba(245, 158, 11, 0.15)', color: 'var(--accent-warning)', border: '1px solid rgba(245, 158, 11, 0.3)' }}
           >
             {simulating === 'warehouse_shutdown' ? <RefreshCw size={14} className="spinning" /> : <Factory size={14} />}
-            🏭 Simulate Warehouse Shutdown
+            🏭 Warehouse Shutdown — {selectedCity}
           </button>
           <button
             className="btn btn-danger"
-            onClick={() => handleSimulate('fraud_cluster', 'Delhi')}
+            onClick={() => handleSimulate('fraud_cluster')}
             disabled={simulating}
             style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 20px', background: 'rgba(239, 68, 68, 0.15)', color: 'var(--accent-danger)', border: '1px solid rgba(239, 68, 68, 0.3)' }}
           >
             {simulating === 'fraud_cluster' ? <RefreshCw size={14} className="spinning" /> : <AlertTriangle size={14} />}
-            🕵 Simulate Fraud Attack Cluster
+            🕵 Fraud Cluster — {selectedCity}
           </button>
         </div>
       </div>
 
-      {/* Simulation Results */}
+      {/* Enhanced Simulation Results */}
       {lastSimResult && (
         <div className="card" style={{ marginBottom: 20, borderLeft: '3px solid var(--accent-primary)' }}>
           <div className="card-header">
-            <h3>📊 Last Simulation Results</h3>
+            <h3>📊 Simulation Results</h3>
             <span className="badge success">Completed</span>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 16 }}>
             <div style={{ padding: '8px 12px', borderRadius: 'var(--radius-sm)', background: 'var(--bg-glass)' }}>
               <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Total Processed</div>
               <div style={{ fontSize: 20, fontWeight: 700 }}>{lastSimResult.stats?.total_processed || 0}</div>
@@ -149,7 +164,31 @@ export default function DisruptionsPage() {
               <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Flagged / Rejected</div>
               <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--accent-danger)' }}>{(lastSimResult.stats?.flagged || 0) + (lastSimResult.stats?.auto_rejected || 0)}</div>
             </div>
+            {lastSimResult.stats?.duplicates_skipped > 0 && (
+              <div style={{ padding: '8px 12px', borderRadius: 'var(--radius-sm)', background: 'rgba(99, 102, 241, 0.08)' }}>
+                <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Duplicates Skipped</div>
+                <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--accent-primary)' }}>{lastSimResult.stats.duplicates_skipped}</div>
+              </div>
+            )}
           </div>
+
+          {/* Impact Estimation */}
+          {lastSimResult.total_estimated_impact > 0 && (
+            <div style={{
+              padding: '12px 16px', borderRadius: 'var(--radius-sm)',
+              background: 'var(--bg-glass)', display: 'flex', alignItems: 'center', gap: 12,
+              fontSize: 13, color: 'var(--text-secondary)',
+            }}>
+              <IndianRupee size={16} color="var(--accent-warning)" />
+              <span>
+                Estimated total impact: <strong style={{ color: 'var(--accent-warning)' }}>₹{lastSimResult.total_estimated_impact?.toLocaleString()}</strong>
+                {' '}across <strong>{lastSimResult.total_claims || 0}</strong> affected workers
+                {lastSimResult.total_payout_value > 0 && (
+                  <> — <strong style={{ color: 'var(--accent-success)' }}>₹{lastSimResult.total_payout_value?.toLocaleString()}</strong> disbursed instantly</>
+                )}
+              </span>
+            </div>
+          )}
         </div>
       )}
 
@@ -212,7 +251,6 @@ export default function DisruptionsPage() {
                 </div>
               </div>
 
-              {/* Extra data */}
               {(d.weather_data || d.traffic_data) && (
                 <div style={{
                   marginTop: 12, padding: '8px 12px', borderRadius: 'var(--radius-sm)',
