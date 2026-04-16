@@ -105,7 +105,7 @@ class AnalyticsService:
         return {
             "worker_profile": {
                 "name": worker_name,
-                "avg_income": user.get("avg_daily_income") if user else 1500,
+                "avg_income": (user.get("avg_daily_income") or 1500) if user else 1500,
                 "reliability": user.get("reliability_score") if user else 0.85,
             },
             "policy": {
@@ -233,10 +233,10 @@ class AnalyticsService:
             return {"risk_forecast": [], "income_forecast": [], "current_risk": {}, "narrative": ""}
         
         user = await db["users"].find_one({"id": worker_id})
-        base_income = user.get("avg_daily_income", 1500) if user else 1500
+        base_income = (user.get("avg_daily_income") or 1500) if user else 1500
         worker_name = user.get("name", "Worker") if user else "Worker"
         city = user.get("city", "") if user else ""
-        reliability = user.get("reliability_score", 0.8) if user else 0.8
+        reliability = (user.get("reliability_score") or 0.8) if user else 0.8
         
         date_seed = _date_seed()
         days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']

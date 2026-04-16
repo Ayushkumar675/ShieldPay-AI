@@ -28,7 +28,7 @@ async def connect_db():
     await db["payout_transactions"].create_index("worker_id")
     await db["payout_transactions"].create_index("claim_id")
     await db["liquidity_state"].create_index("last_updated")
-    print(f"✅ Connected to MongoDB: {settings.MONGODB_DB_NAME}")
+    print(f"[SUCCESS] Connected to MongoDB: {settings.MONGODB_DB_NAME}")
 
 
 async def close_db():
@@ -36,7 +36,7 @@ async def close_db():
     global client
     if client:
         client.close()
-        print("🔌 MongoDB connection closed")
+        print("[CLOSED] MongoDB connection closed")
 
 
 def get_db():
